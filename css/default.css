@@ -123,7 +123,10 @@ nav a:link, a:hover, a:visited {
      font-size: x-small;
  }
  
- .border{
-     margin-top: 15px;
+ .carousel{
+     margin-bottom: 15px;
+ }
+ 
+ .card-margin{
      margin-bottom: 15px;
  }

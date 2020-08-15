@@ -15,5 +15,11 @@
   ],
   "author": "Marvin R. Cerdas Angulo",
   "license": "UNLICENSED",
-  "homepage": "https://bitbucket.org/Marc782/didicalc#readme"
+  "homepage": "https://bitbucket.org/Marc782/didicalc#readme",
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
