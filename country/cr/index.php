@@ -10,38 +10,8 @@
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
         <meta http-equiv="Expires" content="5">
 
-        <!-- Miniature -->
-        <meta property="og:title" content="Calculadora de viajes de Didi" />
-        <meta property="og:site_name" content="DidiCalc">
-        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/images/calculator_128.png">
-
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
-        <link rel="manifest" href="../../images/manifest.json">
-        <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="theme-color" content="#ffffff">
-
-        <!-- Json-LD -->
-        <script type="application/ld+json">
-            {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "DidiCalc",
-            "url": "http://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
-            "potentialAction": {
-            "@type": "SearchAction",
-            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
-            "query-input": "required name=search_term_string"
-            }
-            }
-        </script>        
-
+        <?php include_once("../../includes/headinfo.php") ?>
+        
         <!-- build:css ../../dist/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href="../../css/default.css" rel="stylesheet">        
@@ -101,7 +71,7 @@
                     <div class="card h-100">
                         <img class="img-responsive card-img-top" src="../../images/administrate.jpg"/>
                         <div class="card-body">
-                            <h5 class="card-title">Seguimiento a tus ganancias</h5>
+                            <h5 class="card-title">Administra tus ganancias</h5>
                             <p class="card-text">Con Didical podras dar seguimiento a tus ganancias de una forma fácil, rápida y segura.</p>
                         </div>
                     </div>
@@ -119,57 +89,59 @@
                     <div class="card h-100">
                         <img class="img-responsive card-img-top" src="../../images/administrate.jpg"/>
                         <div class="card-body">
-                            <h5 class="card-title">100% Gratuito</h5>
-                            <p class="card-text">Didical es una plataroma 100% gratuita, para los socios conductores, por lo que no tendras que preocuparte por cargos mensuales.</p>
+                            <h5 class="card-title">Seguridad</h5>
+                            <p class="card-text">El sistama de Didical nunca almacena tus consultas, además contamos con criptacion SSL.</p>
                         </div>
                     </div>
                 </div>
-                <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="border rounded padding-container">
-                        <center>
-                            <img class="img-responsive image-margin" src="../../images/calculator-128.png" alt="Calculadora detallada" style="margin-bottom: 15px">
-                        </center>
-                        <div class="caption">
-                            <h1>Calculadora de viajes de Didi detallada</h1>
-                            <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
-                            <p>
-                                <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calcular</button>
-                            </p>
+                <div class="contrast">
+                    <div class="jumbotron">
+                        <h1 class="display-3"><b>Didical</b></h1>
+                        <p>Una herramienta especialmente pensada para socios condutores.</p>
+                        <hr class="my-4">
+                        <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 card-margin">
+                    <div class="card h-100">
+                        <img src="../../images/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
+                        <div class="card-body">
+                            <h5 class="card-title">Calculadora detallada</h5>
+                            <p class="card-text">En calculadora de viajes de Didi detallada hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calcular</button>                            
                         </div>
                     </div>
                 </div>
-                <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="horizontal-center">
-                        <!--AdSense-->
-                        <?php include_once("../../includes/ads.php") ?>  
-                        <!--AdSense-->
-                    </div>
-                </div>
-                <div id="cal_simple" class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 30px">
-                    <div class="border rounded padding-container">
-                        <center>
-                            <img src="../../images/calculator-128.png" alt="Calculadora simple" style="margin-bottom: 15px">
-                        </center>
-                        <div class="caption">
-                            <h1>Calculadora de viajes de Didi simple</h1>
-                            <p>En esta sección como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>
-                            <p>
-                                <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calcular</button>
-                            </p>
+                <div class="col-sm-6 card-margin">
+                    <div class="card h-100">
+                        <img src="../../images/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
+                        <div class="card-body">
+                            <h5 class="card-title">Calculadora simple</h5>
+                            <p class="card-text">En la calculadora de viajes de Didi simple, como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calcular</button>                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer><?php include_once("../../includes/footer.php") ?></footer>
     </div>
-    <!-- JavaScript -->
-    <!-- build:js ../../dis/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../js/index-scripts.js"></script>
-    <script src="../../js/jquery.cookie.js"></script>
-    <script src="../../js/country.js"></script>    
+    <footer><?php include_once("../../includes/footer.php") ?></footer>
+</div>
+<!-- JavaScript -->
+<!-- build:js ../../dis/js -->
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../js/index-scripts.js"></script>
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/country.js"></script>
+<script src="../../js/form-scripts.js"></script>
+<script src="../../js/calculatescripts.js"></script>
+<script src="../../js/defaultscripts.js"></script>
+<!-- endbuild -->
 </body>
 </html>

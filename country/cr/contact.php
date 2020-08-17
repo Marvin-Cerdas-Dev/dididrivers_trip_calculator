@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="description" content="Aquí podras verificar cuales son las tarifas oficiales de la plataforma Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Tarifas, Precio, Montos">
         <meta http-equiv="Expires" content="5">
 
         <?php include_once("../../includes/headinfo.php") ?>
@@ -15,10 +15,10 @@
         <!-- build:css ../../dist/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href="../../css/default.css" rel="stylesheet">        
-        <!-- endbuild -->
-
+        <!-- endbuild -->        
+        
         <!-- Title -->
-        <title>DidiCalc - Ayuda en caso de emergencia</title>
+        <title>DidiCalc - Tarifas de Didi en Costa Rica</title>
 
     </head>
     <!-- Cookies modal -->
@@ -36,38 +36,47 @@
             </div>
         </div>
     </div>
-    <!-- Content -->    
+    <!-- Content -->
     <header>
         <?php include_once("../../includes/header.php") ?>
     </header>
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="../../images/emergency_help.jpg" class="card-img-top" alt="Didi Help">
+                <img src="../../images/contact-us.jpg" class="img-responsive card-img-top" alt="Didi Fares">
                 <div class="card-body">
-                    <h1 class="card-title">Ayuda</h1>
-                    <p class="card-text">
-                        Desde sus inicios Didi implementó lineas telefónicas para brindar ayuda a sus usurios y conductores en caso de emergencia.
-                    </p>
-                    <h6 class="card-title">Linea de emergencia para <b>Conductores</b></h6>
-                    <p class="card-text">
-                        <a href="tel:4002-6947" class="btn btn-update" hreflang="es"><b>4002-6947</b></a>
-                    </p>
-                    <h6 class="card-title">Linea de emergencia para <b>Usuarios</b></h6>
-                    <p class="card-text">
-                        <a href="tel:4002-3814" class="btn btn-update" hreflang="es"><b>4002-3814</b></a>
-                    </p>
-                    <p class="card-text">
-                        <!--AdSense-->
-                        <?php include_once("../../includes/ads.php") ?>  
-                        <!--AdSense-->
-                    </p>
-                    <p class="card-text">
-                        Recuerdas que siempre es muy importante informar a las autoridades correspondientes de cualquier incidentes o si necesitas ayuda inmediata por medio de número de emergencias.
-                    </p>
-                    <p class="card-text">
-                        <a href="tel:911" class="btn btn-update" hreflang="es"><b>911</b></a>
-                    </p>
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label for="contactName">Nombre</label>
+                            <input type="email" class="form-control" id="ContactName" placeholder="José Rodriguez Salzar">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Correo electrónico</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="name@domain.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactType">Tipo de consulta</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Consulta</option>
+                                <option>Sugerencias</option>
+                                <option>Ayuda</option>
+                                <option>Opinión</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>                                     
+                        <div class="form-group">
+                            <label for="contactMessage">Mensaje</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
+                        <p class="card-text">
+                            <!--AdSense-->
+                            <?php include_once("../../includes/ads.php") ?>  
+                            <!--AdSense-->
+                        </p>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-update btn-lg btn-block" id="contactSumit">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

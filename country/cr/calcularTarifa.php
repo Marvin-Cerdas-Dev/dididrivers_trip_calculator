@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<?php include_once("includes/analyticstracking.php") ?>
-<?php include_once("includes/viajeExpress.php") ?>
+<?php include_once("../../includes/analyticstracking.php") ?>
+<?php include_once("../../includes/viajeExpress.php") ?>
 <?php
 $calculation_type = filter_input(INPUT_POST, 'calculating');
 $service_type = filter_input(INPUT_POST, 'service');
@@ -42,33 +42,19 @@ if ($calculation_type == 'Details') {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Podras verificar tus viajes de la plataforma Didi de una forma, rápida, fácil y segura">
+        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
         <meta http-equiv="Expires" content="5">
 
-        <!-- Miniature -->
-        <meta property="og:title" content="Calculadora de viajes de Didi" />
-        <meta property="og:site_name" content="DidiCalc">
-        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/images/calculator_256.png">
-
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="manifest" href="images/manifest.json">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="theme-color" content="#ffffff">
-
+        <?php include_once("../../includes/headinfo.php") ?>
+        
+        <!-- build:css ../../dist/css -->
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href="../../css/default.css" rel="stylesheet">        
+        <!-- endbuild -->
+        
         <!-- Title -->
-        <title>DidiCalc - Calculadora de viajes de Didi</title>
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <!-- Default Css Style -->
-        <link href="css/default.css" rel="stylesheet">        
+        <title>DidiCalc - Calculo de viaje de Didi</title> 
 
         <!-- Send the difference value to change color -->
         <script type="text/javascript">difference = <?php echo number_format($difference, 2) ?></script>
@@ -90,7 +76,7 @@ if ($calculation_type == 'Details') {
     </div>
     <!-- Content -->        
     <header>
-        <?php include_once("includes/header.php") ?>
+        <?php include_once("../../includes/header.php") ?>
     </header>
     <div class="container-fluid">
         <div class="row">
@@ -238,17 +224,19 @@ if ($calculation_type == 'Details') {
     </div>
 </div>
 
-<footer><?php include_once("includes/footer.php") ?></footer>
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!-- Scripst -->
-<script src="js/calculatescripts.js"></script>
-<script src="js/jquery.cookie.js"></script>
+<footer><?php include_once("../../includes/footer.php") ?></footer>
+<!-- JavaScript -->
+<!-- build:js ../../dis/js -->
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../js/index-scripts.js"></script>
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/country.js"></script>
+<script src="../../js/form-scripts.js"></script>
+<script src="../../js/calculatescripts.js"></script>
+<script src="../../js/defaultscripts.js"></script>
+<!-- endbuild -->
 </body>
 </html>
 

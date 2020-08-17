@@ -80,22 +80,22 @@
         <div class="container-fluid">
             <div class="row">
                 <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="border rounded padding-container">
+                    <div class="card card-margin padding-container">
                         <center>
                             <h2>CALCULADOR DE VIAJES DE DIDI</h2>
                             <h3>Selecione su país</h3>
                         </center>
                         <div class="rounded mx-auto d-block">
                             <center>
-                                <a href="country/cr/index.php">
-                                <img class="img-responsive" src="images/costa_rica.png" id="flag-cr" alt="Costa Rica"  width="60%" height="60%">
+                                <a id="flag-cr" href="country/cr/index.php">
+                                <img class="img-responsive" src="images/costa_rica.png" alt="Costa Rica"  width="60%" height="60%">
                                 </a>
                             </center>  
                         </div>
                         <div class="rounded mx-auto d-block">
                             <center>
-                                <a href="country/mx/index.php">
-                                <img class="img-responsive" src="images/mexico.png" id="flag-mx" alt="México" width="60%" height="60%">
+                                <a id="flag-mx" href="country/mx/index.php">
+                                <img class="img-responsive" src="images/mexico.png" alt="México" width="60%" height="60%">
                                 </a>
                             </center>  
                         </div>
