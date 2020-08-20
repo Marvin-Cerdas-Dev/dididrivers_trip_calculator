@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="description" content="En este sitio se encuentra con la covertura por provincias y cantones donde se ofrece el servicio de Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Covertura, Cantones, Provincias">
         <meta http-equiv="Expires" content="5">
 
         <?php include_once("../../includes/headinfo.php") ?>
@@ -43,7 +43,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="../../images/didi_coverage_background.jpg" class="card-img-top" alt="Didi coverage">
+                <img src="../../img/didi_coverage_background.jpg" class="card-img-top" alt="Covertura de servicios de Didi en tu ciudad">
                 <div class="card-body">
                     <h5 class="card-title">Covertura del servicio de didi</h5>
                     <p class="card-text">
@@ -63,7 +63,7 @@
                     </p>
                     <p class="card-text">
                     <center>
-                        <img class="img-fluid" src="../../images/mapa_covertura.svg"/>
+                        <img class="img-fluid" src="../../img/mapa_covertura.svg"/>
                         <p class="fuente">Fuente: Aguilar Arroyo, Yenci (2019) Didi arranca este martes con promos que busca desbancar a Uber, La Teja, Fecha de consulta: 9 de abril del 2019. URL: <a href="https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/" title="Didi arranca este martes con promos que busca desbancar a Uber" hreflang="es">https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/</a></p>
                     </center>
                     </p>

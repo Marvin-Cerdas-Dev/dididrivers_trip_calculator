@@ -32,9 +32,9 @@
         </script>
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="images/manifest.json">
         <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
@@ -71,7 +71,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="images/didi_coverage_background.jpg" class="card-img-top" alt="Didi coverage">
+                <img src="img/didi_coverage_background.jpg" class="card-img-top" alt="Didi coverage">
                 <div class="card-body">
                     <h5 class="card-title">Covertura del servicio de didi</h5>
                     <p class="card-text">
@@ -91,7 +91,7 @@
                     </p>
                     <p class="card-text">
                     <center>
-                        <img class="img-fluid" src="images/mapa_covertura.svg"/>
+                        <img class="img-fluid" src="img/mapa_covertura.svg"/>
                         <p class="fuente">Fuente: Aguilar Arroyo, Yenci (2019) Didi arranca este martes con promos que busca desbancar a Uber, La Teja, Fecha de consulta: 9 de abril del 2019. URL: <a href="https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/" title="Didi arranca este martes con promos que busca desbancar a Uber" hreflang="es">https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/</a></p>
                     </center>
                     </p>

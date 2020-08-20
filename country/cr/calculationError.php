@@ -45,7 +45,7 @@
             <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
                 <div class="border rounded padding-container">
                     <center>
-                        <img class="img-responsive image-margin" src="images/shield-error.png" alt="Calculadora detallada" >
+                        <img class="img-responsive image-margin" src="images/shield-error.png" alt="Error en la página web"/>
                     </center>
                     <div class="caption">
                         <h1>Error en los calculos</h1>

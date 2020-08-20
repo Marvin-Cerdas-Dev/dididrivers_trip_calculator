@@ -43,7 +43,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="../../images/contact-us.jpg" class="img-responsive card-img-top" alt="Didi Fares">
+                <img src="../../img/contact-us.jpg" class="img-responsive card-img-top" alt="Formulario de contacto">
                 <div class="card-body">
                     <form action="" method="POST">
                         <div class="form-group">

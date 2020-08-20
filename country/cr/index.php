@@ -55,13 +55,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="2000">
-                    <img src="../../images/carousel_1.jpg" class="d-block w-100" alt="">
+                    <img src="../../img/carousel_1.jpg" class="d-block w-100" alt="Seguridad">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img src="../../images/carousel_2.jpg" class="d-block w-100" alt="...">
+                    <img src="../../img/carousel_2.jpg" class="d-block w-100" alt="Confianza">
                 </div>
                 <div class="carousel-item">
-                    <img src="../../images/carousel_3.jpg" class="d-block w-100" alt="...">
+                    <img src="../../img/carousel_3.jpg" class="d-block w-100" alt="Un servicio 100% Gratuito">
                 </div>
             </div>
         </div>                
@@ -69,16 +69,16 @@
             <div class="row">
                 <div class="col-sm-4 card-margin">
                     <div class="card h-100">
-                        <img class="img-responsive card-img-top" src="../../images/administrate.jpg"/>
+                        <img class="img-responsive card-img-top" src="../../img/administrate.jpg" alt="Administre sus ganancias"/>
                         <div class="card-body">
-                            <h5 class="card-title">Administra tus ganancias</h5>
+                            <h5 class="card-title">Administre tus ganancias</h5>
                             <p class="card-text">Con Didical podras dar seguimiento a tus ganancias de una forma fácil, rápida y segura.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 card-margin">
                     <div class="card h-100">
-                        <img class="img-responsive card-img-top" src="../../images/free_service.jpg"/>
+                        <img class="img-responsive card-img-top" src="../../img/free_service.jpg" alt="Servicio 100% gratuito"/>
                         <div class="card-body">
                             <h5 class="card-title">100% Gratuito</h5>
                             <p class="card-text">Didical es una plataroma 100% gratuita, para los socios conductores, por lo que no tendras que preocuparte por cargos mensuales.</p>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-sm-4 card-margin">
                     <div class="card h-100">
-                        <img class="img-responsive card-img-top" src="../../images/administrate.jpg"/>
+                        <img class="img-responsive card-img-top" src="../../img/administrate.jpg" alt="Seguridad en sus consultas"/>
                         <div class="card-body">
                             <h5 class="card-title">Seguridad</h5>
                             <p class="card-text">El sistama de Didical nunca almacena tus consultas, además contamos con criptacion SSL.</p>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-sm-6 card-margin">
                     <div class="card h-100">
-                        <img src="../../images/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
+                        <img src="../../img/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
                         <div class="card-body">
                             <h5 class="card-title">Calculadora detallada</h5>
                             <p class="card-text">En calculadora de viajes de Didi detallada hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="col-sm-6 card-margin">
                     <div class="card h-100">
-                        <img src="../../images/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
+                        <img src="../../img/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
                         <div class="card-body">
                             <h5 class="card-title">Calculadora simple</h5>
                             <p class="card-text">En la calculadora de viajes de Didi simple, como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>

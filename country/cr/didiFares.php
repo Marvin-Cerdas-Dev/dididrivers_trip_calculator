@@ -8,10 +8,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="description" content="Aquí podras verificar cuales son las tarifas oficiales de la plataforma Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Tarifas, Precio, Montos">
         <meta http-equiv="Expires" content="5">
-
+        
         <?php include_once("../../includes/headinfo.php") ?>
         
         <!-- build:css ../../dist/css -->
@@ -45,7 +45,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="../../images/didi_fares_background.jpg" class="card-img-top" alt="Didi Fares">
+                <img src="../../img/didi_fares_background.jpg" class="card-img-top" alt="Tarifas de los servicios de Didi">
                 <div class="card-body">
                     <h1 class="card-title">Tarifas de Didi</h1>
                     <p class="card-text">

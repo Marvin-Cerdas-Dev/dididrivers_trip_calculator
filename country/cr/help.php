@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="description" content="Este sitio muestra los contactos de ayuda que usted puede utilizar en caso de emergencia, mientras utiliza la plataforma Didi">
+        <meta name="keywords" content="DidiCalc, Didi, Ayuda, Emergencia, Socios, Plataforma, Contactos, Contactos de emergencia, Números de emergencia, Llamar a emergencias">
         <meta http-equiv="Expires" content="5">
 
         <?php include_once("../../includes/headinfo.php") ?>
@@ -43,7 +43,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="../../images/emergency_help.jpg" class="card-img-top" alt="Didi Help">
+                <img src="../../img/emergency_help.jpg" class="card-img-top" alt="Servicios de ayuda de Didi">
                 <div class="card-body">
                     <h1 class="card-title">Ayuda</h1>
                     <p class="card-text">

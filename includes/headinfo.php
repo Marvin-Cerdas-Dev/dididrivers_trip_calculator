@@ -14,7 +14,19 @@
         <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
-        <!-- Json-LD -->
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "DidiCalc",
+            "url": "https://crdidicalc.azurewebsites.net/",
+            "address": "Costa Rica",
+            "sameAs": [
+            "https://www.facebook.com/calculadoradeplataformasdigitales/"
+            ]
+            }
+        </script>
+        
         <script type="application/ld+json">
             {
             "@context": "https://schema.org/",

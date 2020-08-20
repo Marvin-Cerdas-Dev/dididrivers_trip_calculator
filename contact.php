@@ -32,9 +32,9 @@
         </script>    
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="images/manifest.json">
         <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
@@ -71,7 +71,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="images/contact-us.jpg" class="img-responsive card-img-top" alt="Didi Fares">
+                <img src="img/contact-us.jpg" class="img-responsive card-img-top" alt="Didi Fares">
                 <div class="card-body">
                     <form action="" method="POST">
                         <div class="form-group">

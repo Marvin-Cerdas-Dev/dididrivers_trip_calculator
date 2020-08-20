@@ -32,9 +32,9 @@
         </script>
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="images/manifest.json">
         <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
@@ -96,7 +96,7 @@
                 <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
                     <div class="border rounded padding-container">
                         <center>
-                            <img class="img-responsive image-margin" src="images/calculator-128.png" alt="Calculadora detallada" style="margin-bottom: 15px">
+                            <img class="img-responsive image-margin" src="img/calculator-128.png" alt="Calculadora detallada" style="margin-bottom: 15px">
                         </center>
                         <div class="caption">
                             <h1>Calculadora de viajes de Didi detallada</h1>
@@ -118,7 +118,7 @@
                 <div id="cal_simple" class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 30px">
                     <div class="border rounded padding-container">
                         <center>
-                            <img src="images/calculator-128.png" alt="Calculadora simple" style="margin-bottom: 15px">
+                            <img src="img/calculator-128.png" alt="Calculadora simple" style="margin-bottom: 15px">
                         </center>
                         <div class="caption">
                             <h1>Calculadora de viajes de Didi simple</h1>
