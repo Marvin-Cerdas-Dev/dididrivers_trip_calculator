@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once("includes/analyticstracking.php") ?>
+<?php include_once("../../includes/analyticstracking.php") ?>
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -16,7 +16,15 @@
         <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/images/calculator_128.png">
+        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+        <link rel="manifest" href="../../img/manifest.json">
+        <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
             {
@@ -31,24 +39,6 @@
             }
         </script>
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="manifest" href="images/manifest.json">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="theme-color" content="#ffffff">
-
-        <!-- Title -->
-        <title>DidiCalc - Calculadora de viajes de Didi</title>
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <!-- Default Css Style -->
-        <link href="css/default.css" rel="stylesheet">        
-
-        <!-- Json-LD -->
         <script type="application/ld+json">
             {
             "@context": "https://schema.org/",
@@ -63,6 +53,19 @@
             }
             }
         </script>
+
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- build:css ../../dist/css -->
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href="../../css/preview_default.css" rel="stylesheet">
+        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
+        <!-- endbuild -->
+
+        <!-- Title -->
+        <title>DidiCalc - Calculadora de viajes de Didi</title>       
 
     </head>
     <!-- Loading page -->
@@ -89,58 +92,35 @@
     <!-- Content -->
     <div class="page-container">
         <header>
-            <?php include_once("includes/header.php") ?>
+            <?php include_once("../../includes/prev_header.php") ?>
         </header>
+           
         <div class="container-fluid">
             <div class="row">
-                <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="border rounded padding-container">
-                        <center>
-                            <img class="img-responsive image-margin" src="images/calculator-128.png" alt="Calculadora detallada" style="margin-bottom: 15px">
-                        </center>
-                        <div class="caption">
-                            <h1>Calculadora de viajes de Didi detallada</h1>
-                            <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
-                            <p>
-                                <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calcular</button>
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="horizontal-center">
-                        <!--AdSense-->
-                        <?php include_once("includes/ads.php") ?>  
-                        <!--AdSense-->
-                    </div>
-                </div>
-                <div id="cal_simple" class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 30px">
-                    <div class="border rounded padding-container">
-                        <center>
-                            <img src="images/calculator-128.png" alt="Calculadora simple" style="margin-bottom: 15px">
-                        </center>
-                        <div class="caption">
-                            <h1>Calculadora de viajes de Didi simple</h1>
-                            <p>En esta sección como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>
-                            <p>
-                                <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calcular</button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <div class="content">
+                        <h1 class="display-3 prev_text">¡Hola! México</h1>
+                        <p class="prev_text">Muy pronto podrás utilizar nuestra calculadora de viajes de Didi, optimizada para tu cuidad.</p>
+                        <hr class="my-4">
+                        <p class="prev_text">Esperamos con anseas porder ayudarte en tu día a día.</p>
+                    </div>          
             </div>
         </div>
-
-        <footer><?php include_once("includes/footer.php") ?></footer>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- Scripst -->
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
+    <footer><?php include_once("../../includes/footer.php") ?></footer>  
+</div>
+<!-- JavaScript -->
+<!-- build:js ../../dis/js -->
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../js/index-scripts.js"></script>
+<script src="../../js/jquery.cookie.js"></script>
+<script src="../../js/country.js"></script>
+<script src="../../js/form-scripts.js"></script>
+<script src="../../js/calculatescripts.js"></script>
+<script src="../../js/defaultscripts.js"></script>
+<script src="../../node_modules/aos/dist/aos.js"></script>
+<script src="../../js/aos_config.js"></script>
+<!-- endbuild -->
 </body>
 </html>

@@ -10,11 +10,58 @@
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
         <meta http-equiv="Expires" content="5">
 
-        <?php include_once("../../includes/headinfo.php") ?>
-        
+        <!-- Miniature -->
+        <meta property="og:title" content="Calculadora de viajes de Didi" />
+        <meta property="og:site_name" content="DidiCalc">
+        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+        <link rel="manifest" href="../../manifest.json">
+        <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "DidiCalc",
+            "url": "https://crdidicalc.azurewebsites.net/",
+            "address": "Costa Rica",
+            "sameAs": [
+            "https://www.facebook.com/calculadoradeplataformasdigitales/"
+            ]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "DidiCalc",
+            "url": "http://crdidicalc.azurewebsites.net/",
+            "address": "Costa Rica",
+            "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "query-input": "required name=search_term_string"
+            }
+            }
+        </script>
+
+        <script>
+            AOS.init();
+        </script>
+
         <!-- build:css ../../dist/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="../../css/default.css" rel="stylesheet">        
+        <link href="../../css/default.css" rel="stylesheet">
+        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
         <!-- endbuild -->
 
         <!-- Title -->
@@ -67,7 +114,7 @@
         </div>                
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4 card-margin">
+                <div class="col-sm-4 card-margin" data-aos="fade-right">
                     <div class="card h-100">
                         <img class="img-responsive card-img-top" src="../../img/administrate.jpg" alt="Administre sus ganancias"/>
                         <div class="card-body">
@@ -76,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 card-margin">
+                <div class="col-sm-4 card-margin" data-aos="fade-up">
                     <div class="card h-100">
                         <img class="img-responsive card-img-top" src="../../img/free_service.jpg" alt="Servicio 100% gratuito"/>
                         <div class="card-body">
@@ -85,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 card-margin">
+                <div class="col-sm-4 card-margin" data-aos="fade-left">
                     <div class="card h-100">
                         <img class="img-responsive card-img-top" src="../../img/administrate.jpg" alt="Seguridad en sus consultas"/>
                         <div class="card-body">
@@ -102,7 +149,7 @@
                         <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
                     </div>
                 </div>
-                <div class="col-sm-6 card-margin">
+                <div class="col-sm-12 col-md-12 col-lg-6 card-margin" data-aos="fade-right">
                     <div class="card h-100">
                         <img src="../../img/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
                         <div class="card-body">
@@ -114,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 card-margin">
+                <div class="col-sm-12 col-md-12 col-lg-6 card-margin" data-aos="fade-left">
                     <div class="card h-100">
                         <img src="../../img/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
                         <div class="card-body">
@@ -129,7 +176,7 @@
             </div>
         </div>
     </div>
-    <footer><?php include_once("../../includes/footer.php") ?></footer>
+    <footer><?php include_once("../../includes/footer.php") ?></footer>  
 </div>
 <!-- JavaScript -->
 <!-- build:js ../../dis/js -->
@@ -142,6 +189,8 @@
 <script src="../../js/form-scripts.js"></script>
 <script src="../../js/calculatescripts.js"></script>
 <script src="../../js/defaultscripts.js"></script>
+<script src="../../node_modules/aos/dist/aos.js"></script>
+<script src="../../js/aos_config.js"></script>
 <!-- endbuild -->
 </body>
 </html>
