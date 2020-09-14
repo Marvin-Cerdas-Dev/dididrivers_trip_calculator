@@ -1,23 +1,23 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-12 col-lg-12"> 
-            <a id="facebook" href="https://www.facebook.com/calculadoradeplataformasdigitales/" target="_blank" alt="Facebook" title="Facebook" hreflang="es">
-                <img src="/img/facebook.png" height="40" width="40"/>
+            <a id="facebook" href="http://www.facebook.com/sharer.php?u=https://crdidicalc.azurewebsites.net/" target="_blank" alt="Compartir en Facebook" title="Facebook" hreflang="es">
+                <img class="socialmedia-img"  src="img/facebook.png" alt="Compartir en Facebook"/>
             </a>
-            <a id="whatsapp" href="https://www.facebook.com/calculadoradeplataformasdigitales/" target="_blank" alt="Facebook" title="Facebook" hreflang="es">
-                <img src="/img/whatsapp.png" height="40" width="40"/>
-            </a>
-            <a id="twitter" href="https://www.facebook.com/calculadoradeplataformasdigitales/" target="_blank" alt="Facebook" title="Facebook" hreflang="es">
-                <img src="/img/twitter.png" height="40" width="40"/>
-            </a>            
-            <a id="telegram" href="https://www.facebook.com/calculadoradeplataformasdigitales/" target="_blank" alt="Facebook" title="Facebook" hreflang="es">
-                <img src="/img/telegram.png" height="40" width="40"/>
+            <a id="whatsapp" href="https://wa.me/?text=Didical%20la%20calculadora%20para%20los%20socios%20conductores%20https://crdidicalc.azurewebsites.net/" target="_blank" alt="Compartir en Whatsapp" title="Compartir en Whatsapp" hreflang="es">
+                <img class="socialmedia-img"  src="img/whatsapp.png" alt="Compartir en Whatsapp" />
             </a>   
+             <a id="twitter" href="http://twitter.com/share?text=Didical%20la%20calculadora%20para%20los%20socios%20conductores%20https://crdidicalc.azurewebsites.net/" target="_blank" alt="Compartir en Twitter" title="Compartir en Twitter" hreflang="es">
+                 <img class="socialmedia-img" src="img/twiter.png" alt="Compartir en Twitter"/>
+            </a>              
+            <a id="telegram" href="https://t.me/share/url?url=https://crdidicalc.azurewebsites.net/&text=Didical%20la%20calculadora%20para%20los%20socios%20conductores" target="_blank" alt="Compartir en Telegram" title="Compartir en Telegram" hreflang="es">
+                <img class="socialmedia-img" src="img/telegram.png" alt="Compartir en Telegram"/>
+            </a>    
         </div>
-        <div class="col-xs-12 col-md-12 col-lg-12">CrDidiCalc Services 2020 &COPY; 
+        <div class="col-xs-12 col-md-12 col-lg-12">DidiCalc Services 2020 &COPY; 
             <a id="policyLink" href="privacypolicy.php" title="Política de privacidad" hreflang="es">Política de privacidad</a>
         </div>
-        <div class="col-xs-12 col-md-12 col-lg-12">Version 1.0.0</div>
+        <div class="col-xs-12 col-md-12 col-lg-12">Version 1.1.0</div>
     </div>
 </div>
 

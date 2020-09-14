@@ -10,7 +10,56 @@
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
         <meta http-equiv="Expires" content="5">
 
-        <?php include_once("includes/headinfo.php") ?>
+        <!-- Miniature -->
+        <meta property="og:title" content="Calculadora de viajes de Didi" />
+        <meta property="og:site_name" content="DidiCalc">
+        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "DidiCalc",
+            "url": "https://crdidicalc.azurewebsites.net/",
+            "address": "Costa Rica",
+            "sameAs": [
+            "https://www.facebook.com/calculadoradeplataformasdigitales/"
+            ]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "DidiCalc",
+            "url": "http://crdidicalc.azurewebsites.net/",
+            "address": "Costa Rica",
+            "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "query-input": "required name=search_term_string"
+            }
+            }
+        </script>
+
+        <!-- build:css dist/country/cr/css -->
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href="css/default.css" rel="stylesheet">        
+        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
+        <!-- endbuild -->
+
         
         <!-- build:css dist/css -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -45,7 +94,7 @@
     <!-- Content -->
     <div class="page-container">
         <header>
-            <?php include_once("includes/header.php") ?>
+            <?php include_once("includes/prev_header.php") ?>
         </header>
         <div class="container-fluid">
             <div class="row">
@@ -66,6 +115,13 @@
                             <center>
                                 <a id="flag-mx" href="country/mx/index.php">
                                 <img class="img-responsive" src="img/mexico.png" alt="México" width="60%" height="60%">
+                                </a>
+                            </center>  
+                        </div>
+                        <div class="rounded mx-auto d-block">
+                            <center>
+                                <a id="flag-cl" href="country/cl/index.php">
+                                    <img class="img-responsive" src="img/chile.png" alt="Chile" width="60%" height="60%">
                                 </a>
                             </center>  
                         </div>

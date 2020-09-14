@@ -33,6 +33,12 @@ footer a:link, a:hover, a:visited, a:active{
     color: white;
 }
 
+.socialmedia-img{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
 .horizontal-center{
     text-align: center;
     margin-left: 0 auto;
@@ -114,11 +120,6 @@ nav a:link, a:hover, a:visited {
     font-weight: normal !important;
 }
 
-#siteMap {
-    color: #ffffff !important;
-    font-weight: normal !important;
-}
-
 .fuente{
     font-size: x-small;
 }
@@ -134,7 +135,7 @@ nav a:link, a:hover, a:visited {
 
 .jumbotron{
     width: 100% !important;
-    background-image: url("../../img/didical_background.jpg") !important;
+    background-image: url("img/didical_background.jpg") !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -143,8 +144,6 @@ nav a:link, a:hover, a:visited {
     font-weight: bold;
     border-radius: 0px 0px 0px 0px;
 }
-
-
 
 hr{
     display: block; height: 1px;

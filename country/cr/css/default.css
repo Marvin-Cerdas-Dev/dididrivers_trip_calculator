@@ -33,6 +33,12 @@ footer a:link, a:hover, a:visited, a:active{
     color: white;
 }
 
+.socialmedia-img{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
 .horizontal-center{
     text-align: center;
     margin-left: 0 auto;
@@ -114,11 +120,6 @@ nav a:link, a:hover, a:visited {
     font-weight: normal !important;
 }
 
-#siteMap {
-    color: #ffffff !important;
-    font-weight: normal !important;
-}
-
 .fuente{
     font-size: x-small;
 }
@@ -133,21 +134,59 @@ nav a:link, a:hover, a:visited {
 }
 
 .jumbotron{
-    width: 100% !important;
-    background-image: url("../../img/didical_background.jpg") !important;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #ffffff;
-    font-weight: bold;
+    position: relative;
     border-radius: 0px 0px 0px 0px;
 }
 
-
+.jumbotron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    background-image: url("../img/didical_background.jpg") !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    filter: grayscale(10%) brightness(70%);
+}
+.jumbotron .container {
+    z-index: 10;
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: justify;
+    texto-justify: inter-palabra;
+}
 
 hr{
     display: block; height: 1px;
     border: 0; border-top: 1px solid #ffffff;
     margin: 1em 0; padding: 0;
+}
+
+.justiy-text{
+    text-align: justify;
+    texto-justify: inter-palabra;
+}
+
+#dropdown-countries {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+#dropdown-countries a{
+    color: #000000;
+    font-weight: normal;
 }

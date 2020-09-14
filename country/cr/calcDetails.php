@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<?php include_once("../../includes/analyticstracking.php") ?>
-<?php include_once("../../includes/tolls.php") ?>
+<?php include_once("includes/analyticstracking.php") ?>
+<?php include_once("includes/tolls.php") ?>
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -20,11 +20,11 @@
         <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
-        <link rel="manifest" href="../../img/manifest.json">
-        <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -59,9 +59,9 @@
             AOS.init();
         </script>
 
-        <!-- build:css ../../dist/css -->
+        <!-- build:css dist/country/cr/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="../../css/default.css" rel="stylesheet">        
+        <link href="css/default.css" rel="stylesheet">        
         <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
         <!-- endbuild -->
 
@@ -86,7 +86,7 @@
     </div>
     <!-- Content -->        
     <header>
-        <?php include_once("../../includes/header.php") ?>
+        <?php include_once("includes/header.php") ?>
     </header>
     <div class="container-fluid">
         <div class="row">
@@ -218,7 +218,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-12">
                         <div class="horizontal-center">
                             <!--AdSense-->
-                            <?php include_once("../../includes/ads.php") ?>  
+                            <?php include_once("includes/ads.php") ?>  
                             <!--AdSense-->
                         </div>
                     </div>                               
@@ -338,18 +338,17 @@
         </div>
     </div>
 
-    <footer><?php include_once("../../includes/footer.php") ?></footer>
+    <footer><?php include_once("includes/footer.php") ?></footer>
     <!-- JavaScript -->
-    <!-- build:js ../../dis/js -->
+    <!-- build:js dist/country/cr/js -->
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../js/index-scripts.js"></script>
-    <script src="../../js/jquery.cookie.js"></script>
-    <script src="../../js/country.js"></script>
-    <script src="../../js/form-scripts.js"></script>
-    <script src="../../js/calculatescripts.js"></script>
-    <script src="../../js/defaultscripts.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
     <script src="../../node_modules/aos/dist/aos.js"></script>
     <!-- endbuild -->
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once("../../includes/analyticstracking.php") ?>
+<?php include_once("includes/analyticstracking.php") ?>
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -19,11 +19,11 @@
         <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
-        <link rel="manifest" href="../../img/manifest.json">
-        <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -58,9 +58,9 @@
             AOS.init();
         </script>
 
-        <!-- build:css ../../dist/css -->
+        <!-- build:css dist/country/cr/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="../../css/default.css" rel="stylesheet">        
+        <link href="css/default.css" rel="stylesheet">        
         <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
         <!-- endbuild -->
 
@@ -85,12 +85,12 @@
     </div>
     <!-- Content -->    
     <header>
-        <?php include_once("../../includes/header.php") ?>
+        <?php include_once("includes/header.php") ?>
     </header>
     <div class="container-fluid">
         <div class="row">
             <div class="card md-3 card-update">
-                <img src="../../img/didi_coverage_background.jpg" class="card-img-top" alt="Covertura de servicios de Didi en tu ciudad">
+                <img src="img/didi_coverage_background.jpg" class="card-img-top" alt="Covertura de servicios de Didi en tu ciudad">
                 <div class="card-body">
                     <h5 class="card-title">Covertura del servicio de didi</h5>
                     <p class="card-text">
@@ -105,12 +105,12 @@
                     </p>
                     <p class="card-text">
                         <!--AdSense-->
-                        <?php include_once("../../includes/ads.php") ?>  
+                        <?php include_once("includes/ads.php") ?>  
                         <!--AdSense-->
                     </p>
                     <p class="card-text">
                     <center>
-                        <img class="img-fluid" src="../../img/mapa_covertura.svg"/>
+                        <img class="img-fluid" src="img/mapa_covertura.svg"/>
                         <p class="fuente">Fuente: Aguilar Arroyo, Yenci (2019) Didi arranca este martes con promos que busca desbancar a Uber, La Teja, Fecha de consulta: 9 de abril del 2019. URL: <a href="https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/" title="Didi arranca este martes con promos que busca desbancar a Uber" hreflang="es">https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/</a></p>
                     </center>
                     </p>
@@ -120,19 +120,18 @@
     </div>
 </div>
 
-<footer><?php include_once("../../includes/footer.php") ?></footer>
-<!-- JavaScript -->
-<!-- build:js ../../dis/js -->
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/popper.js/dist/popper.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../js/index-scripts.js"></script>
-<script src="../../js/jquery.cookie.js"></script>
-<script src="../../js/country.js"></script>
-<script src="../../js/form-scripts.js"></script>
-<script src="../../js/calculatescripts.js"></script>
-<script src="../../js/defaultscripts.js"></script>
-<script src="../../node_modules/aos/dist/aos.js"></script>
+<footer><?php include_once("includes/footer.php") ?></footer>
+    <!-- JavaScript -->
+    <!-- build:js dist/country/cr/js -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
+    <!-- endbuild -->
 <!-- endbuild -->
 </body>
 </html>

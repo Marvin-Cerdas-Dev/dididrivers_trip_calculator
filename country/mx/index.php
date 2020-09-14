@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once("../../includes/analyticstracking.php") ?>
+<?php include_once("includes/analyticstracking.php") ?>
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -19,11 +19,11 @@
         <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
-        <link rel="manifest" href="../../img/manifest.json">
-        <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -54,14 +54,10 @@
             }
         </script>
 
-        <script>
-            AOS.init();
-        </script>
 
         <!-- build:css ../../dist/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="../../css/preview_default.css" rel="stylesheet">
-        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
+        <link href="css/preview_default.css" rel="stylesheet">
         <!-- endbuild -->
 
         <!-- Title -->
@@ -92,35 +88,34 @@
     <!-- Content -->
     <div class="page-container">
         <header>
-            <?php include_once("../../includes/prev_header.php") ?>
+            <?php include_once("includes/prev_header.php") ?>
         </header>
            
         <div class="container-fluid">
             <div class="row">
-                    <div class="content">
-                        <h1 class="display-3 prev_text">¡Hola! México</h1>
-                        <p class="prev_text">Muy pronto podrás utilizar nuestra calculadora de viajes de Didi, optimizada para tu cuidad.</p>
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-3"><b>¡Hola! México</b></h1>
+                        <p>Muy pronto podrás utilizar nuestra calculadora de viajes de Didi, optimizada para tu cuidad.</p>
                         <hr class="my-4">
-                        <p class="prev_text">Esperamos con anseas porder ayudarte en tu día a día.</p>
-                    </div>          
+                        <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>                            
+                        <p>Esperamos con anseas porder ayudarte en tu día a día.</p>
+                    </div>
+                </div>        
             </div>
         </div>
     </div>
-    <footer><?php include_once("../../includes/footer.php") ?></footer>  
+    <footer><?php include_once("includes/footer.php") ?></footer>  
 </div>
 <!-- JavaScript -->
 <!-- build:js ../../dis/js -->
 <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../js/index-scripts.js"></script>
-<script src="../../js/jquery.cookie.js"></script>
-<script src="../../js/country.js"></script>
-<script src="../../js/form-scripts.js"></script>
-<script src="../../js/calculatescripts.js"></script>
-<script src="../../js/defaultscripts.js"></script>
-<script src="../../node_modules/aos/dist/aos.js"></script>
-<script src="../../js/aos_config.js"></script>
+<script src="js/index-scripts.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/country.js"></script>
+<script src="js/defaultscripts.js"></script>
 <!-- endbuild -->
 </body>
 </html>

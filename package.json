@@ -18,13 +18,14 @@
   "license": "UNLICENSED",
   "homepage": "https://bitbucket.org/Marc782/didicalc#readme",
   "dependencies": {
-    "aos": "^2.3.4",
     "bootstrap": "^4.5.2",
+    "is-promise": "^4.0.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "@cedx/gulp-php-minify": "^11.0.0",
+    "aos": "^2.3.4",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -40,6 +41,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-usemin": "^0.3.30",
     "lite-server": "^2.5.4",
+    "module": "^1.2.5",
     "node-sass": "^4.14.1"
   }
 }

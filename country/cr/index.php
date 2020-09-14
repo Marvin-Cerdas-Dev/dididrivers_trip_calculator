@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once("../../includes/analyticstracking.php") ?>
+<?php include_once("includes/analyticstracking.php") ?>
 <html lang="es">
     <head>
         <meta charset="utf-8">
@@ -19,11 +19,11 @@
         <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
-        <link rel="manifest" href="../../manifest.json">
-        <link rel="mask-icon" href="../../img/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -54,14 +54,9 @@
             }
         </script>
 
-        <script>
-            AOS.init();
-        </script>
-
-        <!-- build:css ../../dist/css -->
+        <!-- build:css dist/country/cr/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="../../css/default.css" rel="stylesheet">
-        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
+        <link href="css/default.css" rel="stylesheet">        
         <!-- endbuild -->
 
         <!-- Title -->
@@ -92,7 +87,7 @@
     <!-- Content -->
     <div class="page-container">
         <header>
-            <?php include_once("../../includes/header.php") ?>
+            <?php include_once("./includes/header.php") ?>
         </header>
         <div id="carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -102,71 +97,72 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="2000">
-                    <img src="../../img/carousel_1.jpg" class="d-block w-100" alt="Seguridad">
+                    <img src="img/carousel_1.jpg" class="d-block w-100" alt="Seguridad">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img src="../../img/carousel_2.jpg" class="d-block w-100" alt="Confianza">
+                    <img src="img/carousel_2.jpg" class="d-block w-100" alt="Confianza">
                 </div>
                 <div class="carousel-item">
-                    <img src="../../img/carousel_3.jpg" class="d-block w-100" alt="Un servicio 100% Gratuito">
+                    <img src="img/carousel_3.jpg" class="d-block w-100" alt="Un servicio 100% Gratuito">
                 </div>
             </div>
         </div>                
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4 card-margin" data-aos="fade-right">
+                <div class="col-sm-4 card-margin">
                     <div class="card h-100">
-                        <img class="img-responsive card-img-top" src="../../img/administrate.jpg" alt="Administre sus ganancias"/>
+                        <img class="img-responsive card-img-top" src="img/administrate.jpg" alt="Administre sus ganancias"/>
                         <div class="card-body">
                             <h5 class="card-title">Administre tus ganancias</h5>
-                            <p class="card-text">Con Didical podras dar seguimiento a tus ganancias de una forma fácil, rápida y segura.</p>
+                            <p class="card-text justify-text">Con Didical podras dar seguimiento a tus ganancias de una forma fácil, rápida y segura.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 card-margin" data-aos="fade-up">
+                <div class="col-sm-4 card-margin">
                     <div class="card h-100">
-                        <img class="img-responsive card-img-top" src="../../img/free_service.jpg" alt="Servicio 100% gratuito"/>
+                        <img class="img-responsive card-img-top" src="img/free_service.jpg" alt="Servicio 100% gratuito"/>
                         <div class="card-body">
                             <h5 class="card-title">100% Gratuito</h5>
-                            <p class="card-text">Didical es una plataroma 100% gratuita, para los socios conductores, por lo que no tendras que preocuparte por cargos mensuales.</p>
+                            <p class="card-text justify-text">Didical es una plataroma 100% gratuita, para los socios conductores, por lo que no tendras que preocuparte por cargos mensuales.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 card-margin" data-aos="fade-left">
+                <div class="col-sm-4 card-margin">
                     <div class="card h-100">
-                        <img class="img-responsive card-img-top" src="../../img/administrate.jpg" alt="Seguridad en sus consultas"/>
+                        <img class="img-responsive card-img-top" src="img/administrate.jpg" alt="Seguridad en sus consultas"/>
                         <div class="card-body">
                             <h5 class="card-title">Seguridad</h5>
-                            <p class="card-text">El sistama de Didical nunca almacena tus consultas, además contamos con criptacion SSL.</p>
+                            <p class="card-text justify-text">El sistama de Didical nunca almacena tus consultas, además contamos con criptacion SSL.</p>
                         </div>
                     </div>
                 </div>
-                <div class="contrast">
-                    <div class="jumbotron">
+
+                <div class="jumbotron">
+                    <div class="container">
                         <h1 class="display-3"><b>Didical</b></h1>
                         <p>Una herramienta especialmente pensada para socios condutores.</p>
                         <hr class="my-4">
-                        <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
+                        <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>                            
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 card-margin" data-aos="fade-right">
+                </div>               
+                <div class="col-sm-12 col-md-12 col-lg-6 card-margin">
                     <div class="card h-100">
-                        <img src="../../img/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
+                        <img src="img/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
                         <div class="card-body">
                             <h5 class="card-title">Calculadora detallada</h5>
-                            <p class="card-text">En calculadora de viajes de Didi detallada hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
+                            <p class="card-text justify-text">En calculadora de viajes de Didi detallada hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
                         </div>
                         <div class="card-footer">
                             <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calcular</button>                            
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 card-margin" data-aos="fade-left">
+                <div class="col-sm-12 col-md-12 col-lg-6 card-margin">
                     <div class="card h-100">
-                        <img src="../../img/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
+                        <img src="img/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
                         <div class="card-body">
                             <h5 class="card-title">Calculadora simple</h5>
-                            <p class="card-text">En la calculadora de viajes de Didi simple, como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>
+                            <p class="card-text justify-text">En la calculadora de viajes de Didi simple, como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>
                         </div>
                         <div class="card-footer">
                             <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calcular</button>                           
@@ -176,21 +172,17 @@
             </div>
         </div>
     </div>
-    <footer><?php include_once("../../includes/footer.php") ?></footer>  
-</div>
-<!-- JavaScript -->
-<!-- build:js ../../dis/js -->
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/popper.js/dist/popper.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../js/index-scripts.js"></script>
-<script src="../../js/jquery.cookie.js"></script>
-<script src="../../js/country.js"></script>
-<script src="../../js/form-scripts.js"></script>
-<script src="../../js/calculatescripts.js"></script>
-<script src="../../js/defaultscripts.js"></script>
-<script src="../../node_modules/aos/dist/aos.js"></script>
-<script src="../../js/aos_config.js"></script>
-<!-- endbuild -->
+    <footer><?php include_once("./includes/footer.php") ?></footer>  
+    <!-- JavaScript -->
+    <!-- build:js dist/country/cr/js -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

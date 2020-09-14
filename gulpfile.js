@@ -15,7 +15,8 @@ var gulp = require('gulp'),
         minifyInline = require('gulp-minify-inline'),
         minifyHTML = require('gulp-minify-html');
 
-const {phpMinify} = require('@cedx/gulp-php-minify');
+//const {phpMinify} = require('@cedx/gulp-php-minify');
+//const module = require('module');
 
 gulp.task('sass', function(){
 	gulp.src(['./css/*.scss'])
@@ -42,6 +43,16 @@ gulp.task('clean', function(){
 	return del(['dist']);
 });
 
+gulp.task('copy-sitemap', function() {
+  return gulp.src('*.xml')
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('copy-robot', function() {
+  return gulp.src('*.txt')
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('imagemin', function(){
 	return gulp.src('img/*.{png, jpg, jpeg, gif}')
 		.pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
@@ -63,10 +74,26 @@ gulp.task('usemin', function(){
 		.pipe(gulp.dest('dist/'));
 });
 
+/*module.Module._extensions['.js'] = function(module, filename) {
+  const content = fs.readFileSync(filename, 'utf8');
+  module._compile(content, filename);
+};
+
 gulp.task('minify:php', () => gulp.src('./*.php', {read: false})
     .pipe(phpMinify())
     .pipe(gulp.dest('dist/'))
 );
+
+gulp.task('minify-html', function() {
+    return gulp.src('./*.php')
+    .pipe(htmlmin({
+    // preserveLineBreaks:true,
+    collapseWhitespace: true,
+    ignoreCustomFragments: [/<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/ ],
+    removeComments:true
+    }))
+    .pipe(gulp.dest('dist/'));
+});*/
 
 
 gulp.task('imagemin-cr', function(){
@@ -91,6 +118,6 @@ gulp.task('usemin-cr', function(){
 });
 
 // Se realiza unos cambios ya que las nuevas versiones de gulp así lo requiere.
-gulp.task('build', gulp.series('clean', 'minify:php'));
+gulp.task('build', gulp.series('copy-sitemap', 'copy-robot', 'clean', 'imagemin', 'usemin'));
 
 
