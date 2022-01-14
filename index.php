@@ -7,22 +7,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
         <meta http-equiv="Expires" content="5">
 
-        <!-- Miniature -->
-        <meta property="og:title" content="Calculadora de viajes de Didi" />
-        <meta property="og:site_name" content="DidiCalc">
-        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <!-- Canonical Tag -->        
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/" />
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Calculadora de viajes de Didi">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
+        <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
+        <meta name="twitter:title" content="Calculadora de viajes de Didi">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="twitter:image:alt" content="DidiCalc">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="img/manifest.json">
         <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
@@ -44,11 +54,11 @@
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "DidiCalc",
-            "url": "http://crdidicalc.azurewebsites.net/",
+            "url": "https://crdidicalc.azurewebsites.net/",
             "address": "Costa Rica",
             "potentialAction": {
             "@type": "SearchAction",
-            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
             }
@@ -57,13 +67,6 @@
         <!-- build:css dist/country/cr/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href="css/default.css" rel="stylesheet">        
-        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
-        <!-- endbuild -->
-
-        
-        <!-- build:css dist/css -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="/css/default.css" rel="stylesheet">        
         <!-- endbuild -->
 
         <!-- Title -->
@@ -100,42 +103,33 @@
             <div class="row">
                 <div id="cal_details" class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card card-margin padding-container">
-                        <center>
-                            <h2>CALCULADOR DE VIAJES DE DIDI</h2>
-                            <h3>Selecione su país</h3>
-                        </center>
-                        <div class="rounded mx-auto d-block">
-                            <center>
-                                <a id="flag-cr" href="country/cr/index.php">
+                        <h1 class="center-text">CALCULADOR DE VIAJES DE DIDI</h1>
+                        <h2 class="center-text">Selecione su país</h2>
+                        <div class="rounded mx-auto d-block center-text">
+                            <a id="flag-cr" href="country/cr/index.php">
                                 <img class="img-responsive" src="img/costa_rica.png" alt="Costa Rica"  width="60%" height="60%">
-                                </a>
-                            </center>  
+                            </a>
                         </div>
-                        <div class="rounded mx-auto d-block">
-                            <center>
-                                <a id="flag-mx" href="country/mx/index.php">
+                        <div class="rounded mx-auto d-block center-text">
+                            <a id="flag-mx" href="country/mx/index.php">
                                 <img class="img-responsive" src="img/mexico.png" alt="México" width="60%" height="60%">
-                                </a>
-                            </center>  
+                            </a>  
                         </div>
-                        <div class="rounded mx-auto d-block">
-                            <center>
-                                <a id="flag-cl" href="country/cl/index.php">
-                                    <img class="img-responsive" src="img/chile.png" alt="Chile" width="60%" height="60%">
-                                </a>
-                            </center>  
+                        <div class="rounded mx-auto d-block center-text">
+                            <a id="flag-cl" href="country/cl/index.php">
+                                <img class="img-responsive" src="img/chile.png" alt="Chile" width="60%" height="60%">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <footer><?php include_once("includes/footer.php") ?></footer>
+        <footer><?php include_once("./includes/footer.php") ?></footer>
     </div>
 <!-- JavaScript -->
 <!-- build:js dis/js -->
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/popper.js/dist/popper.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/index-scripts.js"></script>
 <script src="js/jquery.cookie.js"></script>

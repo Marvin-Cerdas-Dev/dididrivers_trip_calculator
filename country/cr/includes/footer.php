@@ -8,13 +8,13 @@
                 <img class="socialmedia-img"  src="img/whatsapp.png" alt="Compartir en Whatsapp" />
             </a>   
             <a id="twitter" href="http://twitter.com/share?text=Didical%20la%20calculadora%20para%20los%20socios%20conductores%20https://crdidicalc.azurewebsites.net/" target="_blank" alt="Compartir en Twitter" title="Compartir en Twitter" hreflang="es">
-                <img class="socialmedia-img" src="img/twiter.png" alt="Compartir en Twitter"/>
+                <img class="socialmedia-img" src="img/twitter.png" alt="Compartir en Twitter"/>
             </a>              
             <a id="telegram" href="https://t.me/share/url?url=https://crdidicalc.azurewebsites.net/&text=Didical%20la%20calculadora%20para%20los%20socios%20conductores" target="_blank" alt="Compartir en Telegram" title="Compartir en Telegram" hreflang="es">
                 <img class="socialmedia-img" src="img/telegram.png" alt="Compartir en Telegram"/>
             </a>   
         </div>
-        <div class="col-xs-12 col-md-12 col-lg-12">DidiCalc Services 2020 &COPY; 
+        <div class="col-xs-12 col-md-12 col-lg-12">DidiCalc Services 2021 &COPY; 
             <a id="policyLink" href="privacypolicy.php" title="Política de privacidad" hreflang="es">Política de privacidad</a>
         </div>
         <div id="dropdown-countries" class="btn-group dropup">
@@ -27,7 +27,7 @@
                 <a class="dropdown-item" href="https://crdidicalc.azurewebsites.net/country/cl/index.php">Chile</a>
             </div>
         </div>  
-        <div class="col-xs-12 col-md-12 col-lg-12">Version 1.1.0</div>
+        <div class="col-xs-12 col-md-12 col-lg-12">Version 2.0.1</div>
     </div>
 </div>
 

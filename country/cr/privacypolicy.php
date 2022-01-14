@@ -6,23 +6,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="En este sitio encontrará la Política de privacidad de DidiCalc">
-        <meta name="keywords" content="Política de Privacidad, DidiCalc, privacidad, política, protección de datos, DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
         <meta http-equiv="Expires" content="5">
 
-        <!-- Miniature -->
-        <meta property="og:title" content="Calculadora de viajes de Didi" />
-        <meta property="og:site_name" content="DidiCalc">
-        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <!-- Canonical Tag -->        
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Calculadora de viajes de Didi">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
+        <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
+        <meta name="twitter:title" content="Calculadora de viajes de Didi">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="twitter:image:alt" content="DidiCalc">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="img/manifest.json">
         <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
@@ -44,24 +54,19 @@
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "DidiCalc",
-            "url": "http://crdidicalc.azurewebsites.net/",
+            "url": "https://crdidicalc.azurewebsites.net/",
             "address": "Costa Rica",
             "potentialAction": {
             "@type": "SearchAction",
-            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
             }
         </script>
 
-        <script>
-            AOS.init();
-        </script>
-
         <!-- build:css dist/country/cr/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href="css/default.css" rel="stylesheet">        
-        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
         <!-- endbuild -->
 
         <!-- Title -->

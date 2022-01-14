@@ -2,11 +2,11 @@
 
 class viajeExpress {
 
-    private $basicFare = 320.00;
-    private $kilometerFare = 192.00;
-    private $minuteFare = 32.00;
-    private $extraCharge10KmFare = 40.00;
-    private $minimunFare = 755;
+    private $basicFare = 342.00;
+    private $kilometerFare = 205.00;
+    private $minuteFare = 34.00;
+    private $extraCharge10KmFare = 235.00;
+    private $minimunFare = 755.00;
     private $profit = 0.85;
     private $Didifee = 0.15;
     private $kilometers = 0.00;
@@ -16,8 +16,12 @@ class viajeExpress {
     private $difference = 0.00;
     private $earnings = 0.00;
     private $totalTripPrice = 0.00;
+    private $pendingAmount = 0.00;
+    private $discount = 0.00;
+    private $extraAmount = 0.00;
+    private $payment = "";
 
-    function __construct($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice) {
+    function __construct($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment) { // Si esta
         $this->kilometers = $kilometers;
         $this->time = $this->convertirMinutos($hours, $minutes, $seconds);
         if ($fare > 1 && $fare < 2) {
@@ -28,38 +32,85 @@ class viajeExpress {
         $this->tolls = $tolls;
         $this->earnings = $earnings;
         $this->totalTripPrice = $totalTripPrice;
-        $this->calculaDiferencia();
+        $this->pendingAmount = $pendingAmount;
+        $this->discount = $discount;
+        $this->extraAmount = $extras;
+        $this->difference = $this->calculateDifference();
+        $this->payment = $payment;
     }
 
-    private function calculaDiferencia() {
-        $this->difference = $this->earnings - $this->calculaGanancia();
+//###################################### Métodos getters #######################################################    
+
+    public function getBasicFare() { 
+        return $this->basicFare;
     }
 
-    // Conviente los valores de horas, minutos y segundos a minutos
-    private function convertirMinutos($hours, $minutes, $seconds) {
-        $htomin = $hours * 60;
-        $stomin = $seconds / 60;
-        return $htomin + $minutes + $stomin;
+    public function getKilometerFare() {
+        return $this->kilometerFare;
     }
 
-    public function getKilometers() {
-        return $this->kilometers;
+    public function getMinuteFare() { 
+        return $this->minuteFare;
     }
 
-    public function getFare() {
-        return $this->fare;
-    }
-
-    public function getTime() {
-        return $this->time;
+    public function getExtraCharge10KmFare() { 
+        return $this->extraCharge10KmFare;
     }
 
     public function getMinimunFare() {
         return $this->minimunFare;
     }
 
-    public function getTotalTolls() {
-        $cadena = preg_split("/\s/", $this->tolls);
+    public function getProfit() { 
+        return $this->profit;
+    }
+
+    public function getDidifee() { 
+        return $this->Didifee;
+    }
+
+    public function getKilometers() { 
+        return $this->kilometers;
+    }
+
+    public function getTime() {
+        return $this->time;
+    }
+
+    public function getFare() {  
+        return $this->fare;
+    }
+
+    public function getTolls() { 
+        return $this->tolls;
+    }
+
+    public function getDifference() { 
+        return $this->difference;
+    }
+
+    public function getEarnings() {  
+        return $this->earnings;
+    }
+
+    public function getTotalTripPrice() {  
+        return $this->totalTripPrice;
+    }
+
+    function getPendingAmount() {
+        return $this->pendingAmount;
+    }
+
+    function getDiscount() {
+        return $this->discount;
+    }
+
+    function getExtraAmount() {
+        return $this->extraAmount;
+    }
+
+    public function getTotalTolls() { 
+        $cadena = preg_split("/\s/", $this->getTolls());
         $total = 0;
         for ($i = 0; $i < count($cadena); $i++) {
             if ($cadena[$i] != "+") {
@@ -69,70 +120,179 @@ class viajeExpress {
         return $total;
     }
 
-    public function getTolls() {
-        return $this->tolls;
+    function getPayment() {
+        return $this->payment;
     }
 
-    // Calcula el monto 
-    public function calculaComisionDidi() {
-        if ($this->kilometers <= 1.5 && $this->fare == 0) {
-            return (double) $this->minimunFare * (double) $this->Didifee;
+//###################################### Métodos de calculo #######################################################
+    // Conviente los valores de horas, minutos y segundos a minutos
+    private function convertirMinutos($hours, $minutes, $seconds) {// Si esta interno
+        $htomin = $hours * 60;
+        $stomin = $seconds / 60;
+        return $htomin + $minutes + $stomin;
+    }
+
+    public function calculaMontoTotalViaje() { 
+        if ($this->getKilometers() <= 1.5 && $this->getFare() == 0) {
+            if ($this->getPayment() == "Efectivo") {
+                return (double) $this->getMinimunFare() + (double) $this->getExtraAmount() + (integer) $this->getTotalTolls() + $this->getPendingAmount();
+            } else {
+                return (double) $this->getMinimunFare() + (double) $this->getExtraAmount() + (integer) $this->getTotalTolls();
+            }
         } else {
-            return (double) ($this->calculaMontoTotalViaje() - (integer) $this->getTotalTolls()) * (double) $this->Didifee;
+            $fare = 0.0;
+            if ($this->getFare() > 0) {
+                $subTotal = $this->calculaKilometraje() + $this->calculaTiempo();
+                $fare = $subTotal * $this->getFare();
+            }
+            $pending = 0.0;
+            if ($this->getPayment() == "Efectivo") {
+                $pending = (float) $this->getPendingAmount();
+            }
+            return (float) $this->getBasicFare() + (float) $this->calculaKilometraje() +
+                    (float) $this->calculaTiempo() + (float) $fare + 
+                    (integer) $this->getTotalTolls() + (float) $this->getExtraAmount() + $pending;
         }
+    }
+
+    public function calculaTarifaDinamica() { 
+        $subTotal = $this->calculaKilometraje() + $this->calculaTiempo();
+        return number_format($subTotal * $this->getFare(), 2);
+    }
+
+    public function calculaKilometraje() { 
+        if ($this->getKilometers() > 10) {
+            $excess = $this->getKilometers() - 10;
+            return (10 * $this->getKilometerFare()) + ($excess * $this->getExtraCharge10KmFare());
+        } else {
+            return $this->getKilometers() * $this->getKilometerFare();
+        }
+    }
+
+    public function calculaTiempo() { 
+        $whole = floor($this->getTime());
+        $decimal = ($this->getTime() - $whole) * 100;
+        if ($decimal != NULL && $decimal > 0 && $decimal < 59) {
+            return ($whole * $this->getMinuteFare()) + (($decimal / 60) * $this->getMinuteFare());
+        } else {
+            return $this->getTime() * $this->getMinuteFare();
+        }
+    }
+
+    private function calculateDifference() {
+        $uberfee = (float) $this->calculaComisionDidi() * -1;
+        return (float) $this->getEarnings() - ($this->calculaMontoTotalViaje() - $uberfee);
+    }
+
+    public function calculaComisionDidi() {        
+        if ($this->getKilometers() <= 1.5 && $this->getFare() == 0) {
+            return number_format(-($this->getMinimunFare() * $this->getDidifee()), 2);
+        } else {
+            if ($this->getPayment() == "Efectivo") {
+                return -1 * (($this->calculaMontoTotalViaje() - $this->getExtraAmount() - $this->getTotalTolls() - $this->getPendingAmount()) * $this->getDidifee());
+            } else {
+                return -1 * (($this->calculaMontoTotalViaje() - $this->getExtraAmount() - $this->getTotalTolls()) * $this->getDidifee());
+            }
+        }
+    }
+
+    public function calculaGanancia() {
+        $total = (float) $this->calculaMontoTotalViaje() - $this->getExtraAmount() - $this->getTotalTolls();
+        $uberfee = (float) $this->calculaComisionDidi() * -1;
+        return ($total - $uberfee) + $this->getExtraAmount() + $this->getTotalTolls();
+    }
+
+//###################################### Métodos toString #######################################################
+
+    public function toString_montoKilometraje() { 
+        if ($this->getKilometers() > 10) {
+            $excess = $this->getKilometers() - 10;
+            echo "&#8353;" . $this->calculaKilometraje() . " => " .
+            " (10 x " . "&#8353;" . $this->getKilometerFare() . ") + (" . $excess . " x &#8353;" . $this->getExtraCharge10KmFare() . ")";
+        } else {
+            echo "&#8353;" . $this->calculaKilometraje() . " => " .
+            " (" . "&#8353;" . $this->getKilometers() . " x " . "&#8353;" . $this->getKilometerFare() . ")";
+        }
+    }
+
+    public function toString_montoTiempo() { 
+        echo "&#8353;" . number_format($this->calculaTiempo(), 2) . " => " .
+        " (" . number_format($this->getTime(), 2) .
+        " x " . "&#8353;" . number_format($this->getMinuteFare(), 2) . ")";
+    }
+
+    public function toString_montoDinamica() { 
+        echo "&#8353;" . $this->calculaTarifaDinamica() . " => " .
+        " (" . $this->getFare() .
+        " x (" . "&#8353;" . number_format($this->calculaKilometraje(), 2) . " + " . "&#8353;" . number_format($this->calculaTiempo(), 2) . "))";
     }
 
     public function toString_montoGanancia() {
-        return ((double) $this->minimunFare - (double) $this->calculaComisionDidi()) + (double) $this->getTotalTolls();
+        // Importante se suma minimunFare y calculaComisionDidi ya que el resultado de calculaComisionDidi() es negativo
+        return ((double) $this->minimunFare + (double) $this->calculaComisionDidi()) + (double) $this->getExtraAmount() + (double) $this->getTotalTolls();
     }
 
-    public function getTotalTripPrice() {
-        return $this->totalTripPrice;
-    }
-
-    public function getEarnings() {
-        return $this->earnings;
-    }
-
-    public function getDifference() {
-        return $this->difference;
-    }
-
-    private function calculaMontoTotalViaje() {
-        if ($this->kilometers <= 1.5 && $this->fare == 0) {
-            return (double) $this->minimunFare + (integer) $this->getTotalTolls();
-        } else {
-            $kilometers = (double) $this->kilometerFare * (double) $this->kilometers;
-            $time = (double) $this->minuteFare * (double) $this->time;
-            $fare = 0.0;
-            if ($this->fare > 0) {
-                $subTotal = $kilometers + $time;
-                $fare = $subTotal * $this->fare;
+    public function toString_montoTotal() { 
+        echo "&#8353;" . number_format($this->calculaMontoTotalViaje(), 2) . " => ";
+        if ($this->getKilometers() <= 1.5 && $this->getFare() == 0) {
+            echo "(&#8353;" . $this->getMinimunFare();
+            if ($this->getTotalTolls() > 0) {
+                echo " + " . "&#8353;" . $this->getTotalTolls();
             }
-            return (double) $this->basicFare + (double) $kilometers + (double) $time + (double) $fare + (integer) $this->getTotalTolls();
+            if ($this->getExtraAmount() > 0) {
+                echo " + " . "&#8353;" . $this->getExtraAmount();
+            }            
+            if ($this->getPayment() == "Efectivo") {
+                echo " + " . "&#8353;" . $this->getPendingAmount();
+            }
+        } else {
+            echo "(&#8353;" . (float) $this->getBasicFare() .
+            " + " . "&#8353;" . (float) $this->calculaKilometraje() .
+            " + " . "&#8353;" . number_format($this->calculaTiempo(), 2);
+            if ($this->getFare() > 0) {
+                echo " + " . "&#8353;" . $this->calculaTarifaDinamica();
+            }
+            if ($this->getTotalTolls() > 0) {
+                echo " + " . "&#8353;" . $this->getTotalTolls();
+            }
+            if ($this->getExtraAmount() > 0) {
+                echo " + " . "&#8353;" . $this->getExtraAmount();
+            }            
+            if ( $this->getPayment() == "Efectivo") {
+                echo " + " . "&#8353;" . $this->getPendingAmount();
+            }
         }
+        echo ")";
     }
 
-    private function calculaGanancia() {
-        return (double) $this->calculaMontoTotalViaje() - (double) $this->calculaComisionDidi();
+    public function toString_Ganancia() {
+        $uberfee = $this->calculaComisionDidi() * -1;
+        echo "&#8353;" . number_format($this->calculaGanancia(), 2) . " => ";
+        echo "(&#8353;" . number_format($this->calculaMontoTotalViaje(), 2) .
+    " - " . "&#8353;" . number_format($uberfee, 2);
+        echo ")";
     }
 
-    //--------------------------------------------------------------------------------
+    public function toStringSimple() {
+        echo
+        'Kilómetros = ' . number_format($this->getKilometers(), 2) . '<br>' .
+        'Tiempo = ' . number_format($this->getTime(), 2) . '<br>';
+        if ($this->getFare() > 0) {
+            echo 'Tarifa dinámica = ' . number_format($this->getFare(), 2) . '<br>';
+        }
+        if ($this->getTotalTolls() > 0) {
+            echo 'Peajes = &#8353;' . $this->getTotalTolls() . '<br>';
+        }
+        if ($this->getExtraAmount() > 0) {
+            echo 'Gratificación extra = &#8353;' . $this->getExtraAmount() . '<br>';
+        }
+        echo "Comisión de Didi = &#8353;" . $this->calculaComisionDidi() . '<br>';
+        echo 'Monto total del viaje: &#8353;' . number_format($this->calculaMontoTotalViaje(), 2);
+    }
 
-    // Métodos de consulta de la clase de usan para mostrar los precios
-    public function getBasicFare() {
-        return $this->basicFare;
-    }
-    
-    public function getKilometerFare() {
-        return $this->kilometerFare;
+    public function toStringDifference(){
+        echo "&#8353;" . number_format($this->calculateDifference(), 2);
     }
 
-        public function getMinuteFare() {
-        return $this->minuteFare;
-    }
-    
-     function getExtraCharge10KmFare() {
-        return $this->extraCharge10KmFare;
-    }
-}?>
+}
+?>

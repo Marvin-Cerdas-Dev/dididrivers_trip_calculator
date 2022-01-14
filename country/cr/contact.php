@@ -6,23 +6,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar cuales son las tarifas oficiales de la plataforma Didi">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Tarifas, Precio, Montos">
+        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
         <meta http-equiv="Expires" content="5">
 
-        <!-- Miniature -->
-        <meta property="og:title" content="Calculadora de viajes de Didi" />
-        <meta property="og:site_name" content="DidiCalc">
-        <meta property="og:url" content="http://crdidicalc.azurewebsites.net/" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="http://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <!-- Canonical Tag -->        
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Calculadora de viajes de Didi">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
+        <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
+        <meta name="twitter:title" content="Calculadora de viajes de Didi">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="twitter:image:alt" content="DidiCalc">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="img/manifest.json">
         <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
@@ -44,25 +54,41 @@
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "DidiCalc",
-            "url": "http://crdidicalc.azurewebsites.net/",
+            "url": "https://crdidicalc.azurewebsites.net/",
             "address": "Costa Rica",
             "potentialAction": {
             "@type": "SearchAction",
-            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
             }
         </script>
 
-        <script>
-            AOS.init();
+                <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
         </script>
-
+        
         <!-- build:css dist/country/cr/css -->
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link href="css/default.css" rel="stylesheet">        
-        <link href="../../node_modules/aos/dist/aos.css" rel="stylesheet"> 
-        <!-- endbuild -->   
+        <!-- endbuild -->
 
         <!-- Title -->
         <title>DidiCalc - Tarifas de Didi en Costa Rica</title>
@@ -92,28 +118,37 @@
             <div class="card md-3 card-update">
                 <img src="img/contact-us.jpg" class="img-responsive card-img-top" alt="Formulario de contacto">
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form class="needs-validation" action="sendmessage.php" method="POST" novalidate>
                         <div class="form-group">
                             <label for="contactName">Nombre</label>
-                            <input type="email" class="form-control" id="ContactName" placeholder="José Rodriguez Salzar">
+                            <input name="contactName" type="text" class="form-control" id="contactName" placeholder="José Rodriguez Salzar" required>
+                            <div class="invalid-feedback">
+                                Debe ingresar su nombre
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="contactEmail">Correo electrónico</label>
-                            <input type="email" class="form-control" id="contactEmail" placeholder="name@domain.com">
+                            <input name="contactEmail" type="email" class="form-control" id="contactEmail" placeholder="sunombre@domain.com" required>
+                            <div class="invalid-feedback">
+                                Debe ingresar su correo electrónico
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="contactType">Tipo de consulta</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Consulta</option>
-                                <option>Sugerencias</option>
-                                <option>Ayuda</option>
-                                <option>Opinión</option>
-                                <option>Otros</option>
-                            </select>
+                            <select name="contactType" class="form-control" id="contactType" placeholder="Seleccione una opción" required>
+                                <option value="Consulta">Consulta</option>
+                                <option value="Sugerencia">Sugerencias</option>
+                                <option value="Ayuda">Ayuda</option>
+                                <option value="Opinión">Opinión</option>
+                                <option value="Otros">Otros</option>
+                            </select>                          
                         </div>                                     
                         <div class="form-group">
                             <label for="contactMessage">Mensaje</label>
-                            <textarea class="form-control" id="contactMessage" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+                            <textarea name="conctactMessage" class="form-control" id="contactMessage" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                            <div class="invalid-feedback">
+                                Debe escribir un mensaje
+                            </div>                            
                         </div>
                         <p class="card-text">
                             <!--AdSense-->
@@ -121,7 +156,7 @@
                             <!--AdSense-->
                         </p>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-update btn-lg btn-block" id="contactSumit">Enviar</button>
+                            <button name="contactSubmit" type="submit" class="btn btn-update btn-lg btn-block" id="contactSumit">Enviar</button>
                         </div>
                     </form>
                 </div>

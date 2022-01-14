@@ -22,11 +22,11 @@ $(document).ready(function () {
     });
 
     $('#calc_details').click(function () {
-        window.location.href = 'calcDetails.php';
+        window.location.href = 'details.php';
     });
 
     $('#calc_simple').click(function () {
-        window.location.href = 'calcSimple.php';
+        window.location.href = 'simple.php';
     });
 
 });

@@ -1,6 +1,87 @@
 $(document).ready(function () {
+    $("[name='service']").on("change", function (e) {
+        if ($("input:radio[name=service]:checked").val() === "X") {
+            $("#servicePlanet").removeClass("radioActive");
+            $("#servicePlanet").addClass("radioInactive");
+            $("#serviceFlash").removeClass("radioActive");
+            $("#serviceFlash").addClass("radioInactive");            
+            $("#serviceComfort").removeClass("radioActive");
+            $("#serviceComfort").addClass("radioInactive"); 
+            $("#serviceXL").removeClass("radioActive");
+            $("#serviceXL").addClass("radioInactive"); 
+            $("#serviceX").removeClass("radioInactive");
+            $("#serviceX").addClass("radioActive");
+        }
+        if ($("input:radio[name=service]:checked").val() === "Planet") {
+            $("#serviceX").removeClass("radioActive");
+            $("#serviceX").addClass("radioInactive");
+            $("#serviceFlash").removeClass("radioActive");
+            $("#serviceFlash").addClass("radioInactive");            
+            $("#serviceComfort").removeClass("radioActive");
+            $("#serviceComfort").addClass("radioInactive"); 
+            $("#serviceXL").removeClass("radioActive");
+            $("#serviceXL").addClass("radioInactive"); 
+            $("#servicePlanet").removeClass("radioInactive");
+            $("#servicePlanet").addClass("radioActive");
+        }
+        if ($("input:radio[name=service]:checked").val() === "Flash") {
+            $("#serviceX").removeClass("radioActive");
+            $("#serviceX").addClass("radioInactive");
+            $("#servicePlanet").removeClass("radioActive");
+            $("#servicePlanet").addClass("radioInactive");            
+            $("#serviceComfort").removeClass("radioActive");
+            $("#serviceComfort").addClass("radioInactive"); 
+            $("#serviceXL").removeClass("radioActive");
+            $("#serviceXL").addClass("radioInactive"); 
+            $("#serviceFlash").removeClass("radioInactive");
+            $("#serviceFlash").addClass("radioActive");
+        }
+        if ($("input:radio[name=service]:checked").val() === "Comfort") {
+            $("#serviceX").removeClass("radioActive");
+            $("#serviceX").addClass("radioInactive");
+            $("#servicePlanet").removeClass("radioActive");
+            $("#servicePlanet").addClass("radioInactive");            
+            $("#serviceFlash").removeClass("radioActive");
+            $("#serviceFlash").addClass("radioInactive"); 
+            $("#serviceXL").removeClass("radioActive");
+            $("#serviceXL").addClass("radioInactive"); 
+            $("#serviceComfort").removeClass("radioInactive");
+            $("#serviceComfort").addClass("radioActive");
+        } 
+        if ($("input:radio[name=service]:checked").val() === "XL") {
+            $("#serviceX").removeClass("radioActive");
+            $("#serviceX").addClass("radioInactive");
+            $("#servicePlanet").removeClass("radioActive");
+            $("#servicePlanet").addClass("radioInactive");            
+            $("#serviceFlash").removeClass("radioActive");
+            $("#serviceFlash").addClass("radioInactive"); 
+            $("#serviceComfort").removeClass("radioActive");
+            $("#serviceComfort").addClass("radioInactive"); 
+            $("#serviceXL").removeClass("radioInactive");
+            $("#serviceXL").addClass("radioActive");
+        }
+    });
+
+    // Pendinamount change class
+    $("[name='payment']").on("change", function (e) {
+        if ($("input:radio[name=payment]:checked").val() === "Tarjeta") {
+            $("#Cash").removeClass("radioActive");
+            $("#Cash").addClass("radioInactive");
+            $("#Creditcard").removeClass("radioInactive");
+            $("#Creditcard").addClass("radioActive");
+        }
+        if ($("input:radio[name=payment]:checked").val() === "Efectivo") {
+            $("#Creditcard").removeClass("radioActive");
+            $("#Creditcard").addClass("radioInactive");
+            $("#Cash").removeClass("radioInactive");
+            $("#Cash").addClass("radioActive");
+        }
+    });
+
+
+
     // Show the cookies modal
-    var cookie_policy = $.cookie('Didicalc_cookies');
+    var cookie_policy = $.cookie('Ubercalc_cookies');
     if (cookie_policy === undefined) {
         $('#cookieModal').modal('show');
     } else {
@@ -18,7 +99,7 @@ $(document).ready(function () {
 
     // Cookie acept cookies use
     $('#acept').click(function () {
-        $.cookie('Didicalc_cookies', 'acepted', {expires: 365, path: '/'});
+        $.cookie('Ubercalc_cookies', 'acepted', {expires: 365, path: '/'});
     });
 
     // Validate the details form
@@ -243,7 +324,6 @@ $(document).ready(function () {
         } else if ($('#Siquiares').is(":not(:checked)")) {
             $('#SiquiaresLabel').removeClass("btn-secondary");
         }
-
     });
 }
 );

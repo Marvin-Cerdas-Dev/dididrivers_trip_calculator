@@ -9,6 +9,7 @@ $(document).ready(function () {
             $('.page-container').css("display", "block");
         }
     }, 1);
+    
     // Show the cookies modal
     var cookie_policy = $.cookie('Didicalc_cookies');
     if (cookie_policy === undefined) {
