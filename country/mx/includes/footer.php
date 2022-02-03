@@ -14,7 +14,7 @@
                 <img class="socialmedia-img" src="img/telegram.png" alt="Compartir en Telegram"/>
             </a>   
         </div>
-        <div class="col-xs-12 col-md-12 col-lg-12">DidiCalc Services 2020 &COPY; 
+        <div class="col-xs-12 col-md-12 col-lg-12">DidiCalc Services 2021 &COPY; 
             <a id="policyLink" href="privacypolicy.php" title="Política de privacidad" hreflang="es">Política de privacidad</a>
         </div>
         <div id="dropdown-countries" class="btn-group dropup">
@@ -27,8 +27,7 @@
                 <a class="dropdown-item" href="https://crdidicalc.azurewebsites.net/country/cl/index.php">Chile</a>
             </div>
         </div>  
-        <div class="col-xs-12 col-md-12 col-lg-12">Version 1.1.0</div>
+        <div class="col-xs-12 col-md-12 col-lg-12">Version 2.0.1</div>
     </div>
 </div>
-
 
