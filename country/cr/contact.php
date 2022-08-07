@@ -12,7 +12,7 @@
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -64,117 +64,103 @@
             }
         </script>
 
-                <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-          'use strict';
-          window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-              }, false);
-            });
-          }, false);
-        })();
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
         </script>
-        
-        <!-- build:css dist/country/cr/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/default.css" rel="stylesheet">        
+
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css" > 
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
         <!-- endbuild -->
 
         <!-- Title -->
-        <title>DidiCalc - Tarifas de Didi en Costa Rica</title>
+        <title>DidiCalc - Contactando...</title>
 
     </head>
-    <!-- Cookies modal -->
-    <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-update" role="document">
-            <div class="modal-content modal-content-update">
-                <div class="modal-body">
-                    <div class="notice d-flex justify-content-between align-items-center">
-                        <div class="cookie-text">Al usar este sitio acepta el uso de cookies para análisis y contenido personalizado. <button id="learMore" type="button" class="btn btn-update2 buttons btn-sm">Leer más</button></div>
-                        <div class="buttons d-flex flex-column flex-lg-row">
-                            <button id="acept" type="button" class="btn btn-update buttons btn-sm" data-dismiss="modal">Acepto</button>
-                        </div>
+    <body>
+        <!-- Cookies modal -->
+        <?php include_once("includes/cookies_modal.php") ?>
+        <!-- Content -->
+        <header>
+            <?php include_once("includes/header.php") ?>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card md-3 card-update">
+                    <img src="img/contact-us.jpg" class="img-responsive card-img-top" alt="Formulario de contacto">
+                    <div class="card-body">
+                        <form class="needs-validation" action="sendmessage.php" method="POST" novalidate>
+                            <div class="form-group">
+                                <label for="contactName">Nombre</label>
+                                <input name="contactName" type="text" class="form-control" id="contactName" placeholder="José Rodriguez Salzar" required>
+                                <div class="invalid-feedback">
+                                    Debe ingresar su nombre
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Correo electrónico</label>
+                                <input name="contactEmail" type="email" class="form-control" id="contactEmail" placeholder="sunombre@domain.com" required>
+                                <div class="invalid-feedback">
+                                    Debe ingresar su correo electrónico
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactType">Tipo de consulta</label>
+                                <select name="contactType" class="form-control" id="contactType" placeholder="Seleccione una opción" required>
+                                    <option value="Consulta">Consulta</option>
+                                    <option value="Sugerencia">Sugerencias</option>
+                                    <option value="Ayuda">Ayuda</option>
+                                    <option value="Opinión">Opinión</option>
+                                    <option value="Otros">Otros</option>
+                                </select>                          
+                            </div>                                     
+                            <div class="form-group">
+                                <label for="contactMessage">Mensaje</label>
+                                <textarea name="conctactMessage" class="form-control" id="contactMessage" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                                <div class="invalid-feedback">
+                                    Debe escribir un mensaje
+                                </div>                            
+                            </div>
+                            <p class="card-text">
+                                <!--AdSense-->
+                                <?php include_once("includes/ads.php") ?>  
+                                <!--AdSense-->
+                            </p>
+                            <div class="form-group">
+                                <button name="contactSubmit" type="submit" class="btn btn-update btn-lg btn-block" id="contactSumit">Enviar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Content -->
-    <header>
-        <?php include_once("includes/header.php") ?>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card md-3 card-update">
-                <img src="img/contact-us.jpg" class="img-responsive card-img-top" alt="Formulario de contacto">
-                <div class="card-body">
-                    <form class="needs-validation" action="sendmessage.php" method="POST" novalidate>
-                        <div class="form-group">
-                            <label for="contactName">Nombre</label>
-                            <input name="contactName" type="text" class="form-control" id="contactName" placeholder="José Rodriguez Salzar" required>
-                            <div class="invalid-feedback">
-                                Debe ingresar su nombre
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactEmail">Correo electrónico</label>
-                            <input name="contactEmail" type="email" class="form-control" id="contactEmail" placeholder="sunombre@domain.com" required>
-                            <div class="invalid-feedback">
-                                Debe ingresar su correo electrónico
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="contactType">Tipo de consulta</label>
-                            <select name="contactType" class="form-control" id="contactType" placeholder="Seleccione una opción" required>
-                                <option value="Consulta">Consulta</option>
-                                <option value="Sugerencia">Sugerencias</option>
-                                <option value="Ayuda">Ayuda</option>
-                                <option value="Opinión">Opinión</option>
-                                <option value="Otros">Otros</option>
-                            </select>                          
-                        </div>                                     
-                        <div class="form-group">
-                            <label for="contactMessage">Mensaje</label>
-                            <textarea name="conctactMessage" class="form-control" id="contactMessage" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
-                            <div class="invalid-feedback">
-                                Debe escribir un mensaje
-                            </div>                            
-                        </div>
-                        <p class="card-text">
-                            <!--AdSense-->
-                            <?php include_once("includes/ads.php") ?>  
-                            <!--AdSense-->
-                        </p>
-                        <div class="form-group">
-                            <button name="contactSubmit" type="submit" class="btn btn-update btn-lg btn-block" id="contactSumit">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <footer><?php include_once("includes/footer.php") ?></footer>
-    <!-- JavaScript -->
-    <!-- build:js dist/country/cr/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/form-scripts.js"></script>
-    <script src="js/calculatescripts.js"></script>
-    <script src="js/defaultscripts.js"></script>
-    <!-- endbuild -->
-</body>
+        <footer><?php include_once("includes/footer.php") ?></footer>
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
+    </body>
 </html>

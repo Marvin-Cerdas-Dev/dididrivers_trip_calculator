@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        

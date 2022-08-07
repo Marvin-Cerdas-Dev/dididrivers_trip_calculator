@@ -45,8 +45,8 @@ footer a:link, a:hover, a:visited, a:active{
 }
 
 .socialmedia-img{
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     margin: 5px;
 }
 
@@ -78,11 +78,6 @@ label {
     margin-top: 35px;
 }
 
-.padding-container{
-    padding: 30px !important;
-    align-content: center !important;
-}
-
 .radioActive{
     background-color: #ff783a;
     color: #ffffff !important;
@@ -97,7 +92,31 @@ label {
     margin-top: 8px;
 }
 
+.btn_updated {
+	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+	background-color:#ffffff;
+	border-radius:4px;
+	border:3px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 12px;
+	text-decoration:none;
+}
+.btn_updated:hover {
+	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
+	background-color:#ffffff;
+}
+.btn_updated:active {
+	position:relative;
+	top:1px;
+}
+
 .btn-update {
+    font-weight: 500 !important;
     background-color: #ff783a !important;
     color: #ffffff !important;
     -webkit-box-shadow: -6px 6px 5px 0px rgba(201,199,201,1);
@@ -106,6 +125,7 @@ label {
 }
 
 .btn-update2 {
+    font-weight: 500 !important;
     background-color: #000000 !important;
     color: #ffffff !important;
     -webkit-box-shadow: -6px 6px 5px 0px rgba(201,199,201,1);
@@ -120,11 +140,6 @@ label {
 nav a:link, a:hover, a:visited {
     color: #000000 !important;
     font-weight: bold;
-}
-
-.card-update{
-    margin: 20px;
-    text-align: justify;
 }
 
 .modal-dialog-update {
@@ -145,6 +160,10 @@ nav a:link, a:hover, a:visited {
     font-weight: normal !important;
 }
 
+#licenselink {
+    color: #ffffff !important;
+    font-weight: normal !important;
+}
 .fuente{
     font-size: x-small;
 }
@@ -161,6 +180,7 @@ nav a:link, a:hover, a:visited {
 .jumbotron{
     position: relative;
     border-radius: 0px 0px 0px 0px;
+    width: 100%;
 }
 
 .jumbotron:before {
@@ -183,19 +203,21 @@ nav a:link, a:hover, a:visited {
     background-attachment: fixed;    
     filter: grayscale(10%) brightness(70%);
 }
-.jumbotron .container {
-    z-index: 10;
-    position: relative;
-    color: #ffffff;
+#jumbotron {
     font-weight: bold;
     text-align: justify;
     texto-justify: inter-palabra;
+    background-image: url("../img/didical_background.jpg") !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    filter: grayscale(10%) brightness(90%);
 }
 
 hr{
-    display: block; height: 1px;
-    border: 0; border-top: 1px solid #ffffff;
-    margin: 1em 0; padding: 0;
+    border: 1 !important; 
+    background-color: #FFFFFF !important;
 }
 
 .justiy-text{
@@ -220,10 +242,20 @@ h2 {
     margin-top: 30px;
 }
 
-.wrapper{
-    
+#btn_details_calc{
+    margin-top: 30px;
 }
 
-.delete{
-    
+#btn_simple_calc{
+    margin-top: 30px;
+}
+
+.modalCountry{
+    color: black !important;
+}
+
+.pointer {cursor: pointer;}
+
+.modalover{
+    background-color: #ff783a;
 }

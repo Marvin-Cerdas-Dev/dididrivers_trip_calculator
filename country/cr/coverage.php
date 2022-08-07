@@ -6,13 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
+        <meta name="description" content="En este sitio se encuentra con la covertura por provincias y cantones donde se ofrece el servicio de Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Covertura, Cantones, Provincias, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -54,89 +54,74 @@
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "DidiCalc",
-            "url": "https://crdidicalc.azurewebsites.net/",
+            "url": "http://crdidicalc.azurewebsites.net/",
             "address": "Costa Rica",
             "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
             }
         </script>
 
-        <!-- build:css dist/country/cr/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/default.css" rel="stylesheet">        
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css" > 
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
         <!-- endbuild -->
 
         <!-- Title -->
         <title>DidiCalc - Covertura del servicio de Didi</title>
 
     </head>
-    <!-- Cookies modal -->
-    <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-update" role="document">
-            <div class="modal-content modal-content-update">
-                <div class="modal-body">
-                    <div class="notice d-flex justify-content-between align-items-center">
-                        <div class="cookie-text">Al usar este sitio acepta el uso de cookies para análisis y contenido personalizado. <button id="learMore" type="button" class="btn btn-update2 buttons btn-sm">Leer más</button></div>
-                        <div class="buttons d-flex flex-column flex-lg-row">
-                            <button id="acept" type="button" class="btn btn-update buttons btn-sm" data-dismiss="modal">Acepto</button>
+    <body>
+        <!-- Cookies modal -->
+        <?php include_once("includes/cookies_modal.php") ?>
+        <!-- Content -->    
+        <header>
+            <?php include_once("includes/header.php") ?>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="cal_details" class="g-col-sm-12 g-col-md-12 g-col-lg-12">
+                    <div class="card card-margin">
+                        <img src="img/didi_coverage_background.jpg" class="card-img-top" alt="Covertura de servicios de Didi en tu ciudad">
+                        <div class="card-body">
+                            <h5 class="card-title">Covertura del servicio de didi</h5>
+                            <p class="card-text">
+                                Desde el noviembre del 2019 que Didi inició operaciones su covertura está en:
+                            <ul>
+                                <li>San José</li>
+                                <li>Heredia</li>
+                                <li>Alajuela</li>
+                                <li>Puntarenas</li>
+                            </ul>
+                            A continuación puede ver el detalle de los cantones en los cuales Didi opera desde el inicio:
+                            </p>
+                            <p class="card-text">
+                                <!--AdSense-->
+                                <?php include_once("includes/ads.php") ?>  
+                                <!--AdSense-->
+                            </p>
+                            <p class="card-text">
+                            <center>
+                                <img class="img-fluid" src="img/mapa_covertura.svg"/>
+                                <p class="fuente">Fuente: Aguilar Arroyo, Yenci (2019) Didi arranca este martes con promos que busca desbancar a Uber, La Teja, Fecha de consulta: 9 de abril del 2019. URL: <a href="https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/" title="Didi arranca este martes con promos que busca desbancar a Uber" hreflang="es">https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/</a></p>
+                            </center>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Content -->    
-    <header>
-        <?php include_once("includes/header.php") ?>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card md-3 card-update">
-                <img src="img/didi_coverage_background.jpg" class="card-img-top" alt="Covertura de servicios de Didi en tu ciudad">
-                <div class="card-body">
-                    <h5 class="card-title">Covertura del servicio de didi</h5>
-                    <p class="card-text">
-                        Desde el noviembre del 2019 que Didi inició operaciones su covertura está en:
-                    <ul>
-                        <li>San José</li>
-                        <li>Heredia</li>
-                        <li>Alajuela</li>
-                        <li>Puntarenas</li>
-                    </ul>
-                    A continuación puede ver el detalle de los cantones en los cuales Didi opera desde el inicio:
-                    </p>
-                    <p class="card-text">
-                        <!--AdSense-->
-                        <?php include_once("includes/ads.php") ?>  
-                        <!--AdSense-->
-                    </p>
-                    <p class="card-text">
-                    <center>
-                        <img class="img-fluid" src="img/mapa_covertura.svg"/>
-                        <p class="fuente">Fuente: Aguilar Arroyo, Yenci (2019) Didi arranca este martes con promos que busca desbancar a Uber, La Teja, Fecha de consulta: 9 de abril del 2019. URL: <a href="https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/" title="Didi arranca este martes con promos que busca desbancar a Uber" hreflang="es">https://www.lateja.cr/nacional/didi-arranca-este-martes-con-promos-que-buscan/VQE7MUUXBBFNLDV7TZKTZTPEQQ/story/</a></p>
-                    </center>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer><?php include_once("includes/footer.php") ?></footer>
-    <!-- JavaScript -->
-    <!-- build:js dist/country/cr/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/form-scripts.js"></script>
-    <script src="js/calculatescripts.js"></script>
-    <script src="js/defaultscripts.js"></script>
-    <!-- endbuild -->
-<!-- endbuild -->
-</body>
+        </div>       
+        <footer><?php include_once("includes/footer.php") ?></footer>
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
+    </body>
 </html>

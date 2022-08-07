@@ -7,11 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, México">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        
-        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
         
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
@@ -35,6 +35,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
+        
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
             {
@@ -42,7 +49,7 @@
             "@type": "Organization",
             "name": "DidiCalc",
             "url": "https://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
+            "address": "México",
             "sameAs": [
             "https://www.facebook.com/calculadoradeplataformasdigitales/"
             ]
@@ -54,19 +61,19 @@
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "DidiCalc",
-            "url": "https://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
+            "url": "http://crdidicalc.azurewebsites.net/",
+            "address": "México",
             "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
             }
         </script>
 
-        <!-- build:css dist/country/cr/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/default.css" rel="stylesheet">        
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
         <!-- endbuild -->
 
         <!-- Title -->
@@ -137,6 +144,34 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="form-group row"> 
+                                <label for="service" class="col-md-4 col-lg-2 control-label">Cuentas con RFC:</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <div class="btn-group btn-group-toggle">
+                                        <label id="RFC-Yes" class="btn radioActive">
+                                            <input type="radio" name="RFC" value="Yes" autocomplete="off" checked> Si
+                                        </label>
+                                        <label id="RFC-No" class="btn radioInactive">
+                                            <input type="radio" name="RFC" value="No" autocomplete="off" > No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>   
+                             <div class="form-group row"> 
+                                <label for="Guanajuato" class="col-md-4 col-lg-2-5 control-label">Vives en Guanajuato:</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <div class="btn-group btn-group-toggle">
+                                        <label id="Guanajuato-Yes" class="btn radioInactive">
+                                            <input type="radio" name="Guanajuato" value="Yes" autocomplete="off"> Si
+                                        </label>
+                                        <label id="Guanajuato-No" class="btn radioActive ">
+                                            <input type="radio" name="Guanajuato" value="No" autocomplete="off" checked> No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                            
+                            
                             <div class="form-group row">
                                 <label for="kilometers" class="col-md-4 col-lg-2 control-label">Kilómetros recorridos:</label>
                                 <div class="col-md-8 col-lg-10">                      
@@ -365,17 +400,15 @@
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-    <!-- JavaScript -->
-    <!-- build:js dist/country/cr/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/form-scripts.js"></script>
-    <script src="js/calculatescripts.js"></script>
-    <script src="js/defaultscripts.js"></script>
-    <!-- endbuild -->
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
 

@@ -11,11 +11,6 @@ $(document).ready(function () {
         }
     }
 
-    // Cookies link Leer mas
-    $('#learMore').click(function () {
-        window.location.href = 'privacypolicy.php';
-    });
-
     // Cookie acept cookies use
     $('#acept').click(function () {
         $.cookie('Didicalc_cookies', 'acepted', {expires: 365, path: '/'});

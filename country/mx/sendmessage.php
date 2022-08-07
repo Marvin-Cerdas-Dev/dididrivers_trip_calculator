@@ -83,9 +83,9 @@ if (isset($_POST['contactSubmit'])) {
             }
         </script>
 
-        <!-- build:css dist/country/cr/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/default.css" rel="stylesheet">        
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
         <!-- endbuild -->
 
         
@@ -166,17 +166,15 @@ if (isset($_POST['contactSubmit'])) {
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-    <!-- JavaScript -->
-    <!-- build:js dist/country/cr/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/form-scripts.js"></script>
-    <script src="js/calculatescripts.js"></script>
-    <script src="js/defaultscripts.js"></script>
-    <!-- endbuild -->
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
 

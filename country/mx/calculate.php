@@ -8,6 +8,8 @@
 $calculation_type = filter_input(INPUT_POST, 'calculating');
 $service_type = filter_input(INPUT_POST, 'service');
 $payment_type = filter_input(INPUT_POST, 'payment');
+$RFC = filter_input(INPUT_POST, 'RFC');
+$eGuanajuato = filter_input(INPUT_POST, 'Guanajuato');
 $error = false;
 if ($calculation_type == 'Simple') {
     $kilometers = filter_input(INPUT_POST, 'kilometers');
@@ -26,12 +28,22 @@ if ($calculation_type == 'Simple') {
     } else {
         $pendingAmount = filter_input(INPUT_POST, 'pendingamount');
     }
-    $extras = filter_input(INPUT_POST, 'extra');
+    if (filter_input(INPUT_POST, 'extra') == "") {
+        $extras = 0;
+    } else {
+        $extras = filter_input(INPUT_POST, 'extra');
+    }
     if ($service_type == 'Express') {
-        $viaje = new viajeExpress($kilometers, $hours, $minutes, $seconds, $fare, $tolls, 0.0, 0.0, $pendingAmount, 0.0, $extras, $payment_type);
+        $viaje = new viajeExpress($kilometers, $hours, $minutes, $seconds, $fare, $tolls, 0.0, 0.0, $pendingAmount, 0.0, $extras, $payment_type, $RFC, $eGuanajuato);
+    }
+    if ($service_type == 'Protect') {
+        $viaje = new viajeProtect($kilometers, $hours, $minutes, $seconds, $fare, $tolls, 0.0, 0.0, $pendingAmount, 0.0, $extras, $payment_type, $RFC, $eGuanajuato);
+    }
+    if ($service_type == 'Entrega') {
+        $viaje = new viajeEntrega($kilometers, $hours, $minutes, $seconds, $fare, $tolls, 0.0, 0.0, $pendingAmount, 0.0, $extras, $payment_type, $RFC, $eGuanajuato);
     }
     if ($service_type == 'Economy') {
-        $viaje = new viajeEconomy($kilometers, $hours, $minutes, $seconds, $fare, $tolls, 0.0, 0.0, $pendingAmount, 0.0, $extras, $payment_type);
+        $viaje = new viajeEconomy($kilometers, $hours, $minutes, $seconds, $fare, $tolls, 0.0, 0.0, $pendingAmount, 0.0, $extras, $payment_type, $RFC, $eGuanajuato);
     }
     $viaje->calculaMontoTotalViaje();
 } else {
@@ -56,12 +68,22 @@ if ($calculation_type == 'Details') {
     } else {
         $pendingAmount = filter_input(INPUT_POST, 'pendingamount');
     }
-    $extras = filter_input(INPUT_POST, 'extra');
+    if (filter_input(INPUT_POST, 'extra') == "") {
+        $extras = 0;
+    } else {
+        $extras = filter_input(INPUT_POST, 'extra');
+    }
     if ($service_type == 'Express') {
-        $viaje = new viajeExpress($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment_type);
+        $viaje = new viajeExpress($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment_type, $RFC, $eGuanajuato);
+    }
+    if ($service_type == 'Protect') {
+        $viaje = new viajeProtect($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment_type, $RFC, $eGuanajuato);
+    }
+    if ($service_type == 'Entrega') {
+        $viaje = new viajeEntrega($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment_type, $RFC, $eGuanajuato);
     }
     if ($service_type == 'Economy') {
-        $viaje = new viajeEconomy($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment_type);
+        $viaje = new viajeEconomy($kilometers, $hours, $minutes, $seconds, $fare, $tolls, $earnings, $totalTripPrice, $pendingAmount, $discount, $extras, $payment_type, $RFC, $eGuanajuato);
     }
     $difference = $viaje->getDifference();
 } else {
@@ -75,12 +97,12 @@ if ($calculation_type == 'Details') {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, México">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        
-        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
-        
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -110,7 +132,7 @@ if ($calculation_type == 'Details') {
             "@type": "Organization",
             "name": "DidiCalc",
             "url": "https://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
+            "address": "México",
             "sameAs": [
             "https://www.facebook.com/calculadoradeplataformasdigitales/"
             ]
@@ -122,19 +144,19 @@ if ($calculation_type == 'Details') {
             "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "DidiCalc",
-            "url": "https://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
+            "url": "http://crdidicalc.azurewebsites.net/",
+            "address": "México",
             "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
+            "target": "http://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
             }
         </script>
 
-        <!-- build:css dist/country/cr/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/default.css" rel="stylesheet">        
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
         <!-- endbuild -->
 
         <!-- Title -->
@@ -195,59 +217,61 @@ if ($calculation_type == 'Details') {
                                 <?php if ($viaje->getKilometers() <= 1.5 && $viaje->getFare() == 0) { ?> 
                                     <p>Cantidad de Kilometros = <?php echo number_format($viaje->getKilometers(), 2) ?></p> 
                                     <p>Cantidad de Minutos = <?php echo number_format($viaje->getTime(), 2) ?></p>
-                                    <p>Monto de tarifa mínima= <?php echo "&#8353;" . number_format($viaje->getMinimunFare(), 2) ?></p> 
+                                    <p>Monto de tarifa mínima= <?php echo "&#36;" . number_format($viaje->getMinimunFare(), 2) ?></p> 
                                     <?php if ($viaje->getTotalTolls() > 0) { ?> <!-- Si esta en los metodos -->
-                                        <p>Monto por peajes = <?php echo "&#8353;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?></p> 
+                                        <p>Monto por peajes = <?php echo "&#36;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?></p> 
                                     <?php } ?>
                                     <?php if ($viaje->getExtraAmount() > 0) { ?>
-                                        <p>Gratificación extra = <?php echo "&#8353;" . $viaje->getExtraAmount() ?></p>
+                                        <p>Gratificación extra = <?php echo "&#36;" . $viaje->getExtraAmount() ?></p>
                                     <?php } ?>
                                     <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Efectivo") { ?>
-                                        <p>Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?></p>
+                                        <p>Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?></p>
                                     <?php } ?>                                          
                                     <p>Monto total = <?php number_format($viaje->toString_montoTotal(), 2) ?></p> 
-                                    <p>Comisión de Didi = <?php echo "&#8353;" . number_format($viaje->calculaComisionDidi(), 2) ?></p>                         
+                                    <p>Comisión de Didi = <?php echo "&#36;" . number_format($viaje->calculaComisionDidi(), 2) ?></p>                         
+                                    <p>Detalle de impuestos: <?php echo $viaje->toString_taxes() ?></p>
                                     <p><strong>Monto de ganancia = <?php echo $viaje->toString_Ganancia() ?></strong></p>
                                     <hr>
                                     <h4>Detalle ganancias reportadas en la aplicación</h4>
-                                    <p>Total del viaje = <?php echo "&#8353;" . number_format($viaje->getTotalTripPrice(), 2) ?></p>
+                                    <p>Total del viaje = <?php echo "&#36;" . number_format($viaje->getTotalTripPrice(), 2) ?></p>
                                     <?php if ($viaje->getDiscount() > 0) { ?>
-                                        <p>Descuentos = <?php echo "&#8353;" . number_format($viaje->getDiscount(), 2) ?></p>
+                                        <p>Descuentos = <?php echo "&#36;" . number_format($viaje->getDiscount(), 2) ?></p>
                                     <?php } ?>
                                     <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Tarjeta") { ?>
-                                        <p>Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?></p>
+                                        <p>Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?></p>
                                     <?php } ?>   
-                                    <p>Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?></p>
+                                    <p>Ganancia del viaje = <?php echo "&#36;" . number_format($viaje->getEarnings(), 2) ?></p>
                                     <p><strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong></p>                                   
                                 <?php } else { ?>
-                                    <p>Tarifa base = <?php echo "&#8353;" . $viaje->getBasicFare() ?></p>
+                                    <p>Tarifa base = <?php echo "&#36;" . $viaje->getBasicFare() ?></p>
                                     <p>Monto por kilometraje = <?php number_format($viaje->toString_montoKilometraje(), 2) ?></p>
                                     <p>Monto por tiempo = <?php number_format($viaje->toString_montoTiempo(), 2) ?></p>
                                     <?php if ($fare > 0.1) { ?>
                                         <p>Monto tarifa dinámica = <?php number_format($viaje->toString_montoDinamica(), 2) ?></p>
                                     <?php } ?>
                                     <?php if ($tolls > 0) { ?>    
-                                        <p>Monto por peajes = <?php echo "&#8353;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?></p>
+                                        <p>Monto por peajes = <?php echo "&#36;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?></p>
                                     <?php } ?>
                                     <?php if ($viaje->getExtraAmount() > 0) { ?>
-                                        <p>Gratificación extra = <?php echo "&#8353;" . $viaje->getExtraAmount() ?></p>
+                                        <p>Gratificación extra = <?php echo "&#36;" . $viaje->getExtraAmount() ?></p>
                                     <?php } ?>
                                     <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Efectivo") { ?>
-                                        <p>Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?></p>
+                                        <p>Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?></p>
                                     <?php } ?>                                        
                                     <p>Monto total = <?php number_format($viaje->toString_montoTotal(), 2) ?></p>
-                                    <p>Comisión de Didi = <?php echo "&#8353;" . number_format($viaje->calculaComisionDidi(), 2) ?></p>
+                                    <p>Comisión de Didi = <?php echo "&#36;" . number_format($viaje->calculaComisionDidi(), 2) ?></p>
+                                    <p>Detalle de impuestos: <?php echo $viaje->toString_taxes() ?></p>
                                     <p><strong>Monto de ganancia = <?php $viaje->toString_Ganancia() ?></strong></p>
                                     <hr>
                                     <h4>Detalle ganancias reportadas en la aplicación</h4>
-                                    <p>Total del viaje = <?php echo "&#8353;" . number_format($viaje->getTotalTripPrice(), 2) ?></p>
+                                    <p>Total del viaje = <?php echo "&#36;" . number_format($viaje->getTotalTripPrice(), 2) ?></p>
                                     <?php if ($viaje->getDiscount() > 0) { ?>
-                                        <p>Descuentos = <?php echo "&#8353;" . number_format($viaje->getDiscount(), 2) ?></p>
+                                        <p>Descuentos = <?php echo "&#36;" . number_format($viaje->getDiscount(), 2) ?></p>
                                     <?php } ?>
                                     <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Tarjeta") { ?>
-                                        <p>Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?></p>
+                                        <p>Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?></p>
                                     <?php } ?>   
-                                    <p>Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?></p>
+                                    <p>Ganancia del viaje = <?php echo "&#36;" . number_format($viaje->getEarnings(), 2) ?></p>
                                     <p><strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong></p>
                                 <?php } ?>
                                 <div class="horizontal-center col-sm-12 col-md12 col-lg-12">
@@ -263,7 +287,7 @@ if ($calculation_type == 'Details') {
                         <?php
                     } else {
                         // Redirect to error because $calculation_type is undefine 
-                        header("Location: https://crubercalc.azurewebsites.net/country/cr/error.php?calculate=true");
+                        header("Location: https://crubercalc.azurewebsites.net/country/mx/error.php?calculate=true");
                     }
                     ?>   
                 </div>
@@ -295,60 +319,62 @@ if ($calculation_type == 'Details') {
                         <?php if ($viaje->getKilometers() <= 1.5 && $viaje->getFare() == 0) { ?>
                             Cantidad de kilometros recorridos: <?php echo number_format($viaje->getKilometers(), 2) ?><br>
                             Cantidad de tiempo: <?php echo number_format($viaje->getTime(), 2) ?> en minutos.<br>
-                            Monto de tarifa mínima= <?php echo "&#8353;" . number_format($viaje->getMinimunFare(), 2) ?><br>
+                            Monto de tarifa mínima= <?php echo "&#36;" . number_format($viaje->getMinimunFare(), 2) ?><br>
                             <?php if ($viaje->getTotalTolls() > 0) { ?>
-                                Monto por peajes = <?php echo "&#8353;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?><br>
+                                Monto por peajes = <?php echo "&#36;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?><br>
                             <?php } ?>
                             <?php if ($viaje->getExtraAmount() > 0) { ?>
-                                Gratificación extra = <?php echo "&#8353;" . $viaje->getExtraAmount() ?><br>
+                                Gratificación extra = <?php echo "&#36;" . $viaje->getExtraAmount() ?><br>
                             <?php } ?>
                             <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Efectivo") { ?>
-                                Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?><br>
+                                Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?><br>
                             <?php } ?>
                             Monto total = <?php number_format($viaje->toString_montoTotal(), 2) ?><br>
-                            Comisión de la aplicación: <?php echo "&#8353;" . number_format($viaje->calculaComisionDidi(), 2) ?><br>
-                            <strong>Monto de ganancia = <?php echo "&#8353;" . number_format($viaje->calculaGanancia(), 2) ?></strong><br><br>
+                            Comisión de la aplicación: <?php echo "&#36;" . number_format($viaje->calculaComisionDidi(), 2) ?><br>
+                            Detalle de impuestos: <?php echo $viaje->toString_taxesModal() ?><br>
+                            <strong>Monto de ganancia = <?php echo "&#36;" . number_format($viaje->calculaGanancia(), 2) ?></strong><br><br>
                             Detalle ganancias reportadas en la aplicación<br>
-                            Total del viaje = <?php echo "&#8353;" . number_format($viaje->getTotalTripPrice(), 2) ?><br>
+                            Total del viaje = <?php echo "&#36;" . number_format($viaje->getTotalTripPrice(), 2) ?><br>
                             <?php if ($viaje->getDiscount() > 0) { ?>
-                                Descuentos = <?php echo "&#8353;" . number_format($viaje->getDiscount(), 2) ?><br>
+                                Descuentos = <?php echo "&#36;" . number_format($viaje->getDiscount(), 2) ?><br>
                             <?php } ?>
                             <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Tarjeta") { ?>
-                                Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?><br>
+                                Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?><br>
                             <?php } ?>   
-                            Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?><br>
+                            Ganancia del viaje = <?php echo "&#36;" . number_format($viaje->getEarnings(), 2) ?><br>
                             <strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong><br><br>
                             Por tanto existen una diferencia de <?php echo $viaje->toStringDifference() ?><br><br>            
                             Espero me puedan ayudar.<br>
                             Saludos.<br>
                         <?php } else { ?>
-                            Tarifa base = <?php echo "&#8353;" . $viaje->getBasicFare() ?><br>
+                            Tarifa base = <?php echo "&#36;" . $viaje->getBasicFare() ?><br>
                             Monto por kilometraje = <?php number_format($viaje->toString_montoKilometraje(), 2) ?><br>
                             Monto por tiempo = <?php number_format($viaje->toString_montoTiempo(), 2) ?><br>
                             <?php if ($fare > 0.1) { ?>
                                 Monto tarifa dinámica = <?php number_format($viaje->toString_montoDinamica(), 2) ?><br>
                             <?php } ?>
                             <?php if ($tolls > 0) { ?>
-                                Monto por peajes = <?php echo "&#8353;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?><br>
+                                Monto por peajes = <?php echo "&#36;" . $viaje->getTotalTolls() . " => (" . $viaje->getTolls() . ")" ?><br>
                             <?php } ?>
                             <?php if ($viaje->getExtraAmount() > 0) { ?>
-                                Gratificación extra = <?php echo "&#8353;" . $viaje->getExtraAmount() ?><br>
+                                Gratificación extra = <?php echo "&#36;" . $viaje->getExtraAmount() ?><br>
                             <?php } ?>
                             <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Efectivo") { ?>
-                                Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?><br>
+                                Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?><br>
                             <?php } ?>                                  
                             Monto total = <?php number_format($viaje->toString_montoTotal(), 2) ?><br>
-                            Comisión de Didi = <?php echo "&#8353;" . number_format($viaje->calculaComisionDidi(), 2) ?><br>
-                            <strong>Monto de ganancia = <?php echo "&#8353;" . number_format($viaje->calculaGanancia(), 2) ?></strong><br><br>
+                            Comisión de Didi = <?php echo "&#36;" . number_format($viaje->calculaComisionDidi(), 2) ?><br>
+                            Detalle de impuestos: <?php echo $viaje->toString_taxesModal() ?><br>
+                            <strong>Monto de ganancia = <?php echo "&#36;" . number_format($viaje->calculaGanancia(), 2) ?></strong><br><br>
                             Detalle ganancias reportadas en la aplicación<br>
-                            Total del viaje = <?php echo "&#8353;" . number_format($viaje->getTotalTripPrice(), 2) ?><br>
+                            Total del viaje = <?php echo "&#36;" . number_format($viaje->getTotalTripPrice(), 2) ?><br>
                             <?php if ($viaje->getDiscount() > 0) { ?>
-                                Descuentos = <?php echo "&#8353;" . number_format($viaje->getDiscount(), 2) ?><br>
+                                Descuentos = <?php echo "&#36;" . number_format($viaje->getDiscount(), 2) ?><br>
                             <?php } ?>
                             <?php if ($viaje->getPendingAmount() > 0 && $viaje->getPayment() == "Tarjeta") { ?>
-                                Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?><br>
+                                Saldo pendiente = <?php echo "&#36;" . $viaje->getPendingAmount() ?><br>
                             <?php } ?>   
-                            Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?><br>
+                            Ganancia del viaje = <?php echo "&#36;" . number_format($viaje->getEarnings(), 2) ?><br>
                             <strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong><br><br>
                             Por tanto existen una diferencia de <?php echo $viaje->toStringDifference() ?><br><br>            
                             Espero me puedan ayudar.<br>
@@ -364,18 +390,16 @@ if ($calculation_type == 'Details') {
         </div>
     </div>
 
-<footer><?php include_once("includes/footer.php") ?></footer>
-    <!-- JavaScript -->
-    <!-- build:js dist/country/cr/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/form-scripts.js"></script>
-    <script src="js/calculatescripts.js"></script>
-    <script src="js/defaultscripts.js"></script>
-    <!-- endbuild -->
+    <footer><?php include_once("includes/footer.php") ?></footer>
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
 

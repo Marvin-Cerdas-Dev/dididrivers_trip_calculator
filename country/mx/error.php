@@ -6,12 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, didicalc, loading, usar, este, sitio, DIDI, VIAJES DIDI, VIAJES, CALCULADOR, Calculadora viajes Didi, Costa Rica, México, Chile, paises, privacidad, política, services, país, selecione">
+        <meta name="description" content="En esta plataforma entradas la opcíón de verificar tus viajes de la plataforma Didi de una forma fácil y segura.">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, México">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        
-        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
         
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
@@ -42,7 +42,7 @@
             "@type": "Organization",
             "name": "DidiCalc",
             "url": "https://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
+            "address": "México",
             "sameAs": [
             "https://www.facebook.com/calculadoradeplataformasdigitales/"
             ]
@@ -55,7 +55,7 @@
             "@type": "WebSite",
             "name": "DidiCalc",
             "url": "https://crdidicalc.azurewebsites.net/",
-            "address": "Costa Rica",
+            "address": "México",
             "potentialAction": {
             "@type": "SearchAction",
             "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
@@ -64,9 +64,9 @@
             }
         </script>
 
-        <!-- build:css dist/country/cr/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/default.css" rel="stylesheet">        
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
         <!-- endbuild -->
 
         <!-- Title -->
@@ -120,16 +120,14 @@
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-    <!-- JavaScript -->
-    <!-- build:js dist/country/cr/js -->
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/index-scripts.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/form-scripts.js"></script>
-    <script src="js/calculatescripts.js"></script>
-    <script src="js/defaultscripts.js"></script>
-    <!-- endbuild -->
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
 </body>
 </html>

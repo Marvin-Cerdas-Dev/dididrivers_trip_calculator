@@ -64,9 +64,9 @@
             }
         </script>
 
-        <!-- build:css ../../dist/css -->
-        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="css/preview_default.css" rel="stylesheet">
+        <!-- build:css css/styles.css -->
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
         <!-- endbuild -->
 
         <!-- Title -->
@@ -113,18 +113,16 @@
                 </div>        
             </div>
         </div>
-    <footer><?php include_once("includes/footer.php") ?></footer>  
     </div>
-</div>
-<!-- JavaScript -->
-<!-- build:js ../../dis/js -->
-<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/index-scripts.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/country.js"></script>
-<script src="js/defaultscripts.js"></script>
-<!-- endbuild -->
+    <footer><?php include_once("includes/footer.php") ?></footer> 
+        <!-- build:js js/js.js -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="js/index-scripts.js"></script>
+        <script src="js/form-scripts.js"></script>
+        <script src="js/calculatescripts.js"></script>
+        <script src="js/defaultscripts.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <!-- endbuild -->
 </body>
 </html>

@@ -11,22 +11,41 @@ $(document).ready(function () {
         }
     }
 
-    // Cookies link Leer mas
-    $('#learMore').click(function () {
-        window.location.href = 'privacypolicy.php';
-    });
-
     // Cookie acept cookies use
     $('#acept').click(function () {
         $.cookie('Didicalc_cookies', 'acepted', {expires: 365, path: '/'});
     });
 
     $('#calc_details').click(function () {
-        window.location.href = 'calcDetails.php';
+        window.location.href = 'details.php';
     });
 
     $('#calc_simple').click(function () {
-        window.location.href = 'calcSimple.php';
+        window.location.href = 'simple.php';
+    });
+    
+    $('#mcountryCR').click(function () {
+        window.location.href = 'https://crdidicalc.azurewebsites.net/country/cr/index.php';
+    });
+    
+    $('#mcountryMX').click(function () {
+        window.location.href = 'https://crdidicalc.azurewebsites.net/country/mx/index.php';
+    });
+    
+    $('#mcountryCR').mouseover(function(){
+        $('#mcountryCR').addClass("modalover");
+    });
+    
+    $('#mcountryCR').mouseout(function(){
+        $('#mcountryCR').removeClass("modalover");
+    });
+    
+    $('#mcountryMX').mouseover(function () {
+        $('#mcountryMX').addClass("modalover");
     });
 
+    $('#mcountryMX').mouseout(function () {
+        $('#mcountryMX').removeClass("modalover");
+    });
+    
 });

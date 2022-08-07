@@ -159,18 +159,18 @@ $(document).ready(function () {
             validate = false;
         } else {
             if ($('#hours').val() === "") {
-                $('#val_hours').text("Debe indicar un valor para las horas.");
-                $('#val_hours').attr("hidden", false);
+                $('#val_time').text("Debe indicar un valor para las horas.");
+                $('#val_time').attr("hidden", false);
                 validate = false;
             }
             if ($('#minutes').val() === "") {
-                $('#val_hours').text("Debe indicar un valor para las minutos.");
-                $('#val_hours').attr("hidden", false);
+                $('#val_time').text("Debe indicar un valor para las minutos.");
+                $('#val_time').attr("hidden", false);
                 validate = false;
             }
             if ($('#seconds').val() === "") {
-                $('#val_hours').text("Debe indicar un valor para las segundos.");
-                $('#val_hours').attr("hidden", false);
+                $('#val_time').text("Debe indicar un valor para las segundos.");
+                $('#val_time').attr("hidden", false);
                 validate = false;
             }
         }
@@ -200,81 +200,81 @@ $(document).ready(function () {
     $('input[type="checkbox"]').click(function () {
 // Atenas
         if ($('#Atenas').is(":checked")) {
-            $('#AtenasLabel').addClass("btn-secondary");
+            $('#AtenasLabel').addClass("btn-update2");
         } else if ($('#Atenas').is(":not(:checked)")) {
-            $('#AtenasLabel').removeClass("btn-secondary");
+            $('#AtenasLabel').removeClass("btn-update2");
         }
 // Braulio Carrillo
         if ($('#BraulioCarrillo').is(":checked")) {
-            $('#BraulioCarrilloLabel').addClass("btn-secondary");
+            $('#BraulioCarrilloLabel').addClass("btn-update2");
         } else if ($('#BraulioCarrillo').is(":not(:checked)")) {
-            $('#BraulioCarrilloLabel').removeClass("btn-secondary");
+            $('#BraulioCarrilloLabel').removeClass("btn-update2");
         }
 // Bernardo Soto
         if ($('#BernardoSoto').is(":checked")) {
-            $('#BernardoSotoLabel').addClass("btn-secondary");
+            $('#BernardoSotoLabel').addClass("btn-update2");
         } else if ($('#BernardoSoto').is(":not(:checked)")) {
-            $('#BernardoSotoLabel').removeClass("btn-secondary");
+            $('#BernardoSotoLabel').removeClass("btn-update2");
         }
 // Cuidad Colón
         if ($('#CuidadColon').is(":checked")) {
-            $('#CuidadColonLabel').addClass("btn-secondary");
+            $('#CuidadColonLabel').addClass("btn-update2");
         } else if ($('#CuidadColon').is(":not(:checked)")) {
-            $('#CuidadColonLabel').removeClass("btn-secondary");
+            $('#CuidadColonLabel').removeClass("btn-update2");
         }
 // Escazú
         if ($('#Escazu').is(":checked")) {
-            $('#EscazuLabel').addClass("btn-secondary");
+            $('#EscazuLabel').addClass("btn-update2");
         } else if ($('#Escazu').is(":not(:checked)")) {
-            $('#EscazuLabel').removeClass("btn-secondary");
+            $('#EscazuLabel').removeClass("btn-update2");
         }
 // Florencio del Castillo
         if ($('#FlorencioDelCastillo').is(":checked")) {
-            $('#FlorencioDelCastilloLabel').addClass("btn-secondary");
+            $('#FlorencioDelCastilloLabel').addClass("btn-update2");
         } else if ($('#FlorencioDelCastillo').is(":not(:checked)")) {
-            $('#FlorencioDelCastilloLabel').removeClass("btn-secondary");
+            $('#FlorencioDelCastilloLabel').removeClass("btn-update2");
         }
 // General Cañas
         if ($('#GeneralCanas').is(":checked")) {
-            $('#GeneralCanasLabel').addClass("btn-secondary");
+            $('#GeneralCanasLabel').addClass("btn-update2");
         } else if ($('#GeneralCanas').is(":not(:checked)")) {
-            $('#GeneralCanasLabel').removeClass("btn-secondary");
+            $('#GeneralCanasLabel').removeClass("btn-update2");
         }
 // Guacima
         if ($('#Guacima').is(":checked")) {
-            $('#GuacimaLabel').addClass("btn-secondary");
+            $('#GuacimaLabel').addClass("btn-update2");
         } else if ($('#Guacima').is(":not(:checked)")) {
-            $('#GuacimaLabel').removeClass("btn-secondary");
+            $('#GuacimaLabel').removeClass("btn-update2");
         }
 // Pozón
         if ($('#Pozon').is(":checked")) {
-            $('#PozonLabel').addClass("btn-secondary");
+            $('#PozonLabel').addClass("btn-update2");
         } else if ($('#Pozon').is(":not(:checked)")) {
-            $('#PozonLabel').removeClass("btn-secondary");
+            $('#PozonLabel').removeClass("btn-update2");
         }
 // Rampa Atenas
         if ($('#RampaAtenas').is(":checked")) {
-            $('#RampaAtenasLabel').addClass("btn-secondary");
+            $('#RampaAtenasLabel').addClass("btn-update2");
         } else if ($('#Atenas').is(":not(:checked)")) {
-            $('#RampaAtenasLabel').removeClass("btn-secondary");
+            $('#RampaAtenasLabel').removeClass("btn-update2");
         }
 // Rampa Pozón
         if ($('#RampaPozon').is(":checked")) {
-            $('#RampaPozonLabel').addClass("btn-secondary");
+            $('#RampaPozonLabel').addClass("btn-update2");
         } else if ($('#RampaPozon').is(":not(:checked)")) {
-            $('#RampaPozonLabel').removeClass("btn-secondary");
+            $('#RampaPozonLabel').removeClass("btn-update2");
         }
 // San Rafael
         if ($('#SanRafael').is(":checked")) {
-            $('#SanRafaelLabel').addClass("btn-secondary");
+            $('#SanRafaelLabel').addClass("btn-update2");
         } else if ($('#SanRafael').is(":not(:checked)")) {
-            $('#SanRafaelLabel').removeClass("btn-secondary");
+            $('#SanRafaelLabel').removeClass("btn-update2");
         }
 // Siquiares
         if ($('#Siquiares').is(":checked")) {
-            $('#SiquiaresLabel').addClass("btn-secondary");
+            $('#SiquiaresLabel').addClass("btn-update2");
         } else if ($('#Siquiares').is(":not(:checked)")) {
-            $('#SiquiaresLabel').removeClass("btn-secondary");
+            $('#SiquiaresLabel').removeClass("btn-update2");
         }
     });
 }
