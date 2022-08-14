@@ -108,7 +108,7 @@ if ($calculation_type == 'Details') {
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
         <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
@@ -117,13 +117,12 @@ if ($calculation_type == 'Details') {
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
         <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
         <meta property="twitter:image:alt" content="DidiCalc">
-        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -190,12 +189,16 @@ if ($calculation_type == 'Details') {
                 <div class="thumbnail"> 
                     <?php if ($error != false) { ?> 
                         <?php if ($calculation_type == 'Simple') { ?>
-                            <div class="horizontal-center"><h2>Calculo de simple viaje</h2></div>
-                            <div class="horizontal-center col-sm-12 col-md12 col-lg-12">
-                                <!--AdSense-->
-                                <?php include_once("includes/ads.php") ?>  
-                                <!--AdSense-->
-                            </div> 
+                            <div class="horizontal-center litle-margins"><h1>Calculo de simple viaje</h1></div>
+                            <div class="mb-3 row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="horizontal-center">
+                                        <!--AdSense-->
+                                        <?php include_once("includes/ads.php") ?>  
+                                        <!--AdSense-->
+                                    </div>
+                                </div>
+                            </div>
                             <div class="justify-text alert alert-info" role="alert">
                                 <strong>Información del viaje:<br></strong>
                                 <?php echo 'Tipo de servicio: Didi ' . $service_type; ?><br>
@@ -209,7 +212,7 @@ if ($calculation_type == 'Details') {
                         }
                         if ($calculation_type == 'Details') {
                             ?>
-                            <div class="horizontal-center"><h2>Calculo detallado de viaje</h2></div>                              
+                            <div class="horizontal-center litle-margins"><h2>Calculo detallado de viaje</h2></div>                              
                             <div id="contCalcViaje" class="justify-text alert" role="alert">
                                 <h4>Detalle del viaje</h4>
                                 <p><?php echo 'Tipo de servicio: Didi ' . $service_type; ?></p>
@@ -274,13 +277,17 @@ if ($calculation_type == 'Details') {
                                     <p>Ganancia del viaje = <?php echo "&#36;" . number_format($viaje->getEarnings(), 2) ?></p>
                                     <p><strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong></p>
                                 <?php } ?>
-                                <div class="horizontal-center col-sm-12 col-md12 col-lg-12">
-                                    <!--AdSense-->
-                                    <?php include_once("includes/ads.php") ?>  
-                                    <!--AdSense-->
+                                <div class="mb-3 row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="horizontal-center">
+                                            <!--AdSense-->
+                                            <?php include_once("includes/ads.php") ?>  
+                                            <!--AdSense-->
+                                        </div>
+                                    </div>
                                 </div>  
                                 <?php if ($viaje->getDifference() < 0) { ?>
-                                    <button type="button" class="btn btn-update btn-lg btn-block" data-toggle="modal" data-target="#supportMessageModal">Mensaje para revisión de tarifa</button>
+                                    <button type="button" class="btn btn-update btn-lg" data-bs-toggle="modal" data-bs-target="#supportMessageModal">Mensaje para revisión de tarifa</button>
                                 <?php } ?>
                             </div>
                         <?php } ?>
@@ -297,17 +304,15 @@ if ($calculation_type == 'Details') {
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="supportMessageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <!-- Message Modal -->
+    <div id="supportMessageModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Mensaje para revisión de tarifas</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title">Mensaje para revisión de tarifas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">           
+                <div class="modal-body">
                     <p id="supportMessage">
                         ¡Hola! Estaba revisando mis granacias y he notado que en este viaje existe una diferencia, 
                         según los datos en la aplicación y el calculo que he hecho. Por tal razón adjunto el detalle 
@@ -383,7 +388,7 @@ if ($calculation_type == 'Details') {
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-update2" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-update2" data-bs-dismiss="modal">Cerrar</button>
                     <button id="tollsFares" type="button" class="btn btn-update" onclick="CopyToClipboard('supportMessage')">Copiar</button>
                 </div>
             </div>
@@ -391,15 +396,15 @@ if ($calculation_type == 'Details') {
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-        <!-- build:js js/js.js -->
-        <script src="../../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="js/index-scripts.js"></script>
-        <script src="js/form-scripts.js"></script>
-        <script src="js/calculatescripts.js"></script>
-        <script src="js/defaultscripts.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        <!-- endbuild -->
+    <!-- build:js js/js.js -->
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
 

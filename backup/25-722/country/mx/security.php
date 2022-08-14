@@ -161,11 +161,15 @@
                             </div>
                         </div>
                     </div>
-                    <p class="card-text">
-                        <!--AdSense-->
-                        <?php include_once("includes/ads.php") ?>  
-                        <!--AdSense-->
-                    </p>
+                    <div class="mb-3 row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="horizontal-center">
+                                <!--AdSense-->
+                                <?php include_once("includes/ads.php") ?>  
+                                <!--AdSense-->
+                            </div>
+                        </div>
+                    </div>
                     <h2>Durante un viaje</h2>
                     <div class="container-fluid">
                         <div class="row">                    

@@ -19,7 +19,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
         <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
@@ -28,13 +28,12 @@
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
         <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
         <meta property="twitter:image:alt" content="DidiCalc">
-        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -357,24 +356,24 @@
                             <p>Esta corresponde a la tarifa dinámica aplicada al viaje. Si el vieja no fue con tarifa dinámica puedes dejar este campo sin modificación.</p>                              
                             <h5>Monto de peajes</h5>
                             <p>Corresponde a los peajes pagados durante el viaje, podrás marcar los diferentes peajes pagados según corresponda.</p>                              
-                        </div>                        </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-update2" data-bs-dismiss="modal">Cerrar</button>  
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-update2" data-bs-dismiss="modal">Cerrar</button>  
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>            
 
-        <footer><?php include_once("includes/footer.php") ?></footer>
-        <!-- build:js js/js.js -->
-        <script src="../../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="js/index-scripts.js"></script>
-        <script src="js/form-scripts.js"></script>
-        <script src="js/calculatescripts.js"></script>
-        <script src="js/defaultscripts.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        <!-- endbuild -->
+            <footer><?php include_once("includes/footer.php") ?></footer>
+            <!-- build:js js/js.js -->
+            <script src="../../node_modules/jquery/dist/jquery.js"></script>
+            <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="js/index-scripts.js"></script>
+            <script src="js/form-scripts.js"></script>
+            <script src="js/calculatescripts.js"></script>
+            <script src="js/defaultscripts.js"></script>
+            <script src="js/jquery.cookie.js"></script>
+            <!-- endbuild -->
     </body>
 </html>
 

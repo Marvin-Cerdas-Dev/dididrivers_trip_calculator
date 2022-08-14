@@ -113,11 +113,15 @@
                             <li>Si el Usuario utiliza efectivo como método de pago, definfectate las manos después de recibirlo.</li>  
                         </ul>
                         </p>
-                        <p class="card-text">
-                            <!--AdSense-->
-                            <?php include_once("includes/ads.php") ?>  
-                            <!--AdSense-->
-                        </p>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="horizontal-center">
+                                    <!--AdSense-->
+                                    <?php include_once("includes/ads.php") ?>  
+                                    <!--AdSense-->
+                                </div>
+                            </div>
+                        </div>
                         <h6 class="card-title"><b>Salud y limpieza de tu vehiculo</b></h6>
                         <p class="card-text">
                         <ul>
@@ -133,15 +137,15 @@
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-        <!-- build:js js/js.js -->
-        <script src="../../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="js/index-scripts.js"></script>
-        <script src="js/form-scripts.js"></script>
-        <script src="js/calculatescripts.js"></script>
-        <script src="js/defaultscripts.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        <!-- endbuild -->
+    <!-- build:js js/js.js -->
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

@@ -1,37 +1,4 @@
 $(document).ready(function () {
-    $("[name='service']").on("change", function (e) {
-        if ($("input:radio[name=service]:checked").val() === "Express") {
-            $("#serviceEconomy").removeClass("radioActive");
-            $("#serviceEconomy").addClass("radioInactive");
-            $("#serviceExpress").removeClass("radioInactive");
-            $("#serviceExpress").addClass("radioActive");
-        }
-        if ($("input:radio[name=service]:checked").val() === "Economy") {
-            $("#serviceExpress").removeClass("radioActive");
-            $("#serviceExpress").addClass("radioInactive");
-            $("#serviceEconomy").removeClass("radioInactive");
-            $("#serviceEconomy").addClass("radioActive");
-        }
-    });
-
-    // Pendinamount change class
-    $("[name='payment']").on("change", function (e) {
-        if ($("input:radio[name=payment]:checked").val() === "Tarjeta") {
-            $("#Cash").removeClass("radioActive");
-            $("#Cash").addClass("radioInactive");
-            $("#Creditcard").removeClass("radioInactive");
-            $("#Creditcard").addClass("radioActive");
-        }
-        if ($("input:radio[name=payment]:checked").val() === "Efectivo") {
-            $("#Creditcard").removeClass("radioActive");
-            $("#Creditcard").addClass("radioInactive");
-            $("#Cash").removeClass("radioInactive");
-            $("#Cash").addClass("radioActive");
-        }
-    });
-
-
-
     // Show the cookies modal
     var cookie_policy = $.cookie('Didicalc_cookies');
     if (cookie_policy === undefined) {

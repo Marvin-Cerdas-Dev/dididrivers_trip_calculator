@@ -12,7 +12,7 @@
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -35,7 +35,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
-        
+
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -144,7 +144,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group row"> 
                                 <label for="service" class="col-md-4 col-lg-2 control-label">Cuentas con RFC:</label>
                                 <div class="custom-control custom-radio custom-control-inline">
@@ -158,7 +158,7 @@
                                     </div>
                                 </div>
                             </div>   
-                             <div class="form-group row"> 
+                            <div class="form-group row"> 
                                 <label for="Guanajuato" class="col-md-4 col-lg-2-5 control-label">Vives en Guanajuato:</label>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="btn-group btn-group-toggle">
@@ -171,7 +171,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                            
+
                             <div class="form-group row">
                                 <label for="kilometers" class="col-md-4 col-lg-2 control-label">Kilómetros recorridos:</label>
                                 <div class="col-md-8 col-lg-10">                      
@@ -281,11 +281,13 @@
                             <input type="text" class="form-control" id="selected_tolls" name="selected_tolls" value="" hidden="true">
                         </div>
                     </div>                    
-                    <div class="col-sm-6 col-md-6 col-lg-12">
-                        <div class="horizontal-center">
-                            <!--AdSense-->
-                            <?php include_once("includes/ads.php") ?>  
-                            <!--AdSense-->
+                    <div class="mb-3 row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="horizontal-center">
+                                <!--AdSense-->
+                                <?php include_once("includes/ads.php") ?>  
+                                <!--AdSense-->
+                            </div>
                         </div>
                     </div>                               
                     <div class="form-group row">
@@ -400,16 +402,16 @@
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-        <!-- build:js js/js.js -->
-        <script src="../../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="js/index-scripts.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        <script src="js/form-scripts.js"></script>
-        <script src="js/calculatescripts.js"></script>
-        <script src="js/defaultscripts.js"></script>
-        <!-- endbuild -->
+    <!-- build:js js/js.js -->
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
 

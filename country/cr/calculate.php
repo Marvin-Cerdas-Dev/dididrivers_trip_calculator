@@ -74,10 +74,6 @@ if ($calculation_type == 'Details') {
 } else {
     $error = true;
 }
-/* if ($error == true){
-  header("Location: error.php");
-  exit();
-  } */
 ?>
 <html lang="es">
     <head>
@@ -97,7 +93,7 @@ if ($calculation_type == 'Details') {
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
         <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
@@ -106,13 +102,12 @@ if ($calculation_type == 'Details') {
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
         <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
         <meta property="twitter:image:alt" content="DidiCalc">
-        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">
@@ -167,12 +162,16 @@ if ($calculation_type == 'Details') {
                     <div class="card-margin">
                         <?php if ($error != false) { ?> 
                             <?php if ($calculation_type == 'Simple') { ?>
-                                <div class="horizontal-center"><h2>Calculo de simple viaje</h2></div>
-                                <div class="horizontal-center col-sm-12 col-md12 col-lg-12">
-                                    <!--AdSense-->
-                                    <?php include_once("includes/ads.php") ?>  
-                                    <!--AdSense-->
-                                </div> 
+                                <div class="horizontal-center litle-margins"><h2>Calculo de simple viaje</h2></div>
+                                <div class="mb-3 row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="horizontal-center">
+                                            <!--AdSense-->
+                                            <?php include_once("includes/ads.php") ?>  
+                                            <!--AdSense-->
+                                        </div>
+                                    </div>
+                                </div>> 
                                 <div class="justify-text alert alert-info" role="alert">
                                     <strong>Información del viaje:<br></strong>
                                     <?php echo 'Tipo de servicio: Didi ' . $service_type; ?><br>
@@ -186,7 +185,7 @@ if ($calculation_type == 'Details') {
                             }
                             if ($calculation_type == 'Details') {
                                 ?>
-                                <div class="horizontal-center"><h2>Calculo detallado de viaje</h2></div>                              
+                                <div class="horizontal-center litle-margins"><h2>Calculo detallado de viaje</h2></div>                              
                                 <div id="contCalcViaje" class="justify-text alert" role="alert">
                                     <h4>Detalle del viaje</h4>
                                     <p><?php echo 'Tipo de servicio: Didi ' . $service_type; ?></p>
@@ -352,7 +351,7 @@ if ($calculation_type == 'Details') {
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-update2" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-update2" data-bs-dismiss="modal">Cerrar</button>
                         <button id="tollsFares" type="button" class="btn btn-update" onclick="CopyToClipboard('supportMessage')">Copiar</button>
                     </div>
                 </div>

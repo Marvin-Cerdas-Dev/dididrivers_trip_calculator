@@ -151,11 +151,15 @@
                                     Debe escribir un mensaje
                                 </div>                            
                             </div>
-                            <p class="card-text">
-                                <!--AdSense-->
-                                <?php include_once("includes/ads.php") ?>  
-                                <!--AdSense-->
-                            </p>
+                            <div class="mb-3 row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="horizontal-center">
+                                        <!--AdSense-->
+                                        <?php include_once("includes/ads.php") ?>  
+                                        <!--AdSense-->
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <button name="contactSubmit" type="submit" class="btn btn-update btn-lg btn-block" id="contactSumit">Enviar</button>
                             </div>

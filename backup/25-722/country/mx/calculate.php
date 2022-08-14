@@ -191,11 +191,15 @@ if ($calculation_type == 'Details') {
                     <?php if ($error != false) { ?> 
                         <?php if ($calculation_type == 'Simple') { ?>
                             <div class="horizontal-center"><h2>Calculo de simple viaje</h2></div>
-                            <div class="horizontal-center col-sm-12 col-md12 col-lg-12">
-                                <!--AdSense-->
-                                <?php include_once("includes/ads.php") ?>  
-                                <!--AdSense-->
-                            </div> 
+                            <div class="mb-3 row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="horizontal-center">
+                                        <!--AdSense-->
+                                        <?php include_once("includes/ads.php") ?>  
+                                        <!--AdSense-->
+                                    </div>
+                                </div>
+                            </div>
                             <div class="justify-text alert alert-info" role="alert">
                                 <strong>Información del viaje:<br></strong>
                                 <?php echo 'Tipo de servicio: Didi ' . $service_type; ?><br>
@@ -274,11 +278,15 @@ if ($calculation_type == 'Details') {
                                     <p>Ganancia del viaje = <?php echo "&#36;" . number_format($viaje->getEarnings(), 2) ?></p>
                                     <p><strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong></p>
                                 <?php } ?>
-                                <div class="horizontal-center col-sm-12 col-md12 col-lg-12">
-                                    <!--AdSense-->
-                                    <?php include_once("includes/ads.php") ?>  
-                                    <!--AdSense-->
-                                </div>  
+                                <div class="mb-3 row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="horizontal-center">
+                                            <!--AdSense-->
+                                            <?php include_once("includes/ads.php") ?>  
+                                            <!--AdSense-->
+                                        </div>
+                                    </div>
+                                </div> 
                                 <?php if ($viaje->getDifference() < 0) { ?>
                                     <button type="button" class="btn btn-update btn-lg btn-block" data-toggle="modal" data-target="#supportMessageModal">Mensaje para revisión de tarifa</button>
                                 <?php } ?>

@@ -130,11 +130,15 @@
                         <p class="card-text">
                             <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Verificar ganancias de forma detallada</button>
                         </p>
-                        <p class="card-text">
-                            <!--AdSense-->
-                            <?php include_once("includes/ads.php") ?>  
-                            <!--AdSense-->
-                        </p>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="horizontal-center">
+                                    <!--AdSense-->
+                                    <?php include_once("includes/ads.php") ?>  
+                                    <!--AdSense-->
+                                </div>
+                            </div>
+                        </div> 
                         <p class="card-text">
                             También si lo prefiere puede verificar sus ganancias de forma simple aquí:
                         </p>

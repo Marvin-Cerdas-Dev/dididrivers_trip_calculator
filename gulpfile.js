@@ -109,7 +109,7 @@ gulp.task('usemin-cr', function () {
                             html: [function () {
                                     return htmlmin({collapseWhitespace: true})
                                 }],
-                            js: [ rev()],
+                            js: [rev()],
                             inlinecss: [cleancss(), 'concat']
                         }));
             }))

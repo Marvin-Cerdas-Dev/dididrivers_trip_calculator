@@ -109,11 +109,15 @@
                         </ul>
                         A continuación puede ver el detalle de los cantones en los cuales Didi opera desde el inicio:
                         </p>
-                        <p class="card-text">
-                            <!--AdSense-->
-                            <?php include_once("includes/ads.php") ?>  
-                            <!--AdSense-->
-                        </p>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="horizontal-center">
+                                    <!--AdSense-->
+                                    <?php include_once("includes/ads.php") ?>  
+                                    <!--AdSense-->
+                                </div>
+                            </div>
+                        </div>
                         <p class="card-text">
                         <center>
                             <img class="img-fluid" src="img/mapa_covertura.svg"/>
@@ -127,15 +131,15 @@
     </div>
 
     <footer><?php include_once("includes/footer.php") ?></footer>
-        <!-- build:js js/js.js -->
-        <script src="../../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="js/index-scripts.js"></script>
-        <script src="js/form-scripts.js"></script>
-        <script src="js/calculatescripts.js"></script>
-        <script src="js/defaultscripts.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        <!-- endbuild -->
+    <!-- build:js js/js.js -->
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/index-scripts.js"></script>
+    <script src="js/form-scripts.js"></script>
+    <script src="js/calculatescripts.js"></script>
+    <script src="js/defaultscripts.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

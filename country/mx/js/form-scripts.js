@@ -1,112 +1,19 @@
 var tollsNum = 1;
 $(document).ready(function () {
-    $("[name='service']").on("change", function (e) {
-        if ($("input:radio[name=service]:checked").val() === "Express") {
-            $("#serviceEconomy").removeClass("radioActive");
-            $("#serviceEconomy").addClass("radioInactive");
-            $("#serviceProtect").removeClass("radioActive");
-            $("#serviceProtect").addClass("radioInactive");
-            $("#serviceEntrega").removeClass("radioActive");
-            $("#serviceEntrega").addClass("radioInactive");
-            $("#serviceExpress").removeClass("radioInactive");
-            $("#serviceExpress").addClass("radioActive");
-
-        }
-        if ($("input:radio[name=service]:checked").val() === "Protect") {
-            $("#serviceExpress").removeClass("radioActive");
-            $("#serviceExpress").addClass("radioInactive");
-            $("#serviceProtect").removeClass("radioInactive");
-            $("#serviceProtect").addClass("radioActive");
-            $("#serviceEntrega").removeClass("radioActive");
-            $("#serviceEntrega").addClass("radioInactive");
-            $("#serviceEconomy").removeClass("radioActive");
-            $("#serviceEconomy").addClass("radioInactive");
-        }
-        if ($("input:radio[name=service]:checked").val() === "Entrega") {
-            $("#serviceExpress").removeClass("radioActive");
-            $("#serviceExpress").addClass("radioInactive");
-            $("#serviceProtect").removeClass("radioActive");
-            $("#serviceProtect").addClass("radioInactive");
-            $("#serviceEntrega").removeClass("radioInactive");
-            $("#serviceEntrega").addClass("radioActive");
-            $("#serviceEconomy").removeClass("radioActive");
-            $("#serviceEconomy").addClass("radioInactive");
-        }
-
-        if ($("input:radio[name=service]:checked").val() === "Economy") {
-            $("#serviceExpress").removeClass("radioActive");
-            $("#serviceExpress").addClass("radioInactive");
-            $("#serviceProtect").removeClass("radioActive");
-            $("#serviceProtect").addClass("radioInactive");
-            $("#serviceEntrega").removeClass("radioActive");
-            $("#serviceEntrega").addClass("radioInactive");
-            $("#serviceEconomy").removeClass("radioInactive");
-            $("#serviceEconomy").addClass("radioActive");
-        }
-    });
-
-    // Paymeth method change class
-    $("[name='payment']").on("change", function (e) {
-        if ($("input:radio[name=payment]:checked").val() === "Tarjeta") {
-            $("#Cash").removeClass("radioActive");
-            $("#Cash").addClass("radioInactive");
-            $("#Creditcard").removeClass("radioInactive");
-            $("#Creditcard").addClass("radioActive");
-        }
-        if ($("input:radio[name=payment]:checked").val() === "Efectivo") {
-            $("#Creditcard").removeClass("radioActive");
-            $("#Creditcard").addClass("radioInactive");
-            $("#Cash").removeClass("radioInactive");
-            $("#Cash").addClass("radioActive");
-        }
-    });
-
-    // RFC change class 
-    $("[name='RFC']").on("change", function (e) {
-        if ($("input:radio[name=RFC]:checked").val() === "Yes") {
-            $("#RFC-No").removeClass("radioActive");
-            $("#RFC-No").addClass("radioInactive");
-            $("#RFC-Yes").removeClass("radioInactive");
-            $("#RFC-Yes").addClass("radioActive");
-        }
-        if ($("input:radio[name=RFC]:checked").val() === "No") {
-            $("#RFC-Yes").removeClass("radioActive");
-            $("#RFC-Yes").addClass("radioInactive");
-            $("#RFC-No").removeClass("radioInactive");
-            $("#RFC-No").addClass("radioActive");
-        }
-    });    
-
-    // Guanajuato change class
-    $("[name='Guanajuato']").on("change", function (e) {
-        if ($("input:radio[name=Guanajuato]:checked").val() === "Yes") {
-            $("#Guanajuato-No").removeClass("radioActive");
-            $("#Guanajuato-No").addClass("radioInactive");
-            $("#Guanajuato-Yes").removeClass("radioInactive");
-            $("#Guanajuato-Yes").addClass("radioActive");
-        }
-        if ($("input:radio[name=Guanajuato]:checked").val() === "No") {
-            $("#Guanajuato-Yes").removeClass("radioActive");
-            $("#Guanajuato-Yes").addClass("radioInactive");
-            $("#Guanajuato-No").removeClass("radioInactive");
-            $("#Guanajuato-No").addClass("radioActive");
-        }
-    }); 
-
     //Add new toll field
     $("#add_toll").on("click", function(e) {
         tollsNum ++;
         if(tollsNum === 2){
             var divTolls = $('#wrap-toll-1');
             var divToll = document.createElement("div");
-            divToll.innerHTML = '<div id="wrap-toll-' + tollsNum + '" class="form-group row"><label for="toll-' + tollsNum + '" class="col-md-4 col-lg-2 control-label">Peaje ' + tollsNum + ':</label><div class="row col-md-8 col-lg-10"><div class="col"><input type="number" id="toll-' + tollsNum + '" name="toll-' + tollsNum + '" class="form-control"  placeholder="Peaje ' + tollsNum + '"><div id="val_toll-' + tollsNum + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div><div><button type="button" id="delete_toll-' + tollsNum + '" class="btn btn-update btn-sm delete" value="' + tollsNum + '">-</button></div></div>';
+            divToll.innerHTML = '<div id="wrap-toll-' + tollsNum + '" class="mb-3 row row-cols-lg-5 align-items-center"><label for="toll-' + tollsNum + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label">Peaje ' + tollsNum + ':</label><div class="col-sm-2 col-md-4 col-lg-6 col-form-label"><input type="number" id="toll-' + tollsNum + '" name="toll-' + tollsNum + '" class="form-control" placeholder="Peaje ' + tollsNum + '"></div><div class="col-sm-2 col-md-4 col-lg-4 col-form-label"><button type="button" id="delete_toll-' + tollsNum + '" class="btn btn-update btn-sm delete" value="' + tollsNum + '">-</button></div><label for="val_toll-' + tollsNum + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label"></label><div class="col-sm-10 col-md-8 col-lg-10 col-form-label"><div id="val_toll-' + tollsNum + '" for="toll-' + tollsNum + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div></div>';
             $(divToll).insertAfter(divTolls);
         } else {
             var divNum = tollsNum - 1;
             var newdiv = '#wrap-toll-' + divNum;
             var divTolls = $(newdiv);
             var divToll = document.createElement("div");
-            divToll.innerHTML = '<div id="wrap-toll-' + tollsNum + '" class="form-group row"><label for="toll-' + tollsNum + '" class="col-md-4 col-lg-2 control-label">Peaje ' + tollsNum + ':</label><div class="row col-md-8 col-lg-10"><div class="col"><input type="number" id="toll-' + tollsNum + '" name="toll-' + tollsNum + '" class="form-control"  placeholder="Peaje ' + tollsNum + '"><div id="val_toll-' + tollsNum + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div><div><button type="button" id="delete_toll-' + tollsNum + '" class="btn btn-update btn-sm delete" value="' + tollsNum + '">-</button></div></div>';
+            divToll.innerHTML = '<div id="wrap-toll-' + tollsNum + '" class="mb-3 row row-cols-lg-5 align-items-center"><label for="toll-' + tollsNum + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label">Peaje ' + tollsNum + ':</label><div class="col-sm-2 col-md-4 col-lg-6 col-form-label"><input type="number" id="toll-' + tollsNum + '" name="toll-' + tollsNum + '" class="form-control" placeholder="Peaje ' + tollsNum + '"></div><div class="col-sm-2 col-md-4 col-lg-4 col-form-label"><button type="button" id="delete_toll-' + tollsNum + '" class="btn btn-update btn-sm delete" value="' + tollsNum + '">-</button></div><label for="val_toll-' + tollsNum + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label"></label><div class="col-sm-10 col-md-8 col-lg-10 col-form-label"><div id="val_toll-' + tollsNum + '" for="toll-' + tollsNum + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div></div>';
             $(divToll).insertAfter(divTolls);
         }
     });
@@ -129,7 +36,7 @@ $(document).ready(function () {
             if(i === 2){
                 var divTolls = $('#wrap-toll-1');
                 var divToll = document.createElement("div");
-                divToll.innerHTML = '<div id="wrap-toll-' + i + '" class="form-group row"><label for="toll-' + i + '" class="col-md-4 col-lg-2 control-label">Peaje ' + i + ':</label><div class="row col-md-8 col-lg-10"><div class="col"><input type="number" id="toll-' + i + '" name="toll-' + i + '" class="form-control"  placeholder="Peaje ' + i + '"><div id="val_toll-' + i + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div><div><button type="button" id="delete_toll-' + i + '" class="btn btn-update btn-sm delete" value="' + i + '">-</button></div></div>';
+                divToll.innerHTML = '<div id="wrap-toll-' + i + '" class="mb-3 row row-cols-lg-5 align-items-center"><label for="toll-' + i + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label">Peaje ' + i + ':</label><div class="col-sm-2 col-md-4 col-lg-6 col-form-label"><input type="number" id="toll-' + i + '" name="toll-' + i + '" class="form-control" placeholder="Peaje ' + i + '"></div><div class="col-sm-2 col-md-4 col-lg-4 col-form-label"><button type="button" id="delete_toll-' + i + '" class="btn btn-update btn-sm delete" value="' + i + '">-</button></div><label for="val_toll-' + i + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label"></label><div class="col-sm-10 col-md-8 col-lg-10 col-form-label"><div id="val_toll-' + i + '" for="toll-' + i + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div></div>';
                 $(divToll).insertAfter(divTolls);
                 $("#toll-" + i).val(data[i-1]);
             } else {
@@ -137,7 +44,7 @@ $(document).ready(function () {
                 var newdiv = '#wrap-toll-' + divNum;
                 var divTolls = $(newdiv);
                 var divToll = document.createElement("div");
-                divToll.innerHTML = '<div id="wrap-toll-' + i + '" class="form-group row"><label for="toll-' + i + '" class="col-md-4 col-lg-2 control-label">Peaje ' + i + ':</label><div class="row col-md-8 col-lg-10"><div class="col"><input type="number" id="toll-' + i + '" name="toll-' + i + '" class="form-control"  placeholder="Peaje ' + i + '"><div id="val_toll-' + i + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div><div><button type="button" id="delete_toll-' + i + '" class="btn btn-update btn-sm" value="' + i + '" onclick="deleteToll(this)">-</button></div></div>';
+                divToll.innerHTML = '<div id="wrap-toll-' + i + '" class="mb-3 row row-cols-lg-5 align-items-center"><label for="toll-' + i + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label">Peaje ' + i + ':</label><div class="col-sm-2 col-md-4 col-lg-6 col-form-label"><input type="number" id="toll-' + i + '" name="toll-' + i + '" class="form-control" placeholder="Peaje ' + i + '"></div><div class="col-sm-2 col-md-4 col-lg-4 col-form-label"><button type="button" id="delete_toll-' + i + '" class="btn btn-update btn-sm delete" value="' + i + '">-</button></div><label for="val_toll-' + i + '" class="col-sm-2 col-md-4 col-lg-2 col-form-label"></label><div class="col-sm-10 col-md-8 col-lg-10 col-form-label"><div id="val_toll-' + i + '" for="toll-' + i + '" class="alert alert-danger validation" role="alert" hidden="true"></div></div></div>';
                 $(divToll).insertAfter(divTolls);
                 $("#toll-" + i).val(data[i-1]);
             }

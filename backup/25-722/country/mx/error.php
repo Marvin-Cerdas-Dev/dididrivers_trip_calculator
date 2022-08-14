@@ -12,7 +12,7 @@
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -105,11 +105,15 @@
                         <p>
                             <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calculadora detallada</button>
                         </p>
-                        <p>
-                            <!--AdSense-->
-                            <?php include_once("includes/ads.php") ?>  
-                            <!--AdSense-->
-                        </p>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="horizontal-center">
+                                    <!--AdSense-->
+                                    <?php include_once("includes/ads.php") ?>  
+                                    <!--AdSense-->
+                                </div>
+                            </div>
+                        </div>
                         <p>
                             <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calculadora simple</button>
                         </p>

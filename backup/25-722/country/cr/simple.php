@@ -237,13 +237,15 @@
                                 <input type="text" class="form-control" id="selected_tolls" name="selected_tolls" value="" hidden="true">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-12">
-                            <div class="horizontal-center">
-                                <!--AdSense-->
-                                <?php include_once("includes/ads.php") ?>  
-                                <!--AdSense-->
+                        <div class="mb-3 row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="horizontal-center">
+                                    <!--AdSense-->
+                                    <?php include_once("includes/ads.php") ?>  
+                                    <!--AdSense-->
+                                </div>
                             </div>
-                        </div>                               
+                        </div>                              
                         <div class="form-group row">
                             <div class="col-sm-12 horizontal-center">
                                 <button id="btn_simple_calc" type="submit" class="btn btn-update btn-lg btn-block">Calcular</button>

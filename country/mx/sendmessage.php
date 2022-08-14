@@ -37,7 +37,7 @@ if (isset($_POST['contactSubmit'])) {
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
         <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
-        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
@@ -46,13 +46,12 @@ if (isset($_POST['contactSubmit'])) {
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
         <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
         <meta property="twitter:image:alt" content="DidiCalc">
-        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator_128.png">
+        <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#ffffff">
 
         <script type="application/ld+json">

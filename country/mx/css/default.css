@@ -78,16 +78,6 @@ label {
     margin-top: 35px;
 }
 
-.radioActive{
-    background-color: #ff783a;
-    color: #ffffff !important;
-}
-
-.radioInactive{
-    background-color: #000000;
-    color: #ffffff !important;
-}
-
 .validation{
     margin-top: 8px;
 }

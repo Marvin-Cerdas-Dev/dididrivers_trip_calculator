@@ -12,7 +12,7 @@
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -151,7 +151,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                             <div class="form-group row"> 
+                            <div class="form-group row"> 
                                 <label for="Guanajuato" class="col-md-4 col-lg-2-5 control-label">Vives en Guanajuato:</label>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="btn-group btn-group-toggle">
@@ -164,7 +164,7 @@
                                     </div>
                                 </div>
                             </div>     
-                            
+
                             <div class="form-group row">
                                 <label for="totalTripPrice" class="col-md-4 col-lg-2 control-label">Monto total del viaje:</label>
                                 <div class="col-md-8 col-lg-10">
@@ -299,13 +299,15 @@
                                     <input type="text" class="form-control" id="selected_tolls" name="selected_tolls" value="" hidden="true">
                                 </div>
                             </div>
-                            <div id="ads" class="col-sm-6 col-md-6 col-lg-12">
-                                <div class="horizontal-center">
-                                    <!--AdSense-->
-                                    <?php include_once("includes/ads.php") ?>  
-                                    <!--AdSense-->
+                            <div class="mb-3 row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <div class="horizontal-center">
+                                        <!--AdSense-->
+                                        <?php include_once("includes/ads.php") ?>  
+                                        <!--AdSense-->
+                                    </div>
                                 </div>
-                            </div>                               
+                            </div>                              
                             <div class="form-group row">
                                 <div class="col-sm-12 horizontal-center" >
                                     <button id="btn_details_calc" type="submit" class="btn btn-update btn-lg btn-block">Calcular</button>

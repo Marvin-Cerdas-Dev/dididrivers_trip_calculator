@@ -12,9 +12,9 @@ if (isset($_POST['contactSubmit'])) {
     $message2 = 'Nombre: ' . $name . '\n' . 'Correo electrónico: ' . $from . '\n' . 'Mensaje: ' . $msg;
     $headers = 'From: ' . $from;
     $headers2 = "From:" . $to;
-    
-    mail($to,$subject,$message,$headers); // Send the customer contact to our email
-    mail($from,$subject2,$message2,$headers2); //Send a copy of the contact to the customer
+
+    mail($to, $subject, $message, $headers); // Send the customer contact to our email
+    mail($from, $subject2, $message2, $headers2); //Send a copy of the contact to the customer
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ if (isset($_POST['contactSubmit'])) {
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -88,85 +88,86 @@ if (isset($_POST['contactSubmit'])) {
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
         <!-- endbuild -->
 
-        
+
         <script async src="https://www.google.com/recaptcha/api.js"></script>
 
 
         <script>
-          // How this code snippet works:
-          // This logic overwrites the default behavior of `grecaptcha.ready()` to
-          // ensure that it can be safely called at any time. When `grecaptcha.ready()`
-          // is called before reCAPTCHA is loaded, the callback function that is passed
-          // by `grecaptcha.ready()` is enqueued for execution after reCAPTCHA is
-          // loaded.
-          if(typeof grecaptcha === 'undefined') {
-            grecaptcha = {};
-          }
-          grecaptcha.ready = function(cb){
-            if(typeof grecaptcha === 'undefined') {
-              // window.__grecaptcha_cfg is a global variable that stores reCAPTCHA's
-              // configuration. By default, any functions listed in its 'fns' property
-              // are automatically executed when reCAPTCHA loads.
-              const c = '___grecaptcha_cfg';
-              window[c] = window[c] || {};
-              (window[c]['fns'] = window[c]['fns']||[]).push(cb);
-            } else {
-              cb();
+            // How this code snippet works:
+            // This logic overwrites the default behavior of `grecaptcha.ready()` to
+            // ensure that it can be safely called at any time. When `grecaptcha.ready()`
+            // is called before reCAPTCHA is loaded, the callback function that is passed
+            // by `grecaptcha.ready()` is enqueued for execution after reCAPTCHA is
+            // loaded.
+            if (typeof grecaptcha === 'undefined') {
+                grecaptcha = {};
             }
-          }
+            grecaptcha.ready = function (cb) {
+                if (typeof grecaptcha === 'undefined') {
+                    // window.__grecaptcha_cfg is a global variable that stores reCAPTCHA's
+                    // configuration. By default, any functions listed in its 'fns' property
+                    // are automatically executed when reCAPTCHA loads.
+                    const c = '___grecaptcha_cfg';
+                    window[c] = window[c] || {};
+                    (window[c]['fns'] = window[c]['fns'] || []).push(cb);
+                } else {
+                    cb();
+                }
+            }
 
-          // Usage
-          grecaptcha.ready(function(){
-            grecaptcha.render("container", {
-              sitekey: "ABC-123"
+            // Usage
+            grecaptcha.ready(function () {
+                grecaptcha.render("container", {
+                    sitekey: "ABC-123"
+                });
             });
-          });
         </script>
-        
-        
+
+
         <!-- Title -->
         <title>DidiCalc - Tarifas de Didi en Costa Rica</title>
 
     </head>
     <body>
-    <!-- Cookies modal -->
-    <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-update" role="document">
-            <div class="modal-content modal-content-update">
-                <div class="modal-body">
-                    <div class="notice d-flex justify-content-between align-items-center">
-                        <div class="cookie-text">Al usar este sitio acepta el uso de cookies para análisis y contenido personalizado. <button id="learMore" type="button" class="btn btn-update2 buttons btn-sm">Leer más</button></div>
-                        <div class="buttons d-flex flex-column flex-lg-row">
-                            <button id="acept" type="button" class="btn btn-update buttons btn-sm" data-dismiss="modal">Acepto</button>
+        <!-- Cookies modal -->
+        <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-update" role="document">
+                <div class="modal-content modal-content-update">
+                    <div class="modal-body">
+                        <div class="notice d-flex justify-content-between align-items-center">
+                            <div class="cookie-text">Al usar este sitio acepta el uso de cookies para análisis y contenido personalizado. <button id="learMore" type="button" class="btn btn-update2 buttons btn-sm">Leer más</button></div>
+                            <div class="buttons d-flex flex-column flex-lg-row">
+                                <button id="acept" type="button" class="btn btn-update buttons btn-sm" data-dismiss="modal">Acepto</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Content -->
-    <header>
-<?php include_once("includes/header.php") ?>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card md-3 card-update">
-                <img src="img/contact-us.jpg" class="img-responsive card-img-top" alt="Formulario de contacto">
-                <div class="card-body">
-                     <?php
-                        if(mail($to,$subject,$message,$headers) && // Send the customer contact to our email
-                           mail($from,$subject2,$message2,$headers2)){ ?>
+        <!-- Content -->
+        <header>
+            <?php include_once("includes/header.php") ?>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="card md-3 card-update">
+                    <img src="img/contact-us.jpg" class="img-responsive card-img-top" alt="Formulario de contacto">
+                    <div class="card-body">
+                        <?php
+                        if (mail($to, $subject, $message, $headers) && // Send the customer contact to our email
+                                mail($from, $subject2, $message2, $headers2)) {
+                            ?>
                             <h2 class="center-text">Muchas gracias! Su mensaje ha sido enviado</h2>
                         <?php } else { ?>
                             <h2 class="center-text">Lo sentimos ha ocurrido un error</h2>   
-                       <?php } ?>
-                    
+<?php } ?>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer><?php include_once("includes/footer.php") ?></footer>
+        <footer><?php include_once("includes/footer.php") ?></footer>
         <!-- build:js js/js.js -->
         <script src="../../node_modules/jquery/dist/jquery.js"></script>
         <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
@@ -177,6 +178,6 @@ if (isset($_POST['contactSubmit'])) {
         <script src="js/defaultscripts.js"></script>
         <script src="js/jquery.cookie.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
 

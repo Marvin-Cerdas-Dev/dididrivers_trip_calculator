@@ -12,7 +12,7 @@
 
         <!-- Canonical Tag -->        
         <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
-        
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
@@ -64,7 +64,7 @@
             }
         </script>
 
-         <!-- build:css css/styles.css -->
+        <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
         <!-- endbuild -->
@@ -115,11 +115,15 @@
                     <p class="card-text">
                         <a href="tel:4104-6037" class="btn btn-update" hreflang="es"><b>4104-6037</b></a>
                     </p>
-                    <p class="card-text">
-                        <!--AdSense-->
-                        <?php include_once("includes/ads.php") ?>  
-                        <!--AdSense-->
-                    </p>                    
+                    <div class="mb-3 row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="horizontal-center">
+                                <!--AdSense-->
+                                <?php include_once("includes/ads.php") ?>  
+                                <!--AdSense-->
+                            </div>
+                        </div>
+                    </div>                   
                     <h6 class="card-title">Linea de ayuda para <b>Usuarios</b></h6>
                     <p class="card-text">
                         <a href="tel:4000-6947" class="btn btn-update" hreflang="es"><b>4000-6947</b></a>
