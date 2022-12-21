@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Este sitio muestra los contactos de ayuda que usted puede utilizar en caso de emergencia, mientras utiliza la plataforma Didi">
+        <meta name="description" content="Este sitio muestra los contactos de ayuda que usted puede utilizar en caso de emergencia, mientras utiliza la plataforma Didi.">
         <meta name="keywords" content="DidiCalc, Didi, Ayuda, Emergencia, Socios, Plataforma, Contactos, Contactos de emergencia, Números de emergencia, Llamar a emergencias, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -86,39 +89,30 @@
                         <img src="img/emergency_help.jpg" class="card-img-top" alt="Servicios de ayuda de Didi">
                         <div class="card-body">
                             <h1 class="card-title">Ayuda en caso de emergencia</h1>
-                            <p class="card-text">
-                                Recuerdas que siempre es muy importante informar a las autoridades correspondientes de cualquier incidentes o si necesitas ayuda inmediata por medio de número de emergencias.
+                            <p class="card-text justify-text">
+                                Recuerdas que siempre es muy importante informar a las autoridades correspondientes de cualquier incidente o si necesitas ayuda inmediata por medio de número de emergencias.
                             </p>
-                            <p class="card-text">
+                            <p class="card-text justify-text">
                                 <a href="tel:911" class="btn btn-update" hreflang="es"><b>911</b></a>
                             </p>
-                            <p class="card-text">
-                                De igual formar desde sus inicios Didi implementó lineas telefónicas para brindar ayuda a sus usurios y conductores en caso de emergencia.
+                            <p class="card-text justify-text">
+                                De igual formar desde sus inicios Didi implementó líneas telefónicas para brindar ayuda a sus usuarios y conductores en caso de emergencia.
                             </p>
-                            <h6 class="card-title">Linea de ayuda para <b>Conductores</b></h6>
-                            <p class="card-text">
+                            <h6 class="card-title">Línea de ayuda para <b>Conductores</b></h6>
+                            <p class="card-text justify-text">
                                 <a href="tel:4002-3814" class="btn btn-update" hreflang="es"><b>4002-3814</b></a>
                             </p>
-                            <h6 class="card-title">Linea de emergencia para <b>Conductores</b></h6>
-                            <p class="card-text">
+                            <h6 class="card-title">Línea de emergencia para <b>Conductores</b></h6>
+                            <p class="card-text justify-text">
                                 <a href="tel:4104-6037" class="btn btn-update" hreflang="es"><b>4104-6037</b></a>
-                            </p>
-                            <div class="mb-3 row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="horizontal-center">
-                                        <!--AdSense-->
-                                        <?php include_once("includes/ads.php") ?>  
-                                        <!--AdSense-->
-                                    </div>
-                                </div>
-                            </div>                    
-                            <h6 class="card-title">Linea de ayuda para <b>Usuarios</b></h6>
-                            <p class="card-text">
+                            </p>                
+                            <h6 class="card-title">Línea de ayuda para <b>Usuarios</b></h6>
+                            <p class="card-text justify-text">
                                 <a href="tel:4000-6947" class="btn btn-update" hreflang="es"><b>4000-6947</b></a>
                             </p>
                             <h6 class="card-title">Contacto por chat <b>Usuarios y conductores</b></h6>
-                            <p class="card-text">
-                                Recuerda que la ambas plataformas para usuarios como para conductores, cuentan con una opción de chat donde también pueder reportar un incidente.
+                            <p class="card-text justify-text">
+                                Recuerda que ambas plataformas para usuarios como para conductores, cuentan con una opción de chat donde también se puede reportar un incidente.
                             </p>
                         </div>
                     </div>

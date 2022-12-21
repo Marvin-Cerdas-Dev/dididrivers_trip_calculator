@@ -14,7 +14,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar cuales son las tarifas oficiales de la plataforma Didi">
+        <meta name="description" content="Aquí podrás verificar cuales son las tarifas oficiales de la plataforma Didi.">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Tarifas, Precio, Montos, México">
         <meta http-equiv="Expires" content="5">
 
@@ -25,7 +25,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -33,7 +33,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -70,7 +70,10 @@
             }
             }
         </script>
-
+ 
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>       
+        
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
@@ -80,21 +83,6 @@
         <title>DidiCalc - Tarifas de Didi en México</title>
 
     </head>
-    <!-- Cookies modal -->
-    <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-update" role="document">
-            <div class="modal-content modal-content-update">
-                <div class="modal-body">
-                    <div class="notice d-flex justify-content-between align-items-center">
-                        <div class="cookie-text">Al usar este sitio acepta el uso de cookies para análisis y contenido personalizado. <button id="learMore" type="button" class="btn btn-update2 buttons btn-sm">Leer más</button></div>
-                        <div class="buttons d-flex flex-column flex-lg-row">
-                            <button id="acept" type="button" class="btn btn-update buttons btn-sm" data-dismiss="modal">Acepto</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <body>
         <!-- Cookies modal -->
         <?php include_once("includes/cookies_modal.php") ?>
@@ -110,7 +98,9 @@
                         <div class="card-body">
                             <h1 class="card-title">Tarifas de Didi</h1>
                             <p class="card-text justify-text">
-                                A partir del 2018 la empresa china Didi empesó sus operaciones en México tarifas muy accesible para los usurios y deneficios económicos a los conductores.<br><br>
+                                A partir del 2018 la empresa china Didi empezó sus operaciones en México 
+                                tarifas muy accesible para los usuarios y beneficios económicos a los 
+                                conductores.<br><br>
                                 Este servicio opera las cuidades de:
                             <ul>
                                 <li>Aguascalientes</li>
@@ -155,7 +145,7 @@
                                 <li>Toluca</li>
                                 <li>Zacatecas</li>
                             </ul>
-                            La tarifas ofrecidas para los conductores son las siguientes:<br><br>
+                            Las tarifas ofrecidas para los conductores son las siguientes:<br><br>
                             <b>Didi Express</b>
                             <ul>
                                 <li>Tarifa mínima: <?php echo "&#36;" . $viajeExpress->getMinimunFare() ?></li>
@@ -191,15 +181,6 @@
                             <div class="container-fluid my-2">
                                 <div class="d-grid gap-2 col-md-12 col-md-12 col-lg-12 col-sm-12 text-center">
                                     <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Verificar ganancias de forma detallada</button>
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="horizontal-center">
-                                        <!--AdSense-->
-                                        <?php include_once("includes/ads.php") ?>  
-                                        <!--AdSense-->
-                                    </div>
                                 </div>
                             </div>
                             <p class="card-text justify-text">

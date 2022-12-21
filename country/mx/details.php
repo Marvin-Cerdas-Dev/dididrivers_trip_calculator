@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, México">
         <meta http-equiv="Expires" content="5">
 
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -63,6 +63,9 @@
             }
         </script>
 
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>           
+        
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
@@ -87,7 +90,7 @@
                         <div id="main" class="caption">
                             <form id="form_details_calc" class="form-horizontal" method="post" action="calculate.php">                            
                                 <div class="mb-3 row">
-                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="true">Tipo de calculo:</label>
+                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="true">Tipo de cálculo:</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="calculating" name="calculating" Value="Details"hidden="true">
                                     </div>
@@ -266,16 +269,7 @@
                                     <div class="col-sm-10 col-md-8 col-lg-10">
                                         <input type="text" class="form-control d-none" id="selected_tolls" name="selected_tolls" value="" hidden="True">
                                     </div>
-                                </div>                                 
-                                <div class="mb-3 row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="horizontal-center">
-                                            <!--AdSense-->
-                                            <?php include_once("includes/ads.php") ?>  
-                                            <!--AdSense-->
-                                        </div>
-                                    </div>
-                                </div>                               
+                                </div>                                                               
                                 <div class="mb-3 row">
                                     <div class="d-grid gap-2 col-sm-12 col-md-12 col-lg-12">
                                         <button id="btn_simple_calc" type="submit" class="btn btn-update btn-lg btn-block">Calcular</button>
@@ -310,7 +304,7 @@
                     <h5>Descuento</h5>
                     <p>Este valor corresponde al monto total de los descuentos aplicados a un viaje por parte de la plataforma.</p>                              
                     <h5>Saldo pendiente</h5>
-                    <p>Este monto corresponde a las tarifas que el cliente tiene pendientes por viajes anteriores y cancela en este viaje. Si el cliento no tiene montos pendientes este campo puede quedar vacio.</p>                              
+                    <p>Este monto corresponde a las tarifas que el cliente tiene pendientes por viajes anteriores y cancela en este viaje. Si el cliente no tiene montos pendientes este campo puede quedar vacío.</p>                              
                     <h5>Ganancias obtenidas</h5>
                     <p>Las ganancias obtenidas en el viaje corresponden al monto que se pagará por haber realizado el viaje. En caso de que existan números decimales, los mismo deben ser ingresados con punto (.) Por ejemplo: ₡ 5180.95</p>
                     <h5>Kilómetros recorridos</h5>

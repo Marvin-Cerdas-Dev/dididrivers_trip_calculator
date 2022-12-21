@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
@@ -85,16 +88,16 @@
                     <div class="card card-margin">
                         <div class="card-body">
                             <h1 class="card-title">Licencias</h1>
-                            <p class="card-text"><a class="ex1" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">DidiCalc</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://crdidicalc.azurewebsites.net/" property="cc:attributionName" rel="cc:attributionURL">http://crdidicalc.azurewebsites.net/</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+                            <p class="card-text justify-text"><a class="ex1" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">DidiCalc</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://crdidicalc.azurewebsites.net/" property="cc:attributionName" rel="cc:attributionURL">http://crdidicalc.azurewebsites.net/</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
                             <h4 class="card-subtitle mb-2 text-muted">Licencia de código abierto (Open source license)</h4> 
-                            <p class="card-text">Esta plataforma utiliza librerías de código abierto para su funcionamiento. Las cuales se enlistan a continuación:
+                            <p class="card-text justify-text">Esta plataforma utiliza librerías de código abierto para su funcionamiento. Las cuales se enlistan a continuación:
                             <ul>
                                 <li>Bootstrap - <a href="https://getbootstrap.com/docs/4.0/about/license/" target="blank">link de contacto</a></li>
                                 <li>Jquery - <a href="https://jquery.org/license/" target="blank">link de contacto</a></li>
                             </ul>
                             </p>
                             <h4 class="card-subtitle mb-2 text-muted">Otras licencias</h4>                    
-                            <p class="card-text">Este sitio cuenta con recursos visuales, los cuales estan protegidos por derechos de autor por tanto a continuación hacemos referencia a estos recursos.
+                            <p class="card-text justify-text">Este sitio cuenta con recursos visuales, los cuales están protegidos por derechos de autor por tanto a continuación hacemos referencia a estos recursos.
                                 <br><b>Iconos</b>
                             <ul>
                                 <li>Strokeicon - <a href="https://www.iconfinder.com/icons/2243997/gps_location_mobile_phone_map_pointer_smartphone_icon" target="blank"> link del contacto</a></li>

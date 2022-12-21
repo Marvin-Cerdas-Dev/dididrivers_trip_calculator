@@ -63,6 +63,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -88,7 +91,7 @@
                         <div class="caption">
                             <form id="form_details_calc" class="form-horizontal" method="post" action="calculate.php">                            
                                 <div class="mb-3 row">
-                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="true">Tipo de calculo:</label>
+                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="true">Tipo de cálculo:</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="calculating" name="calculating" Value="Simple" hidden="true">
                                     </div>
@@ -198,19 +201,10 @@
                                     </div>
                                 </div>                            
                                 <div class="mb-3 row">
-                                    <label class="col-sm-2 col-md-4 col-lg-2 col-form-label" hidden="true">Monto de peajes selecionados:</label>
+                                    <label class="col-sm-2 col-md-4 col-lg-2 col-form-label" hidden="true">Monto de peajes seleccionados:</label>
                                     <div class="col-sm-10 col-md-8 col-lg-10">
                                         <input type="text" class="form-control" id="selected_tolls" name="selected_tolls" value="" hidden="true">
                                     </div>                                    
-                                </div>
-                                <div class="mb-3 row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="horizontal-center">
-                                            <!--AdSense-->
-                                            <?php include_once("includes/ads.php") ?>  
-                                            <!--AdSense-->
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <div class="d-grid gap-2 col-sm-12 col-md-12 col-lg-12">

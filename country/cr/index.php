@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true"/>
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -103,8 +106,8 @@
                     <div class="card h-100">
                         <img class="img-responsive card-img-top" src="img/administrate.jpg" alt="Administre sus ganancias"/>
                         <div class="card-body">
-                            <h5 class="card-title">Administre tus ganancias</h5>
-                            <p class="card-text justify-text">Con Didical podras dar seguimiento a tus ganancias de una forma fácil, rápida y segura.</p>
+                            <h5 class="card-title">Administra tus ganancias</h5>
+                            <p class="card-text justify-text">Con Didical podrás dar seguimiento a tus ganancias de una forma fácil, rápida y segura.</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +116,7 @@
                         <img class="img-responsive card-img-top" src="img/free_service.jpg" alt="Servicio 100% gratuito"/>
                         <div class="card-body">
                             <h5 class="card-title">100% Gratuito</h5>
-                            <p class="card-text justify-text">Didical es una plataroma 100% gratuita, para los socios conductores, por lo que no tendras que preocuparte por cargos mensuales.</p>
+                            <p class="card-text justify-text">Didical es una plataforma 100% gratuita, para los socios conductores, por lo que no tendrás que preocuparte por cargos mensuales.</p>
                         </div>
                     </div>
                 </div>
@@ -122,16 +125,16 @@
                         <img class="img-responsive card-img-top" src="img/security.jpg" alt="Seguridad en sus consultas"/>
                         <div class="card-body">
                             <h5 class="card-title">Seguridad</h5>
-                            <p class="card-text justify-text">El sistama de Didical nunca almacena tus consultas, además contamos con encriptacion SSL.</p>
+                            <p class="card-text justify-text">El sistema de Didical nunca almacena tus datos proporcionados cuando consultes el cálculo de un viaje, además contamos con encriptación SSL para la seguridad de los mismos.</p>
                         </div>
                     </div>
                 </div>
                 <div id="jumbotron" class="bg-image p-5 shadow-1-strong mb-4 bg-light text-white">
                     <div class="container-fluid py-5">
                         <h1 class="display-5 fw-bold">Didicalc</h1>
-                        <p class="col-md-8 fs-4">Una herramienta especialmente pensada para socios condutores.</p>
+                        <p class="col-md-8 fs-4">Una herramienta especialmente pensada para socios conductores.</p>
                         <hr>
-                        <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>                            
+                        <p>Hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además, si tus viajes están mal calculados tendrás la posibilidad copiar un mensaje listo para que lo envíes a la plataforma de soporte.</p>                            
                     </div>
                 </div>            
                 <div class="col-sm-12 col-md-12 col-lg-6 card-margin">
@@ -139,7 +142,7 @@
                         <img src="img/calculate_details.jpg" alt="Calculadora de viajes de Didi detallada" />
                         <div class="card-body">
                             <h5 class="card-title">Calculadora detallada</h5>
-                            <p class="card-text justify-text">En calculadora de viajes de Didi detallada hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además si tus viaje está mal calculado tendras la posibilidad copiar un mensaje listo para que lo envies a la plataforma de soporte.</p>
+                            <p class="card-text justify-text">En calculadora de viajes de Didi detallada hemos logrado crear una plataforma, para que tu como conductor de Didi, puedas calcular de forma detallada un viaje completado. Aquí podrás saber de manera precisa tus ingresos estimados para cada viaje y si el mismo está siendo correctamente calculado. Además, si tu viaje está mal calculado tendrás la posibilidad copiar un mensaje listo para que lo envíes a la plataforma de soporte.</p>
                         </div>
                         <div class="container-fluid my-2">
                             <div class="d-grid gap-2 col-md-12 col-md-12 col-lg-12 col-sm-12 text-center">
@@ -153,7 +156,7 @@
                         <img src="img/calculate_simple.jpg" alt="alculadora de viajes de Didi simple" />
                         <div class="card-body">
                             <h5 class="card-title">Calculadora simple</h5>
-                            <p class="card-text justify-text">En la calculadora de viajes de Didi simple, como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron corectas o no de una forma muy simple.</p>
+                            <p class="card-text justify-text">En la calculadora de viajes de Didi simple, como conductor de Didi, encontrarás una manera rápida de calcular tu viaje realizado, en pocos pasos y sin complicaciones, esta herramienta te permitirá saber si tus ganancias fueron correctas o no de una forma muy simple.</p>
                         </div>
                         <div class="container-fluid my-2">
                             <div class="d-grid gap-2 col-md-12 col-md-12 col-lg-12 col-sm-12 text-center">

@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
@@ -18,7 +18,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -26,7 +26,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -63,6 +63,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -88,7 +91,7 @@
                         <div class="caption">
                             <form id="form_details_calc" class="form-horizontal" method="post" action="calculate.php">                            
                                 <div class="mb-3 row">
-                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="true">Tipo de calculo:</label>
+                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="true">Tipo de cálculo:</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="calculating" name="calculating" Value="Details" hidden="true">
                                     </div>
@@ -230,15 +233,6 @@
                                     </div>                                    
                                 </div>
                                 <div class="mb-3 row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="horizontal-center">
-                                            <!--AdSense-->
-                                            <?php include_once("includes/ads.php") ?>  
-                                            <!--AdSense-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
                                     <div class="d-grid gap-2 col-sm-12 col-md-12 col-lg-12">
                                         <button id="btn_simple_calc" type="submit" class="btn btn-update btn-lg btn-block">Calcular</button>
                                     </div>
@@ -259,7 +253,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Seleccione el los peajes</h5>
+                            <h5 class="modal-title">Seleccione los peajes</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -341,15 +335,15 @@
                             <h5>Descuento</h5>
                             <p>Este valor corresponde al monto total de los descuentos aplicados a un viaje por parte de la plataforma.</p>                              
                             <h5>Saldo pendiente</h5>
-                            <p>Este monto corresponde a las tarifas que el cliente tiene pendientes por viajes anteriores y cancela en este viaje. Si el cliento no tiene montos pendientes este campo puede quedar vacio.</p>                              
+                            <p>Este monto corresponde a las tarifas que el cliente tiene pendientes por viajes anteriores y cancela en este viaje. Si el cliente no tiene montos pendientes este campo puede quedar vacío.</p>                              
                             <h5>Ganancias obtenidas</h5>
                             <p>Las ganancias obtenidas en el viaje corresponden al monto que se pagará por haber realizado el viaje. En caso de que existan números decimales, los mismo deben ser ingresados con punto (.) Por ejemplo: ₡ 5180.95</p>
                             <h5>Kilómetros recorridos</h5>
                             <p>Este dato corresponde a el total de kilómetros recorridos en el viaje, si este dato no es un número entero, se debe utilizar un punto (.) para los decimales. Por ejemplo: Un kilómetro y medio = 1.5</p>                              
                             <h5>Tiempo de duración</h5>
                             <p><b>Horas:</b> Corresponde a la cantidad de horas que duró el viaje. Si el viaje duró menos de 1 hora, debes colocar cero (0). Este campo solo acepta números del 0 al 24.<br>
-                                <b>Minutos:</b> Lo minutos es la cantidad de minutos que duró el viaje. Este dato no puede ser igual a cero (0). Este campo acepta números del 1 al 59.<br>
-                                <b>Segundos:</b> Los segundo son la cantidad de segundos que alcanzó el viaje. Si el mismo quedó en minutos exactos debes colocar cero (0). Este campo acepta números del 0 al 59. 
+                                <b>Minutos:</b> Los minutos es la cantidad de minutos que duró el viaje. Este dato no puede ser igual a cero (0). Este campo acepta números del 1 al 59.<br>
+                                <b>Segundos:</b> Los segundos son la cantidad de segundos que alcanzó el viaje. Si el mismo quedó en minutos exactos debes colocar cero (0). Este campo acepta números del 0 al 59. 
                                 <i>Nota:</i> Ninguno de estos campos acepta números negativos.
                             </p>                              
                             <h5>Tarifa dinámica</h5>

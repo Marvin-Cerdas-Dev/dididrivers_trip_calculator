@@ -36,7 +36,7 @@ if (isset($_POST['contactSubmit'])) {
             "target": "https://crdidicalc.azurewebsites.net/search?q={search_term_string}Buscar",
             "query-input": "required name=search_term_string"
             }
-            }</script><link rel="stylesheet" href="css/styles-549e9c5788.css"><script async src="https://www.google.com/recaptcha/api.js"></script><script>// How this code snippet works:
+            }</script><!--AdSense--> <?php include_once("includes/ads.php") ?> <link rel="stylesheet" href="css/styles-549e9c5788.css"><script async src="https://www.google.com/recaptcha/api.js"></script><script>// How this code snippet works:
             // This logic overwrites the default behavior of `grecaptcha.ready()` to
             // ensure that it can be safely called at any time. When `grecaptcha.ready()`
             // is called before reCAPTCHA is loaded, the callback function that is passed

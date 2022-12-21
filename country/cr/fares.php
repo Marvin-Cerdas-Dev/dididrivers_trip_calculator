@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Aquí podras verificar cuales son las tarifas oficiales de la plataforma Didi">
+        <meta name="description" content="Aquí podrás verificar cuales son las tarifas oficiales de la plataforma Didi.">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Tarifas, Precio, Montos, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
@@ -21,7 +21,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -29,7 +29,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -66,6 +66,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -91,9 +94,13 @@
                         <div class="card-body">
                             <h1 class="card-title">Tarifas de Didi</h1>
                             <p class="card-text justify-text">
-                                A partir del 19 de noviembre del 2019 la empresa china Didi empesó sus operaciones en Costa Rica ofreciendo descuentos para los usurios y deneficios económicos a los conductores.<br><br>
-                                Este servicio opera en San José, Alajuela, Heredia, Cartago y Puntarenas (ver todos cantones de covertura <a href="coverage.php" hreflang="es"><b>aquí</b></a>)<br><br>
-                                La tarifas ofrecidas para los conductores son las siguientes:<br><br>
+                                A partir del 19 de noviembre del 2019 la empresa china Didi empezó sus 
+                                operaciones en Costa Rica ofreciendo descuentos para los usuarios y 
+                                beneficios económicos a los conductores.<br><br>
+                                Este servicio opera en San José, Alajuela, Heredia, Cartago y Puntarenas 
+                                (ver todos cantones de cobertura <a href="coverage.php" hreflang="es">
+                                <b>aquí</b></a>)<br><br>
+                                Las tarifas ofrecidas para los conductores son las siguientes:<br><br>
                                 <b>Didi Express</b>
                             <ul>
                                 <li>Tarifa mínima: <?php echo "&#8353;" . $viajeExpress->getMinimunFare() ?></li>
@@ -119,15 +126,6 @@
                                     <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Verificar ganancias de forma detallada</button>
                                 </div>
                             </div>
-                            <div class="mb-3 row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="horizontal-center">
-                                        <!--AdSense-->
-                                        <?php include_once("includes/ads.php") ?>  
-                                        <!--AdSense-->
-                                    </div>
-                                </div>
-                            </div>
                             <p class="card-text justify-text">
                                 También si lo prefiere puede verificar sus ganancias de forma simple aquí:
                             </p>
@@ -135,7 +133,8 @@
                                 <div class="d-grid gap-2 col-md-12 col-md-12 col-lg-12 col-sm-12 text-center">
                                     <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Verificar ganancias  de forma simple</button>
                                 </div>
-                            </div>                         </div>
+                            </div>                         
+                        </div>
                     </div>
                 </div>
             </div>

@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="En este sitio se encuentra con la covertura por provincias y cantones donde se ofrece el servicio de Didi">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Covertura, Cantones, Provincias, Costa Rica">
+        <meta name="description" content="En este sitio se encuentra con la cobertura por provincias y cantones donde se ofrece el servicio de Didi">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Cobertura, Cantones, Provincias, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -69,7 +72,7 @@
         <!-- endbuild -->
 
         <!-- Title -->
-        <title>DidiCalc - Covertura del servicio de Didi</title>
+        <title>DidiCalc - Cobertura del servicio de Didi</title>
 
     </head>
     <body>
@@ -83,28 +86,20 @@
             <div class="row">
                 <div id="cal_details" class="g-col-sm-12 g-col-md-12 g-col-lg-12">
                     <div class="card card-margin">
-                        <img src="img/didi_coverage_background.jpg" class="card-img-top" alt="Covertura de servicios de Didi en tu ciudad">
+                        <img src="img/didi_coverage_background.jpg" class="card-img-top" alt="Cobertura de servicios de Didi en tu ciudad">
                         <div class="card-body">
-                            <h5 class="card-title">Covertura del servicio de didi</h5>
+                            <h5 class="card-title">Cobertura del servicio de didi</h5>
                             <p class="card-text">
-                                Desde el noviembre del 2019 que Didi inició operaciones su covertura está en:
+                                En este sitio se encuentra con la cobertura por provincias y cantones donde se ofrece el servicio de 
+                                Didi Desde el noviembre del 2019 que Didi inició operaciones su cobertura está en:
                             <ul>
                                 <li>San José</li>
                                 <li>Heredia</li>
                                 <li>Alajuela</li>
                                 <li>Puntarenas</li>
                             </ul>
-                            A continuación puede ver el detalle de los cantones en los cuales Didi opera desde el inicio:
+                                A continuación, puede ver el detalle de los cantones en los cuales Didi opera desde el inicio:
                             </p>
-                            <div class="mb-3 row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="horizontal-center">
-                                        <!--AdSense-->
-                                        <?php include_once("includes/ads.php") ?>  
-                                        <!--AdSense-->
-                                    </div>
-                                </div>
-                            </div>
                             <p class="card-text">
                             <center>
                                 <img class="img-fluid" src="img/mapa_covertura.svg"/>

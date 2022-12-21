@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
@@ -87,7 +90,7 @@
                         <div class="caption">
                             <form id="form_details_calc" class="form-horizontal" method="post" action="calculate.php">                            
                                 <div class="mb-3 row">
-                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="True">Tipo de calculo:</label>
+                                    <label for="calculation_type" class="col-sm-2 col-form-label" hidden="True">Tipo de cálculo:</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control d-none" id="calculating" name="calculating" Value="Simple" hidden="True">
                                     </div>
@@ -236,20 +239,11 @@
                                     </div>
                                 </div> 
                                 <div class="mb-3 row">
-                                    <label for="extra" class="col-sm-2 col-md-4 col-lg-2 col-form-label d-none" hidden="True">Monto de peajes selecionados:</label>
+                                    <label for="extra" class="col-sm-2 col-md-4 col-lg-2 col-form-label d-none" hidden="True">Monto de peajes seleccionados:</label>
                                     <div class="col-sm-10 col-md-8 col-lg-10">
                                         <input type="text" class="form-control d-none" id="selected_tolls" name="selected_tolls" value="" hidden="True">
                                     </div>
-                                </div>                                 
-                                <div class="mb-3 row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12">
-                                        <div class="horizontal-center">
-                                            <!--AdSense-->
-                                            <?php include_once("includes/ads.php") ?>  
-                                            <!--AdSense-->
-                                        </div>
-                                    </div>
-                                </div>                               
+                                </div>                                                              
                                 <div class="mb-3 row">
                                     <div class="d-grid gap-2 col-sm-12 col-md-12 col-lg-12">
                                         <button id="btn_simple_calc" type="submit" class="btn btn-update btn-lg btn-block">Calcular</button>
@@ -272,7 +266,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Información general</h5>
+                        <h5 class="modal-title">>Información general</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

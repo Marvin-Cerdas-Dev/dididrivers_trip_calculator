@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="En esta plataforma entradas la opcíón de verificar tus viajes de la plataforma Didi de una forma fácil y segura.">
+        <meta name="description" content="En esta plataforma entradas la opción de verificar tus viajes de la plataforma Didi de una forma fácil y segura.">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, México">
         <meta http-equiv="Expires" content="5">
 
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -63,6 +63,9 @@
             }
         </script>
 
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>           
+        
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
@@ -73,20 +76,7 @@
 
     </head>
     <!-- Cookies modal -->
-    <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-update" role="document">
-            <div class="modal-content modal-content-update">
-                <div class="modal-body">
-                    <div class="notice d-flex justify-content-between align-items-center">
-                        <div class="cookie-text">Al usar este sitio acepta el uso de cookies para análisis y contenido personalizado. <button id="learMore" type="button" class="btn btn-update2 buttons btn-sm">Leer más</button></div>
-                        <div class="buttons d-flex flex-column flex-lg-row">
-                            <button id="acept" type="button" class="btn btn-update buttons btn-sm" data-dismiss="modal">Acepto</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include_once("includes/cookies_modal.php") ?>
     <!-- Content -->
     <header>
         <?php include_once("includes/header.php") ?>
@@ -98,24 +88,22 @@
                     <center>
                         <img class="img-responsive image-margin" src="img/shield-error.png" alt="Error en la página web"/>
                     </center>
-                    <div class="caption">
-                        <h1>Error en los calculos</h1>
-                        <p>Se ha presentado un error a la hora de hacer los calculos, por favor vuelve seleccionar una opcion para realizar el calculo de tu viaje de Didi</p>
-                        <p>
-                            <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calculadora detallada</button>
+                    <div class="card-body text-center">
+                        <h1 class="card-title justify-text">Error en los calculos</h1>
+                        <p class="card-text justify-text">
+                            Se ha presentado un error a la hora de hacer los calculos, por favor 
+                            vuelve seleccionar una opcion para realizar el calculo de tu viaje de Didi.
                         </p>
-                        <div class="mb-3 row">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="horizontal-center">
-                                    <!--AdSense-->
-                                    <?php include_once("includes/ads.php") ?>  
-                                    <!--AdSense-->
-                                </div>
+                        <div class="container-fluid my-2">
+                            <div class="d-grid gap-2 col-md-12 col-md-12 col-lg-12 col-sm-12 text-center">
+                                <button type="button" class="btn btn-update btn-lg btn-block" id="calc_details">Calculadora detallada</button>                           
                             </div>
                         </div>
-                        <p>
-                            <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calculadora simple</button>
-                        </p>
+                        <div class="container-fluid my-2">
+                            <div class="d-grid gap-2 col-md-12 col-md-12 col-lg-12 col-sm-12 text-center">
+                                <button type="button" class="btn btn-update btn-lg btn-block" id="calc_simple">Calculadora simple</button>                           
+                            </div>
+                        </div>                         
                     </div>
                 </div>
             </div>

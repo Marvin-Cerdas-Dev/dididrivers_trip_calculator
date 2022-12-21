@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Este sitio te muestra cuáles son los lineamiento de la plataforma Didi, en relación de la pandemia de Covid-19">
+        <meta name="description" content="Este sitio te muestra cuáles son los lineamientos de la plataforma Didi, en relación de la pandemia de Covid-19">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Covid-19, Protocolos de viaje, Pandemia Covid-19, Requisitos de viaje, Costa Rica">
         <meta http-equiv="Expires" content="5">
 
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" > 
@@ -85,36 +88,30 @@
                     <div class="card card-margin">
                         <img src="img/covid19.jpg" class="card-img-top" alt="Recomendaciones ante la pandemia del Covid-19 por parte de Didi">
                         <div class="card-body">
-                            <h1 class="card-title">Protocolos de viaje ante el Covid-19</h1>
-                            <h6 class="card-title"><b>Es muy importante que no manejés si no te sentís bien</b></h6>
-                            <p class="card-text">
-                                <b>Si tienes sintomas de gripe</b> como, tos, dolor de cuerpo, agotamiento, dolor de garganta, fiebre, congestion nasal, dolor de garganta, estornudos, o si por alguna razón pierdes el olfato y/o el gusto. <b>No conduzcas y consultes con los servicios de salud pertinentes.</b>  
+                            <h1 class="card-title">Protocolos de viaje ante el COVID-19</h1>
+                            <h6 class="card-title justify-text"><b>Es muy importante que no manejes si no te sientes bien</b></h6>
+                            <p class="card-text justify-text">
+                                <b>Si tienes síntomas de gripe</b> cómo, tos, dolor de cuerpo, agotamiento, 
+                                dolor de garganta, fiebre, congestión nasal, dolor de garganta, estornudos, 
+                                o si por alguna razón pierdes el olfato y/o el gusto. <b>No conduzcas y 
+                                    consultes con los servicios de salud pertinentes.</b>  
                             </p>
-                            <h6 class="card-title"><b>Si estas conduciendo</b></h6>
-                            <p class="card-text">
+                            <h6 class="card-title justify-text"><b>Si estas conduciendo</b></h6>
+                            <p class="card-text justify-text">
                             <ul>
-                                <li>No salgás de casa si estás enfermo o te sientes mal.</li> 
-                                <li>De ser posible, utilizá mascarilla o cubreboca cuando estés conectado con la app de DiDi.</li> 
+                                <li>No salgas de casa si estás enfermo o te sientes mal.</li> 
+                                <li>De ser posible, utiliza mascarilla o cubrebocas cuando estés conectado con la aplicación de DiDi.</li> 
                                 <li>Con el fin de tener mayor distanciamiento social, te recomendamos (de manera opcional) sugerirle al usuario que utilice el asiento de atrás.</li> 
-                                <li>Viajá con las ventanas abiertas para mantener el vehículo ventilado.</li> 
-                                <li>Si el usuario utiliza efectivo como método de pago, definfectate las manos después de recibirlo.</li>  
+                                <li>Viaja con las ventanas abiertas para mantener el vehículo ventilado.</li> 
+                                <li>Si el usuario utiliza efectivo como método de pago, desinféctate las manos después de recibirlo.</li>  
                             </ul>
                             </p>
-                            <div class="mb-3 row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="horizontal-center">
-                                        <!--AdSense-->
-                                        <?php include_once("includes/ads.php") ?>  
-                                        <!--AdSense-->
-                                    </div>
-                                </div>
-                            </div>
-                            <h6 class="card-title"><b>Salud y limpieza de tu vehiculo</b></h6>
-                            <p class="card-text">
+                            <h6 class="card-title  justify-text"><b>Salud y limpieza de tu vehiculo</b></h6>
+                            <p class="card-text justify-text">
                             <ul>
-                                <li>Utilizá un paño limpio y líquido desinfectante para limpiar tu vehículo, incluyendo los asientos, las manillas de las puertas y los cinturones de seguridad.</li>
-                                <li>Lávate las manos con agua y jabón, o desinfectalas con alcohol en gel, antes y después del viaje.</li>
-                                <li>Desinfecá tu celular diariamente.</li> 
+                                <li>Utiliza un paño limpio y líquido desinfectante para limpiar tu vehículo, incluyendo los asientos, las manillas de las puertas y los cinturones de seguridad.</li>
+                                <li>Lávate las manos con agua y jabón, o desinféctalas con alcohol en gel, antes y después del viaje.</li>
+                                <li>Desinfecta tu celular diariamente.</li> 
                             </ul>
                             </p>
                         </div>

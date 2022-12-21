@@ -63,6 +63,9 @@
             }
         </script>
 
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
+
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
@@ -87,7 +90,8 @@
                         <div class="card-body">
                             <h1 class="card-title">Recomendaciones de seguridad</h1>
                             <p class="card-text justify-text">
-                                Para la plataforma tu seguridad es muy importante por ello se brindan recomencaciones antes, durante y al finalizar un viaje.
+                                Para la plataforma tu seguridad es muy importante por ello se brindan recomendaciones
+                                antes, durante y al finalizar un viaje.
                             </p>
                             <h2>Antes de un viaje</h2>
                             <div class="container-fluid">
@@ -98,7 +102,9 @@
                                             <div class="card-body">
                                                 <h3>Verificación facial del pasajero</h3>
                                                 <p class="card-text justify-text">
-                                                    Los pasajeros que en horario nocturno realicen su primer viaje, además de la documentación oficial, deberán realizar una validación facial, para poder solicitar el viaje.
+                                                    Los pasajeros que en horario nocturno realicen su primer viaje, 
+                                                    además de la documentación oficial, deberán realizar una validación 
+                                                    facial, para poder solicitar el viaje.
                                                 </p>
                                             </div>
                                         </div>
@@ -109,7 +115,9 @@
                                             <div class="card-body">
                                                 <h3>Encriptación de tu número de teléfono</h3>
                                                 <p class="card-text justify-text">
-                                                    La plataforma oculta tu número de teléfono con el fin que el pasajero no tenga tus datos reales. El mismo unicamente podrán contactarse por temas de servicio a través de la app.
+                                                    La plataforma oculta tu número de teléfono con el fin que el pasajero
+                                                    no tenga tus datos reales. El mismo únicamente podrán contactarse por
+                                                    temas de servicio a través de la aplicación.
                                                 </p>
                                             </div>
                                         </div>
@@ -120,7 +128,8 @@
                                             <div class="card-body">
                                                 <h3>Contactos de Confianza</h3>
                                                 <p class="card-text justify-text">
-                                                    Tienes la opción de elegir hasta cinco personas, para compartirles la información de tus viajes en tiempo real.
+                                                    Tienes la opción de elegir hasta cinco personas, para compartirles
+                                                    la información de tus viajes en tiempo real.
                                                 </p>
                                             </div>
                                         </div>
@@ -131,7 +140,8 @@
                                             <div class="card-body">
                                                 <h3>Visibilidad del destino</h3>
                                                 <p class="card-text justify-text">
-                                                    La applicacion de DiDi es la única app que te muestra el destino del pasajero, antes de aceptar el viaje.
+                                                    La aplicación de Didi, es la única aplicación que te muestra el 
+                                                    destino del pasajero, antes de aceptar el viaje.
                                                 </p>
                                             </div>
                                         </div>
@@ -140,9 +150,11 @@
                                         <div class="card h-100">
                                             <img src="img/didi-guests.png" class="icon-center" alt="DiDi Invitado">
                                             <div class="card-body">
-                                                <h3>DiDi Invitado</h3>
+                                                <h3>Pasajero Invitado</h3>
                                                 <p class="card-text justify-text">
-                                                    Es una nueva funcionalidad del App donde los pasajeros puden indicar en la misma si están pidiendo el viaje para alguien más. De esta forma, tú sabrás exactamente a quién recoges.
+                                                    Es una nueva funcionalidad de la aplicación donde los pasajeros 
+                                                    pueden indicar en la misma si están pidiendo el viaje para alguien 
+                                                    más. De esta forma, tú sabrás exactamente a quién recoges.
                                                 </p>
                                             </div>
                                         </div>
@@ -167,7 +179,10 @@
                                             <div class="card-body">
                                                 <h3>Zonas de Riesgo</h3>
                                                 <p class="card-text justify-text">
-                                                    Se han Identificado las zonas de riesgo para protegerte durante el viaje, por lo que no será posible solicitar viajes desde o hacia estas zonas. Actualmente se cuenta con aproximadamente 300 zonas restringidas, las cuales se van actualizando de manera constante. 
+                                                    Se han Identificado las zonas de riesgo para protegerte durante el
+                                                    viaje, por lo que no será posible solicitar viajes desde o hacia 
+                                                    estas zonas. Actualmente se cuenta con aproximadamente 300 zonas
+                                                    restringidas, las cuales se van actualizando de manera constante. 
                                                 </p>
                                             </div>
                                         </div>
@@ -176,9 +191,11 @@
                                         <div class="card h-100">
                                             <img src="img/location.png" class="icon-center" alt="Monitoreo de Viaje">
                                             <div class="card-body">
-                                                <h3>Monitoreo de Viaje</h3>
+                                                <h3>Monitoreo de viaje</h3>
                                                 <p class="card-text justify-text">
-                                                    En caso que necesites ayuda, puedes presionar el Botón de Emergencia dentro de tu app, para enlazarte al 911 y la applicación rastrea tu ubicación exacta.
+                                                    En caso que necesites ayuda, puedes presionar el Botón de Emergencia 
+                                                    dentro de tu aplicación, para enlazarte al 911 y la aplicación rastrea 
+                                                    tu ubicación exacta.
                                                 </p>
                                             </div>
                                         </div>
@@ -189,7 +206,8 @@
                                             <div class="card-body">
                                                 <h3>Compartir Viaje</h3>
                                                 <p class="card-text justify-text">
-                                                    Cuando viajas en la plataforma siempre puedes compartir tu ubicación en tiempo real y los datos del viaje.
+                                                    Cuando viajas en la plataforma siempre puedes compartir tu ubicación en tiempo
+                                                    real y los datos del viaje.
                                                 </p>
                                             </div>
                                         </div>
@@ -198,9 +216,12 @@
                                         <div class="card h-100">
                                             <img src="img/audio-recording.png" class="icon-center" alt="Grabación de Audio Manual o Automática">
                                             <div class="card-body">
-                                                <h3>Grabación de Audio Manual o Automática</h3>
+                                                <h3>Grabación de audio manual o automática</h3>
                                                 <p class="card-text justify-text">
-                                                    Existe la opticón que encada viaje de grabar el audio del mismo, o también puedes activar la grabación automática, para que todos tus viajes se graben sin excepción. Puedes estar tranquilo, ya que la aplicación solo escucha tu audio, unicamente cuando reportas un incidente de seguridad.
+                                                    Existe la opción que encada viaje de grabar el audio del mismo, o también 
+                                                    puedes activar la grabación automática, para que todos tus viajes se graben 
+                                                    sin excepción. Puedes estar tranquilo, ya que la aplicación solo escucha tu 
+                                                    audio, únicamente cuando reportas un incidente de seguridad.
                                                 </p>
                                             </div>
                                         </div>
@@ -209,9 +230,10 @@
                                         <div class="card h-100">
                                             <img src="img/emergency-button.png" class="icon-center" alt="Botón de Emergencia">
                                             <div class="card-body">
-                                                <h3>Botón de Emergencia</h3>
+                                                <h3>Botón de emergencia</h3>
                                                 <p class="card-text justify-text">
-                                                    Si necesitas ayuda, presiona el Botón de Emergencia dentro de tu app para enlazarte al 911 y DiDi rastreará tu ubicación exacta.
+                                                    Si necesitas ayuda, presiona el Botón de Emergencia dentro de tu aplicación 
+                                                    para enlazarte al 911 y Didi rastreará tu ubicación exacta.
                                                 </p>
                                             </div>
                                         </div>
@@ -222,7 +244,8 @@
                                             <div class="card-body">
                                                 <h3>Localización GPS</h3>
                                                 <p class="card-text justify-text">
-                                                    Monitoreamos todos los viajes para que, si reportas un incidente, podamos reaccionar de forma inmediata.
+                                                    Monitoreamos todos los viajes para que, si reportas un incidente, podamos
+                                                    reaccionar de forma inmediata.
                                                 </p>
                                             </div>
                                         </div>
@@ -233,7 +256,9 @@
                                             <div class="card-body">
                                                 <h3>Alianza con C5</h3>
                                                 <p class="card-text justify-text">
-                                                    Didi se unió al C5 de Guadalajara y del Estado de México. Por lo que en caso de que necesites ayuda, se les notificará cuando presiones el Botón de Emergencia, para que puedan asistirte.
+                                                    Didi se unió al C5 de Guadalajara y del Estado de México. Por lo que en caso 
+                                                    de que necesites ayuda, se les notificará cuando presiones el Botón de Emergencia, 
+                                                    para que puedan asistirte.
                                                 </p>
                                             </div>
                                         </div>
@@ -244,8 +269,9 @@
                                             <div class="card-body">
                                                 <h3>Cámaras de Seguridad DiDi</h3>
                                                 <p class="card-text justify-text">
-                                                    La empresa Didi ha Instalado cámaras en más de 900 vehículos en Guadalajara. Si detectas alguna situación de riesgo, puedes presionar el Botón de Emergencia y
-                                                    se comenzará a grabar el video del viaje. El soporte DiDi recibe una alerta
+                                                    La empresa Didi ha Instalado cámaras en más de 900 vehículos en Guadalajara. 
+                                                    Si detectas alguna situación de riesgo, puedes presionar el botón de emergencia y
+                                                    se comenzará a grabar el video del viaje. El soporte Didi recibe una alerta
                                                     para evaluar la situación en tiempo real y de ser necesario, enviar apoyo
                                                     a tu ubicación.<br>
                                                     <i>*Disponible solo en Guadalajara.</i>
@@ -257,10 +283,10 @@
                                         <div class="card h-100">
                                             <img src="img/woman-driver.png" class="icon-center" alt="DiDi Mujer">
                                             <div class="card-body">
-                                                <h3>DiDi Mujer</h3>
+                                                <h3>Didi Mujer</h3>
                                                 <p class="card-text justify-text">
-                                                    Si eres conductora, Con la applicación DiDi puedes decidir si quieres realizar viajes solo
-                                                    con pasajeras mujeres.
+                                                    Si eres conductora, Con la aplicación Didi, puedes decidir si quieres 
+                                                    realizar viajes solo con pasajeras mujeres.
                                                 </p>
                                             </div>
                                         </div>
@@ -269,9 +295,10 @@
                                         <div class="card h-100">
                                             <img src="img/insurance-care.png" class="icon-center" alt="Viaje con Cobertura">
                                             <div class="card-body">
-                                                <h3>Viaje con Cobertura</h3>
+                                                <h3>Viaje con cobertura</h3>
                                                 <p class="card-text justify-text">
-                                                    Cuando viajas usango la plataforma de DiDi, tienes una cobertura de responsabilidad civil, la cual incluye gastos médicos por siniestro.
+                                                    Cuando viajas usando la plataforma de Didi, tienes una cobertura de 
+                                                    responsabilidad civil, la cual incluye gastos médicos por siniestro.
                                                 </p>
                                             </div>
                                         </div>
@@ -280,22 +307,16 @@
                                         <div class="card h-100">
                                             <img src="img/artificial-intelligence.png" class="icon-center" alt="Inteligencia Artificia">
                                             <div class="card-body">
-                                                <h3>Inteligencia Artificial</h3>
+                                                <h3>Inteligencia artificial</h3>
                                                 <p class="card-text justify-text">
-                                                    La applicación utiliza Inteligencia Artificia (AI) para cuidarte durante tus viajes. Los modelos Hércules, Clío y Temis analizan características de los viajes, los pasajeros, zonas, horarios e historial, para identificar cualquier riesgo y alertarte o rechazar esa solicitud.
+                                                    La aplicación utiliza Inteligencia Artificia (AI) para cuidarte durante tus 
+                                                    viajes. Los modelos Hércules, Clío y Temis analizan características de los 
+                                                    viajes, los pasajeros, zonas, horarios e historial, para identificar cualquier 
+                                                    riesgo y alertarte o rechazar esa solicitud.
                                                 </p>
                                             </div>
                                         </div>
                                     </div>  
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="horizontal-center">
-                                        <!--AdSense-->
-                                        <?php include_once("includes/ads.php") ?>  
-                                        <!--AdSense-->
-                                    </div>
                                 </div>
                             </div>
                             <h2>Después un viaje</h2>
@@ -305,9 +326,10 @@
                                         <div class="card h-100">
                                             <img src="img/phone-support.png" class="icon-center" alt="Soporte Telefónico 24/7">
                                             <div class="card-body">
-                                                <h3>Soporte Telefónico 24/7</h3>
+                                                <h3>Soporte telefónico 24/7</h3>
                                                 <p class="card-text justify-text">
-                                                    Puedes llamar al soporte telefónico en el número <a href="tel:8007258888"> 800 725 8888</a>, el app cuenta con atención 24/7.
+                                                    Puedes llamar al soporte telefónico en el número 
+                                                    <a href="tel:8007258888"> 800 725 8888</a>, la aplicación cuenta con atención 24/7.
                                                 </p>
                                             </div>
                                         </div>
@@ -316,9 +338,12 @@
                                         <div class="card h-100">
                                             <img src="img/rating-survey.png" class="icon-center" alt="Califica a tu Pasajero">
                                             <div class="card-body">
-                                                <h3>Califica a tu Pasajero</h3>
+                                                <h3>Califica a tu pasajero</h3>
                                                 <p class="card-text justify-text">
-                                                    Tienes la oportunidad de califica a tu pasajero después de cada viaje. Si tuviste una mala experiencia puedes seleccionar “No volver a viajar con este pasajero” y reportar cualquier conducta inapropiada.                                            </p>
+                                                    Tienes la oportunidad de califica a tu pasajero después de cada viaje. Si tuviste 
+                                                    una mala experiencia puedes seleccionar “No volver a viajar con este pasajero” y 
+                                                    reportar cualquier conducta inapropiada.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -329,7 +354,8 @@
                                                 <h3>Limitar viajar con el mismo pasajero</h3>
                                                 <p class="card-text justify-text">
                                                     Por tu seguridad si lo prefieres, puedes elegir la opción de no volver a viajar con
-                                                    alguna persona. La plataforma no te volvera a asignar a esta persona en el futuro.
+                                                    alguna persona. La plataforma no te volverá a asignar a esta persona en el futuro.
+
                                                 </p>
                                             </div>
                                         </div>

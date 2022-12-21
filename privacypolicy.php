@@ -62,6 +62,9 @@
             }
             }
         </script>
+        
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?> 
 
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css" >     

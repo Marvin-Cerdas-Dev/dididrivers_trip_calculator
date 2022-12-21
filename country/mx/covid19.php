@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <meta name="description" content="Este sitio te muestra cuáles son los lineamiento de la plataforma Didi, en relación de la pandemia de Covid-19">
+        <meta name="description" content="Este sitio te muestra cuáles son los lineamientos de la plataforma Didi, en relación de la pandemia de Covid-19">
         <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Covid-19, Protocolos de viaje, Pandemia Covid-19, Requisitos de viaje, México">
         <meta http-equiv="Expires" content="5">
 
@@ -17,7 +17,7 @@
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Calculadora de viajes de Didi">
-        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta property="og:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="og:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
         <!-- Twitter Meta Tags -->
@@ -25,7 +25,7 @@
         <meta property="twitter:domain" content="crdidicalc.azurewebsites.net">
         <meta property="twitter:url" content="https://crdidicalc.azurewebsites.net/">
         <meta name="twitter:title" content="Calculadora de viajes de Didi">
-        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil y segura">
+        <meta name="twitter:description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
         <meta property="twitter:image:alt" content="DidiCalc">
         <meta name="twitter:image" content="https://crdidicalc.azurewebsites.net/img/calculator-128.png">
 
@@ -63,6 +63,9 @@
             }
         </script>
 
+        <!--AdSense-->
+        <?php include_once("includes/ads.php") ?>     
+
         <!-- build:css css/styles.css -->
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">        
@@ -95,7 +98,13 @@
                                             <div class="card-body">
                                                 <h3>DiDi Prevent</h3>
                                                 <p class="card-text justify-text">
-                                                    Al conectarse all app, como conductor debes pasar por una verificación de uso de cubrebocas a través de inteligencia artificial. Para completarla, debed mandar una selfie, una foto demostrando que desinfectaron su vehículo, además voluntariamente reportan su temperatura corporal dentro de los límites normales. Cuando apruebes esta validación, comienzan a recibir viajes.
+                                                    Al conectarse a la aplicación, como conductor debes pasar por una 
+                                                    verificación de uso de cubrebocas a través de inteligencia 
+                                                    artificial. Para completarla, debed mandar una selfie, una 
+                                                    foto demostrando que desinfectaron su vehículo, además 
+                                                    voluntariamente reportan su temperatura corporal dentro de los 
+                                                    límites normales. Cuando apruebes esta validación, comienzan a 
+                                                    recibir viajes.
                                                 </p>
                                             </div>
                                         </div>
@@ -104,9 +113,11 @@
                                         <div class="card h-100">
                                             <img src="img/plastict-protection.png" class="icon-center" alt="Encriptación de tu número de teléfono">
                                             <div class="card-body">
-                                                <h3>Barrera Plástica y Material Desinfectante</h3>
+                                                <h3>Barrera plástica y material desinfectante</h3>
                                                 <p class="card-text justify-text">
-                                                    Como conductor puedes instalar una división plástica para separar los asientos delanteros de los traseros. Deben usar cubrebocas y tener líquido desinfectante a tu disposición.
+                                                    Como conductor puedes instalar una división plástica para 
+                                                    separar los asientos delanteros de los traseros. Deben usar 
+                                                    cubrebocas y tener líquido desinfectante a tu disposición.
                                                 </p>
                                             </div>
                                         </div>
