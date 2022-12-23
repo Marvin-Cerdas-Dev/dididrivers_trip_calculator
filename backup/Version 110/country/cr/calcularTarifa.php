@@ -136,7 +136,7 @@ if ($calculation_type == 'Details') {
                             <div class="justify-text alert alert-info" role="alert">
                                 <strong>Información del viaje:<br></strong>
                                 <?php echo 'Tipo de servicio: Didi ' . $service_type; ?><br>
-                                <?php echo $viaje->toString(); ?><br>
+                                <?php $viaje->toString(); ?><br>
                                 <hr>
                                 <strong><?php echo "Monto total: &#8353;" . number_format($viaje->calculaMontoTotalViaje(), 2) ?></strong>
                             </div>

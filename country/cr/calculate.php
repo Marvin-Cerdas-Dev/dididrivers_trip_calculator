@@ -170,9 +170,9 @@ if ($calculation_type == 'Details') {
                                     <strong>Información del viaje:<br></strong>
                                     <?php echo 'Tipo de servicio: Didi ' . $service_type; ?><br>
                                     <?php echo 'Método de pago: ' . $payment_type; ?><br>
-                                    <?php echo $viaje->toStringSimple(); ?><br> 
+                                    <?php $viaje->toStringSimple(); ?><br> 
                                     <hr>
-                                    <p><strong>Ganancia del viaje = <?php echo $viaje->toString_Ganancia() ?></strong></p>
+                                    <p><strong>Ganancia del viaje = <?php $viaje->toString_Ganancia() ?></strong></p>
 
                                 </div>
                                 <?php
@@ -199,7 +199,7 @@ if ($calculation_type == 'Details') {
                                         <?php } ?>                                          
                                         <p>Monto total = <?php number_format($viaje->toString_montoTotal(), 2) ?></p> 
                                         <p>Comisión de Didi = <?php echo "&#8353;" . number_format($viaje->calculaComisionDidi(), 2) ?></p>                         
-                                        <p><strong>Monto de ganancia = <?php echo $viaje->toString_Ganancia() ?></strong></p>
+                                        <p><strong>Monto de ganancia = <?php $viaje->toString_Ganancia() ?></strong></p>
                                         <hr>
                                         <h4>Detalle ganancias reportadas en la aplicación</h4>
                                         <p>Total del viaje = <?php echo "&#8353;" . number_format($viaje->getTotalTripPrice(), 2) ?></p>
@@ -210,7 +210,7 @@ if ($calculation_type == 'Details') {
                                             <p>Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?></p>
                                         <?php } ?>   
                                         <p>Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?></p>
-                                        <p><strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong></p>                                   
+                                        <p><strong>Diferencia = <?php $viaje->toStringDifference() ?></strong></p>                                   
                                     <?php } else { ?>
                                         <p>Tarifa base = <?php echo "&#8353;" . $viaje->getBasicFare() ?></p>
                                         <p>Monto por kilometraje = <?php number_format($viaje->toString_montoKilometraje(), 2) ?></p>
@@ -240,7 +240,7 @@ if ($calculation_type == 'Details') {
                                             <p>Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?></p>
                                         <?php } ?>   
                                         <p>Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?></p>
-                                        <p><strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong></p>
+                                        <p><strong>Diferencia = <?php $viaje->toStringDifference() ?></strong></p>
                                     <?php } ?>  
                                     <?php if ($viaje->getDifference() < 0) { ?>
                                         <button type="button" class="btn btn-update btn-lg" data-bs-toggle="modal" data-bs-target="#supportMessageModal">Mensaje para revisión de tarifa</button>
@@ -300,8 +300,8 @@ if ($calculation_type == 'Details') {
                                     Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?><br>
                                 <?php } ?>   
                                 Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?><br>
-                                <strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong><br><br>
-                                Por tanto existen una diferencia de <?php echo $viaje->toStringDifference() ?><br><br>            
+                                <strong>Diferencia = <?php $viaje->toStringDifference() ?></strong><br><br>
+                                Por tanto existen una diferencia de <?php $viaje->toStringDifference() ?><br><br>            
                                 Espero me puedan ayudar.<br>
                                 Saludos.<br>
                             <?php } else { ?>
@@ -332,8 +332,8 @@ if ($calculation_type == 'Details') {
                                     Saldo pendiente = <?php echo "&#8353;" . $viaje->getPendingAmount() ?><br>
                                 <?php } ?>   
                                 Ganancia del viaje = <?php echo "&#8353;" . number_format($viaje->getEarnings(), 2) ?><br>
-                                <strong>Diferencia = <?php echo $viaje->toStringDifference() ?></strong><br><br>
-                                Por tanto existen una diferencia de <?php echo $viaje->toStringDifference() ?><br><br>            
+                                <strong>Diferencia = <?php $viaje->toStringDifference() ?></strong><br><br>
+                                Por tanto existen una diferencia de <?php $viaje->toStringDifference() ?><br><br>            
                                 Espero me puedan ayudar.<br>
                                 Saludos.<br>
                             <?php } ?>
