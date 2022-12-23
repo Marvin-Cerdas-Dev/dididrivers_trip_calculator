@@ -297,11 +297,10 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Información general</h5>
+                            <h5 class="modal-title"><strong>Información general del uso de la calculadora</strong></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <h5><strong>Información general del uso de la calculadora</strong></h5>
                             <h5>Kilómetros recorridos</h5>
                             <p>Este dato corresponde a el total de kilómetros recorridos en el viaje, si este dato no es un número entero, se debe utilizar un punto (.) para los decimales. Por ejemplo: Un kilómetro y medio = 1.5</p>                              
                             <h5>Tiempo de duración</h5>

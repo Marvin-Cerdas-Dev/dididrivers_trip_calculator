@@ -293,11 +293,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Información general</h5>
+                    <h5 class="modal-title"><strong>Información general del uso de la calculadora</strong></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h5><strong>Información general del uso de la calculadora</strong></h5>
                     <p>A continuación, se detalla una explicación para cada uno de los campos de la calculadora de viajes</p>
                     <h5>Monto total del viaje</h5>
                     <p>El monto total del viaje hace referencia al valor total pagado por el viaje, eso quiere decir, el monto que pagó el cliente por el viaje. Al igual que las ganancias del viaje, en caso de existir números decimales estos se deben escribir con punto (.)</p>
