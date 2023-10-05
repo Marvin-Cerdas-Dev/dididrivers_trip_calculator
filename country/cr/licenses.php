@@ -11,7 +11,7 @@
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        
-        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/mx/" />
+        <link rel="canonical" href="https://crdidicalc.azurewebsites.net/country/cr/" />
 
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://crdidicalc.azurewebsites.net/">
