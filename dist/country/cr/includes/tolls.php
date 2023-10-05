@@ -1,15 +1,15 @@
 <?php
-    $tollAtenas = 910;
+    $tollAtenas = 820;
     $tollBraulioCarrillo = 250;
     $tollBernardoSoto = 600;
-    $tollCuidadColon = 230;
-    $tollEscazu = 450;
+    $tollCuidadColon = 200;
+    $tollEscazu = 410;
     $tollFlorencioDelCastillo = 75;
     $tollGeneralCanas = 300;
-    $tollGuacima = 510;
-    $tollPozon = 690;
-    $tollRampaAtenas = 450;
-    $tollRampaPozon = 230;
-    $tollSanRafael = 690; 
-    $tollSiquiares = 540;			
+    $tollGuacima = 470;
+    $tollPozon = 620;
+    $tollRampaAtenas = 410;
+    $tollRampaPozon = 200;
+    $tollSanRafael = 620; 
+    $tollSiquiares = 480;			
 ?>

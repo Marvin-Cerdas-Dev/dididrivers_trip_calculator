@@ -178,5 +178,3 @@ gulp.task('includesmin-mx', function () {
 
 /* Master funtion - Deploy the project */
 gulp.task('build', gulp.series('clean', 'copy-sitemap', 'copy-robot', 'imagemin', 'usemin', 'includesmin', 'imagemin-cr', 'usemin-cr', 'includesmin-cr', 'imagemin-mx', 'usemin-mx','includesmin-mx'));
-
-
