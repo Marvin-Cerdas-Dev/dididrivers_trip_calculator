@@ -1,12 +1,10 @@
 <?php
-
 class viajeExpress {
-
-    private $basicFare = 342.00;
-    private $kilometerFare = 205.00;
-    private $minuteFare = 34.00;
+    private $basicFare = 568.00;
+    private $kilometerFare = 206.00;
+    private $minuteFare = 43.00;
     private $extraCharge10KmFare = 235.00;
-    private $minimunFare = 755.00;
+    private $minimunFare = 847.00;
     private $profit = 0.85;
     private $Didifee = 0.15;
     private $kilometers = 0.00;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <?php include_once("includes/analyticstracking.php") ?>
 <html lang="es">
     <head>
@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true"/>
         <meta name="description" content="Aquí podrás verificar tus viajes de la plataforma Didi de una forma fácil, segura y 100% gratuito">
-        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, Costa Rica">
+        <meta name="keywords" content="DidiCalc, Calculadora, Viajes, Didi, Calcular Viaje, Calculadora de viajes, Viajes de Didi, México, calcular tarifa didi, didi cotizar viaje, cotizar viaje didi, didi calcular tarifa, calculadora didi, cotizar didi, calcular viaje didi, simulador didi, didi simulador">
         <meta http-equiv="Expires" content="5">
 
         <!-- Canonical Tag -->        

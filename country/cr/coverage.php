@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <?php include_once("includes/analyticstracking.php") ?>
 <html lang="es">
     <head>

@@ -3,7 +3,7 @@
 <?php include_once("./includes/viajeExpress.php") ?>
 <?php include_once("./includes/viajeEconomy.php") ?>
 <?php include_once("./includes/tolls.php") ?>
-<?php
+<?php 
 $calculation_type = filter_input(INPUT_POST, 'calculating');
 $service_type = filter_input(INPUT_POST, 'service');
 $payment_type = filter_input(INPUT_POST, 'payment');

@@ -13,7 +13,7 @@ function CopyToClipboard(containerid) {
         $('#supportMessageModal').modal('hide');
     }
 }
-
+ 
 $(document).ready(function () {
 
     // Show the cookies modal

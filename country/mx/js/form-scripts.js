@@ -17,7 +17,7 @@ $(document).ready(function () {
             $(divToll).insertAfter(divTolls);
         }
     });
-
+ 
     $(document).on("click", ".delete", function(e) {
         var bnum = $(this).val();
         var data = [];

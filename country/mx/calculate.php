@@ -4,7 +4,7 @@
 <?php include_once("./includes/viajeProtect.php") ?>
 <?php include_once("./includes/viajeEconomy.php") ?>
 <?php include_once("./includes/viajeEntrega.php") ?>
-<?php
+<?php 
 $calculation_type = filter_input(INPUT_POST, 'calculating');
 $service_type = filter_input(INPUT_POST, 'service');
 $payment_type = filter_input(INPUT_POST, 'payment');

@@ -15,7 +15,7 @@ $(document).ready(function () {
             }
         });
         $('#tollsModal').modal('hide');
-    });
+    }); 
     $('#form_simpl_calc').submit(function () {
         var validate = true;
         $('#val_kilometers').addClass('hidden');

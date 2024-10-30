@@ -1,5 +1,4 @@
 <?php
-
 class viajeExpress {
 
     private $basicFare = 3.00;

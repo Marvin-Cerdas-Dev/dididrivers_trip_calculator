@@ -24,18 +24,11 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="help.php" title="Ayuda" hreflang="es">Ayuda</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="covid19.php" title="Covid-19" hreflang="es">Covid-19</a>
-                </li>  
+                </li> 
             </ul>
         </div>
     </div>
 </nav> 
-
-
-
-
 
 
 

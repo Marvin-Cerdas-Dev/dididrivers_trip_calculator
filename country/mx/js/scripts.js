@@ -34,7 +34,7 @@ $(document).ready(function () {
             validate = false;
         }
         return validate;
-    });
+    }); 
     $('#form_details_calc').submit(function () {
         var validate = true;
         $('#val_earnings').addClass('hidden');

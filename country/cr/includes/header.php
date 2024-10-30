@@ -13,7 +13,7 @@
                     <a class="nav-link" href="fares.php" title="Tarifas" hreflang="es">Tarifas</a>
                 </li>       
                 <li class="nav-item">
-                    <a class="nav-link" href="coverage.php" title="Servicios" hreflang="es">Servicios</a>
+                    <a class="nav-link" href="cities.php" title="Ciudades Disponibles" hreflang="es">Ciudades Disponibles</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" hreflang="es">Calculadoras</a>
@@ -25,13 +25,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="help.php" title="Ayuda" hreflang="es">Ayuda</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="covid19.php" title="Covid-19" hreflang="es">Covid-19</a>
-                </li>  
             </ul>
         </div>
     </div>
 </nav>    
+
 
 
 

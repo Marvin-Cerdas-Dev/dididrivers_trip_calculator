@@ -10,7 +10,7 @@ $(document).ready(function () {
             $('#cookieModal').modal('show');
         }
     }
-
+ 
     // Cookies link Leer mas
     $('#learMore').click(function () {
         window.location.href = 'privacypolicy.php';

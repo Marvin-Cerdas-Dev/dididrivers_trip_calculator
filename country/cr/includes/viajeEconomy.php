@@ -39,6 +39,7 @@ class viajeEconomy {
         $this->payment = $payment;
     }
 
+    
 //###################################### Métodos getters #######################################################    
 
     public function getBasicFare() { 

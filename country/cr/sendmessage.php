@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (isset($_POST['contactSubmit'])) {
     $name = $_POST['contactName'];
     $from = $_POST['contactEmail'];
